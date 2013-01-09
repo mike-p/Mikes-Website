@@ -6,5 +6,6 @@
 			<li><a rel="nofollow" href="http://www.linkedin.com/in/mikepfsmith">LinkedIn</a></li>
 			<li><a rel="nofollow" href="http://twitter.com/mike_p">Twitter</a></li>
 			<li><a rel="nofollow" href="http://www.flickr.com/photos/mike-p/">Flickr</a></li>
+			<li><a rel="nofollow" href="https://plus.google.com/109525103062590269831?rel=author">Google +</a></li>
 		</ul>
 		
