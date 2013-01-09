@@ -2,7 +2,9 @@
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<title>Skills | Mike Smith Web Operations/Project Manager</title>
+	<link rel="prev" title='home' href='http://mike-p.co.uk' />
+	<link rel="next" title='work' href='http://mike-p.co.uk/work' />
+	<title>Skills | Mike Smith Web Operations/Project Manager in London</title>
 </head>
 <body>
 	<div class="inner-body">
@@ -14,7 +16,12 @@
 				<li>Business Analysis - Face to Face customer/client meetings, initial scoping, testing, sign off, change requests with a particular interest in e-commerce</li>
 				<li>Project Management - Planning deliverables, milestones, delivery</li>
 				<li>Mentoring junior developers and designers </li>
-				<li>Experience in both working and leading in Agile and Waterfall approaches</li>
+				<li>Experience in both working and leading in <strong>Agile and Waterfall</strong> approaches</li>
+			</ul>
+			<h4>Qualifications</h4>
+			<ul>
+				<li>PRINCE2 Practitioner (2012) Candidate number: P2R/869563 - QA</li>
+				<li>BSc (Hons) Computing and Management – 2:1, Bradford University</li>
 			</ul>
 			<h4>Technical Skills</h4>
 			<ul>
@@ -27,22 +34,18 @@
 			<li>Git(hub)/SVN</li>
 			<li>Mac/PC literate</li>
 			<li>Google Docs/Open Office/MS Office</li>
-			<li>High level UML</li>
+			<li>Basic UML</li>
 			<li>Test Director/Mantis</li>
 			<li>Google Analytics &amp; Webmaster Tools</li>
 			</ul>
-			<h4>Qualifications</h4>
-			<ul>
-				<li>PRINCE2 Practitioner (2012) Candidate number: P2R/869563 - QA</li>
-				<li>BSc (Hons) Computing and Management – 2:1, Bradford University</li>
-			</ul>
+			
 		</div>
 		<nav id="nav" class="global-nav">
 			<h5>A bit about me</h5>
 			<ul>
 				<li><a href="/">Home</a></li>
+				<li><a class="active" href="/skills" title="My core skills">Skills</a></li>
 				<li><a href="/work" title="A bit about my work history">Work</a></li>
-				<li><a class="active" href="/skills" title="My core skillz">Skills</a></li>
 				<li><a href="/interests" title="Some of my interests">Interests</a></li>
 				<li><a href="/contact" title="Lets chat">Hire Me!</a></li>
 			</ul>
