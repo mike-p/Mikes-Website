@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title='interests' href='http://mike-p.co.uk/interests' />
-	<link rel="next" title='home' href='http://mike-p.co.uk' />
-	<title>Contact | Mike Smith Web Operations/Project Manager in London</title>
+	<link rel="prev" title="interests" href="http://mike-p.co.uk/interests" />
+	<link rel="next" title="home" href="http://mike-p.co.uk" />
+	<title>Contact | Mike Smith Web Project Manager in London</title>
 </head>
 <body>
 	<div class="inner-body">

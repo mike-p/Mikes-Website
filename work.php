@@ -2,9 +2,9 @@
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title='skills' href='http://mike-p.co.uk/skills' />
-	<link rel="next" title='interests' href='http://mike-p.co.uk/interests' />
-	<title>Work | Mike Smith Web Operations/Project Manager in London</title>
+	<link rel="prev" title="skills" href="http://mike-p.co.uk/skills" />
+	<link rel="next" title="interests" href="http://mike-p.co.uk/interests" />
+	<title>Work | Mike Smith Web Project Manager in London</title>
 </head>
 <body>
 	<div class="inner-body">
@@ -13,9 +13,18 @@
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			<h4>Zoocha</h4>
 			<p>I co-founded Zoocha in 2009 with the aim for it to become the leading Drupal development agency in the UK.  Within 3 years we built up a client base that includes Argos, Boden, Debenhams, Gamesworkshop, Mydex, Oceans Rattan Furniture and Tesco to name but a few and completed a diverse range of projects (e-commerce, property portals to Facebook apps).</p>
+			<ul class="portfolio">
+				<li><a href="http://argos.co.uk" rel="nofollow" target="_blank"><img src="i/argos.png" alt="Argos" /></a></li>
+				<li><a href="http://boden.co.uk" rel="nofollow" target="_blank"><img src="i/boden.gif" alt="Boden" /></a></li>
+				<li><a href="http://countryside.co.uk" rel="nofollow" target="_blank"><img src="i/countryside.png" alt="Countryside" /></a></li>
+				<li><a href="http://hotelswaps.jpg" rel="nofollow" target="_blank"><img src="i/hotelswaps.jpg" alt="HotelSwaps" /></a></li>
+				<li><a href="http://multiyork.co.uk" rel="nofollow" target="_blank"><img src="i/multiyork.jpg" alt="Multiyork" /></a></li>
+				<li><a href="http://multiyork.co.uk" rel="nofollow" target="_blank"><img src="i/oceans.png" alt="Oceans Rattan Furniture" /></a></li>
+			</ul>
 			
 			<p>At Zoocha I was the Operations Director which covered the day to day running of the business and managing all the projects.  I also worked on the technical scoping aspects of the projects and identifying relevant strategies.</p>
 			
+						
 			<h4>Oracle</h4>
 			<p>Joining Oracle as a Consultant I progressed to becoming a Technical Business Analyst on various telecoms projects based through Europe using the various Oracle platforms.</p>
 			
@@ -37,7 +46,7 @@
 				<li><a href="/skills" title="My core skills">Skills</a></li>
 				<li><a class="active" href="/work" title="A bit about my work history">Work</a></li>
 				<li><a href="/interests" title="Some of my interests">Interests</a></li>
-				<li><a href="/contact" title="Lets chat">Hire Me!</a></li>
+				<li class="contact"><a href="/contact" title="Lets chat">Hire Me!</a></li>
 			</ul>
 			<?php include 'includes/about.php' ?>
 		</nav>

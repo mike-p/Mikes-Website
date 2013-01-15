@@ -2,32 +2,41 @@
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title='home' href='http://mike-p.co.uk' />
-	<link rel="next" title='work' href='http://mike-p.co.uk/work' />
-	<title>Skills | Mike Smith Web Operations/Project Manager in London</title>
+	<link rel="prev" title="home" href="http://mike-p.co.uk" />
+	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
+	<title>Skills | Mike Smith Web Project Manager in London</title>
 </head>
 <body>
 	<div class="inner-body">
 		<?php include 'includes/header.php' ?>
 		<div class="main-content" role="main">
 			<h4>Management</h4>
+			<h5>Business Analyst</h5>
 			<ul>
-				<li><strong>Project Management</strong>
-					<ul>
-						<li>Scoping and creating business requirements; understanding the key deliverables and clearly communicating with stakeholders.</li>
-						<li>Responsible for creating project plans, ensuring a successful project delivery and managing change requests.</li>
-						
-						<li>Experience with data migration, re-platforming, integrating with legacy systems; both e-commerce and bespoke applications.</li>
-						
-						<li>Effectively managing project teams in accordance with their personalities and skill sets.</li>
-					</ul>
-				</li>
-				<li><strong>Operations Management</strong> - Resource planning, allocation, budget and all areas of project delivery</li> 
-				<li><strong>Business Analysis</strong> - Face to Face customer/client meetings, initial scoping, testing, wire-framing, sign off and managing change requests</li>
-				
-				<li>Quick to understand technical requirements in e-commerce environments; able to interface clearly between commercial and development teams.</li>	
-				<li>Mentoring junior developers and designers </li>
-				<li>Experience in both working and leading in <strong>Agile and Waterfall</strong> approaches</li>
+				<li>Drive scoping and requirement gathering; understanding the key deliverables and clearly communicating with stakeholders.</li>
+				<li>Facilitation of interactive workshops to gather requirements successfully.</li>
+				<li>The key point of contact for project scope and deliverables.</li>
+				<li>Define and clearly communicate UAT strategy, milestones and sign off.</li>
+			</ul>
+			<h5>Project Management</h5>
+			<ul>
+				<li>Clear communicator, working with key stakeholders and 3rd parties.</li>
+				<li>Responsible for sprints, key phases and ensuring a successful delivery and managing scope.</li>
+				<li>Experience with data migration, re-platforming, integrating with legacy systems; both e-commerce and bespoke applications.</li>
+				<li>Manage resource allocation and play to team strengths.</li>
+			</ul>
+			<h5>Strengths</h5>
+			<ul>
+				<li>Change leader; initiate, manage and deliver change.</li>
+				<li>Experienced at creating documentation in a relevant medium and using terminology required for the target audience.</li>
+				<li>Highly skilled at mentoring junior developers and designers and how to meet their objectives and progress.</li>
+				<li>Experience in both working and leading in Agile and Waterfall approaches.</li>
+			</ul>
+			<h5>Key Achievements</h5>
+			<ul>
+				<li>Successfully grew Zoocha from ground up to 20 employees in 3 years; funded by retained income; clients include Argos, iNTERTAIN, Multiyork, Mydex.</li>
+				<li>Responsible for programme planning including resource allocation, budget and all areas of project delivery.</li>
+				<li>Created vibrant culture to "exceed expectations" and strive to be the best.</li>
 			</ul>
 			<h4>Qualifications</h4>
 			<ul>
@@ -59,7 +68,7 @@
 				<li><a class="active" href="/skills" title="My core skills">Skills</a></li>
 				<li><a href="/work" title="A bit about my work history">Work</a></li>
 				<li><a href="/interests" title="Some of my interests">Interests</a></li>
-				<li><a href="/contact" title="Lets chat">Hire Me!</a></li>
+				<li class="contact"><a href="/contact" title="Lets chat">Hire Me!</a></li>
 			</ul>
 			<?php include 'includes/about.php' ?>
 		</nav>
