@@ -4,7 +4,7 @@
 	<?php include 'includes/header-includes.php' ?>
 	<link rel="prev" title="work" href="http://mike-p.co.uk/work" />
 	<link rel="next" title="contact" href="http://mike-p.co.uk/contact" />
-	<title>Interests | Mike Smith Web Project Manager in London</title>
+	<title>Interests | Mike Smith Web Business Analyst in London</title>
 </head>
 <body>
 	<div class="inner-body">
@@ -45,7 +45,7 @@
 				<li><a href="skills" title="My core skills">Skills</a></li>
 				<li><a href="work" title="A bit about my work history">Work</a></li>
 				<li><a class="active" href="interests" title="Some of my interests">Interests</a></li>
-				<li class="contact"><a href="contact" title="Lets chat">Hire Me!</a></li>
+				<li class="contact"><a href="contact" title="Lets chat">Lets Talk</a></li>
 			</ul>
 			<?php include 'includes/about.php' ?>	
 		</nav>

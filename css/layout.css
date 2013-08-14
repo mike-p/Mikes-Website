@@ -91,8 +91,11 @@ strong {
 
 ul {
 	list-style-type: disc;
-	margin-left: 20px;
-	
+	margin-left: 20px;	
+}
+
+.clearfix {
+	clear: both;
 }
 
 /* header */
@@ -155,11 +158,16 @@ header .back2home {
 }
 
 /* Portfolio */
+.portfolio {
+	text-align: center;
+}
+
 .portfolio li {
 	margin: 0 20px 20px 0;
 	list-style-type: none;
-	width: 230px;
-	float: left;
+	width: 220px;
+	display: inline-block;
+	min-height: 60px;
 }
 
 .portfolio li img {
