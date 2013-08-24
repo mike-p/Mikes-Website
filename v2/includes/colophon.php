@@ -1,5 +1,5 @@
 
-		<footer>
+		
 		
 			
 			
@@ -9,7 +9,7 @@
 			</p>
 			</address>
 			
-			 
+			
 			<p>Care to validate the <a href="http://validator.w3.org/check/referer" title="Opens the W3 site up" rel="nofollow"><abbr title="HyperText Markup Language">HTML</abbr></a> or <a href="http://jigsaw.w3.org/css-validator/check/referer" rel="nofollow"><abbr title="Cascading Style Sheets">CSS</abbr></a> | Made with a Mac in London</p>
-		</footer>
+		
 		

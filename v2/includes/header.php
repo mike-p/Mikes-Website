@@ -5,7 +5,7 @@
 			<h1>Mike Smith</h1>
 			<a href="/" class="back2home"><img src="i/logo.png" alt="Back to home"></a>
 		</header>-->
-		<nav>
+		<header>
 			<p>A bit about <span>...</span></p>
 			<?php include 'includes/nav.php' ?>
-		</nav>		
+		</header>		

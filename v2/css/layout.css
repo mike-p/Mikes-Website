@@ -3,13 +3,14 @@ body {
 	font-size: 16px;
 	color: #353738;
 	line-height: 110%;
+	text-rendering: optimizeLegibility;
 }
 
 body .inner-body {
 	width: 80%;
-	max-width: 860px;
+	max-width: 760px;
 	margin: 0 auto;
-	text-rendering: optimizeLegibility;
+	
 	
 	
 }
@@ -42,7 +43,6 @@ h3 {
 }
 
 h4 {
-	/*font-family: 'Droid Serif', serif;*/
 	font-family:'Scada', sans-serif;
 	font-size: 30px;
 	border-bottom: 3px solid #353738;
@@ -50,7 +50,8 @@ h4 {
     padding-bottom: 3px;
     display: inline-block;
     letter-spacing:1px;
-    margin: 0 0 20px;
+    margin: 20px 0 20px;
+ 
 	
 }
 
@@ -60,17 +61,20 @@ h4 span {
 }
 
 h5 {
+	font-family:'Scada', sans-serif;
 	font-size: 13px;
-	font-weight: bold;
+	border-bottom: 3px solid #999;
 	line-height: 150%;
+	padding-bottom: 3px;
+	display: inline-block;
+	letter-spacing:1px;
 	margin: 10px 0;
-	text-transform: uppercase;
-	color: #999;
+	
 	
 }
 
 p, ul {
-	font-size: 16px;
+	font-size: 18px;
 	line-height: 26px;
 	margin-bottom: 25px;
 	font-family: 'Gilda Display', serif;
@@ -108,7 +112,7 @@ ul {
 }
 
 /* header */
-header {
+/*header {
 	border-top: 3px solid #999999;
 	text-align: right;
 	padding: 10px 10px 40px;
@@ -121,7 +125,7 @@ header span {
 
 header h2 {
 	float:left;
-}
+}*/
 
 header .jump2nav {
 	float: right;
@@ -141,6 +145,26 @@ header .back2home {
 	margin: -70px 0 0 -10px;
 }
 
+header {
+	margin-bottom: 30px;
+}
+
+header p {
+	margin: 0;
+}
+
+header nav {
+	margin: 0 0 0 90px;
+}
+
+header nav p {
+	letter-spacing: 1px;
+}
+
+header p span {
+	letter-spacing: 5px;
+}
+
 
 
 
@@ -153,26 +177,15 @@ header .back2home {
 
 
 /* Global Nav */
-nav {
-	margin-bottom: 50px;
-}
 
-nav p {
-	margin: 0;
-}
 
-nav p span {
-	letter-spacing: 5px;
-}
-
-.global-nav {
-	font-size: 13px;
-	/*float: right;
-	width: 15%;*/
-	padding: 0 0 0 20px;
-	border-left: 1px solid #DEDEDE;
-	min-height: 450px;
-	margin: 0 0 0 20px;
+.global-nav,
+.elsewhere,
+.about {
+	width: 33.3%;
+	float: left;
+	background-color: #353738;
+	min-height: 200px;
 }
 
 .global-nav .contact {
@@ -204,10 +217,23 @@ nav p span {
 /* = footer */
 
 footer  {
-	font-size: 12px;
-	margin: 40px 0 20px;
+	padding: 70px 40px 20px;
 	color: #999;
 	clear: both;
+	width: 80%;
+	max-width: 760px;
+	margin: 20px auto;
+}
+
+footer p,
+footer ul {
+	font-size: 14px;
+	margin: 0 30px;
+}
+
+footer address {
+	clear: both;
+	padding: 40px 0 0;
 }
 
 @media all and (max-width: 600px) {
