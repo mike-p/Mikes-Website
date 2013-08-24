@@ -1,17 +1,14 @@
 body {
 	font-family: helvetica, sans-serif;
 	font-size: 16px;
-	color: #353738;
+	color: #333333;
 	line-height: 110%;
-	text-rendering: optimizeLegibility;
 }
 
 body .inner-body {
 	width: 80%;
-	max-width: 760px;
+	max-width: 1000px;
 	margin: 0 auto;
-	
-	
 	
 }
 
@@ -27,7 +24,7 @@ h4 {
 }
 
 h1 {
-	font-family:'Voces', cursive;
+	font-family: 'Droid Serif', serif;
 	font-size: 40px;
 }
 	
@@ -43,15 +40,10 @@ h3 {
 }
 
 h4 {
-	font-family:'Scada', sans-serif;
-	font-size: 30px;
-	border-bottom: 3px solid #353738;
-    line-height: 38px;
-    padding-bottom: 3px;
-    display: inline-block;
-    letter-spacing:1px;
-    margin: 20px 0 20px;
- 
+	/*font-family: 'Droid Serif', serif;*/
+	font-size: 20px;
+	color: #DB0AAE;
+	padding-top: 10px;
 	
 }
 
@@ -61,23 +53,18 @@ h4 span {
 }
 
 h5 {
-	font-family:'Scada', sans-serif;
 	font-size: 13px;
-	border-bottom: 3px solid #999;
+	font-weight: bold;
 	line-height: 150%;
-	padding-bottom: 3px;
-	display: inline-block;
-	letter-spacing:1px;
 	margin: 10px 0;
-	
-	
+	text-transform: uppercase;
+	color: #999;
+	letter-spacing: 1px;
 }
 
 p, ul {
-	font-size: 18px;
-	line-height: 26px;
-	margin-bottom: 25px;
-	font-family: 'Gilda Display', serif;
+	margin: 0 0 15px 0;
+	line-height: 150%;
 }
 
 a {
@@ -112,7 +99,7 @@ ul {
 }
 
 /* header */
-/*header {
+header {
 	border-top: 3px solid #999999;
 	text-align: right;
 	padding: 10px 10px 40px;
@@ -125,7 +112,7 @@ header span {
 
 header h2 {
 	float:left;
-}*/
+}
 
 header .jump2nav {
 	float: right;
@@ -145,47 +132,25 @@ header .back2home {
 	margin: -70px 0 0 -10px;
 }
 
-header {
-	margin-bottom: 30px;
-}
-
-header p {
-	margin: 0;
-}
-
-header nav {
-	margin: 0 0 0 90px;
-}
-
-header nav p {
-	letter-spacing: 1px;
-}
-
-header p span {
-	letter-spacing: 5px;
-}
-
-
 
 
 /* main content */
 .main-content {
-	/*float: left;
+	float: left;
 	width: 77%;
-	padding: 0 0 30px;*/
+	padding: 0 0 30px;
 }
 
 
 /* Global Nav */
-
-
-.global-nav,
-.elsewhere,
-.about {
-	width: 33.3%;
-	float: left;
-	background-color: #353738;
-	min-height: 200px;
+.global-nav {
+	font-size: 13px;
+	float: right;
+	width: 15%;
+	padding: 0 0 0 20px;
+	border-left: 1px solid #DEDEDE;
+	min-height: 450px;
+	margin: 0 0 0 20px;
 }
 
 .global-nav .contact {
@@ -217,23 +182,10 @@ header p span {
 /* = footer */
 
 footer  {
-	padding: 70px 40px 20px;
+	font-size: 12px;
+	margin: 40px 0 20px;
 	color: #999;
 	clear: both;
-	width: 80%;
-	max-width: 760px;
-	margin: 20px auto;
-}
-
-footer p,
-footer ul {
-	font-size: 14px;
-	margin: 0 30px;
-}
-
-footer address {
-	clear: both;
-	padding: 40px 0 0;
 }
 
 @media all and (max-width: 600px) {
