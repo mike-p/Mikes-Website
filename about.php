@@ -6,34 +6,28 @@
 	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
 	<title>Skills |  Mike Smith Web Business Analyst in London</title>
 </head>
-<body>
-	<div class="inner-body">
+<body id="about">
+	<div class="inner-body"> 
 		<?php include 'includes/header.php' ?>
 		<div class="main-content" role="main">
-			<h4>Management</h4>
-			<h5>Agile Business Analyst</h5>
+			
+			<h4>Agile Business Analyst</h4>
 			<ul>
 				<li>Drive scoping and requirement gathering; understanding the key deliverables and clearly communicating with stakeholders.</li>
 				<li>Facilitation of interactive workshops to gather requirements successfully.</li>
 				<li>The key point of contact for project scope and deliverables.</li>
-				<li>Define and clearly communicate UAT strategy, milestones and sign off.</li>
+				<li>Backlog grooming</li>
 				<li>User Story writing, acceptance criteria and all things Agile (scrum)</li>
+				<li>BDD with Given, When, Then scenarios</li>
 			</ul>
-			<h5>Project Management</h5>
-			<ul>
-				<li>Clear communicator, working with key stakeholders and 3rd parties.</li>
-				<li>Responsible for sprints, key phases and ensuring a successful delivery and managing scope.</li>
-				<li>Experience with data migration, re-platforming, integrating with legacy systems; both e-commerce and bespoke applications.</li>
-				<li>Manage resource allocation and play to team strengths.</li>
-			</ul>
-			<h5>Strengths</h5>
+			<h4>Strengths</h4>
 			<ul>
 				<li>Change leader; initiate, manage and deliver change.</li>
 				<li>Experienced at creating documentation in a relevant medium and using terminology required for the target audience.</li>
 				<li>Highly skilled at mentoring junior developers and designers and how to meet their objectives and progress.</li>
 				<li>Experience in both working and leading in Agile and Waterfall approaches.</li>
 			</ul>
-			<h5>Key Achievements</h5>
+			<h4>Key Achievements</h4>
 			<ul>
 				<li>Successfully grew Zoocha from ground up to 20 employees in 3 years; funded by retained income; clients include Argos, iNTERTAIN, Multiyork, Mydex.</li>
 				<li>Responsible for programme planning including resource allocation, budget and all areas of project delivery.</li>
@@ -46,19 +40,18 @@
 			</ul>
 			<h4>Technical Skills</h4>
 			<ul>
-			<li>Hand coded HTML 4/5</li>
-			<li>Hand coded CSS 2+</li>
-			<li>jQuery/JavaScript</li>
+			<li>BDD (inc cucumber)</li>
+			<li>Hand coded HTML 4/5, CSS, JS</li>
 			<li>Drupal &amp; many modules</li>
 			<li>XML/XSL</li>
-			<li>ASP, .NET, PHP, Java Environments</li>
+			<li>ASP, .NET, PHP, Java/Scala Environments</li>
 			<li>Git(hub)/SVN</li>
 			<li>Mac/PC literate</li>
 			<li>Google Docs/Open Office/MS Office</li>
 			<li>Basic UML</li>
 			<li>Test Director/Mantis/Bugzilla</li>
 			<li>Google Analytics &amp; Webmaster Tools</li>
-			<li>Basecamp; awareness of other tools such as Pivotal tracker</li>
+			<li>Jira, Pivotal tracker, Basecamp</li>
 			</ul>
 			
 		</div>

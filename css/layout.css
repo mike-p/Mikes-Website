@@ -112,21 +112,6 @@ ul {
 }
 
 /* header */
-/*header {
-	border-top: 3px solid #999999;
-	text-align: right;
-	padding: 10px 10px 40px;
-}
-
-header span {
-	display: block;
-	clear: both;
-}
-
-header h2 {
-	float:left;
-}*/
-
 header .jump2nav {
 	float: right;
 	width: 15px;
@@ -147,14 +132,17 @@ header .back2home {
 
 header {
 	margin-bottom: 30px;
+	border-bottom: 1px solid #DB0AAE;
 }
 
 header p {
 	margin: 0;
+	display: inline;
 }
 
 header nav {
-	margin: 0 0 0 90px;
+	/*margin: 0 0 0 90px;*/
+	display: inline;
 }
 
 header nav p {
@@ -167,30 +155,17 @@ header p span {
 
 
 
-
 /* main content */
 .main-content {
-	/*float: left;
-	width: 77%;
-	padding: 0 0 30px;*/
 }
 
 
-/* Global Nav */
-
-
-.global-nav,
-.elsewhere,
-.about {
-	width: 33.3%;
-	float: left;
-	background-color: #353738;
-	min-height: 200px;
+/* Work */
+#about h4+h5{
+	display: block;
+	width: 150px;
 }
 
-.global-nav .contact {
-	margin: 10px 0 0;
-}
 
 /* Portfolio */
 .portfolio {
@@ -234,6 +209,19 @@ footer ul {
 footer address {
 	clear: both;
 	padding: 40px 0 0;
+}
+
+footer .global-nav,
+footer .elsewhere,
+footer .about {
+	width: 33.3%;
+	float: left;
+	background-color: #353738;
+	min-height: 200px;
+}
+
+footer .global-nav .contact {
+	margin: 10px 0 0;
 }
 
 @media all and (max-width: 600px) {

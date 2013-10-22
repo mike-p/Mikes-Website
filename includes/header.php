@@ -8,4 +8,4 @@
 		<header>
 			<p>A bit about <span>...</span></p>
 			<?php include 'includes/nav.php' ?>
-		</header>		
+		</header>	
