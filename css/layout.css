@@ -4,14 +4,11 @@ body {
 	color: #353738;
 	line-height: 110%;
 	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
 }
 
 body .inner-body {
-	width: 80%;
-	max-width: 760px;
-	margin: 0 auto;
-	
-	
+			
 	
 }
 
@@ -37,7 +34,7 @@ h2 {
 }
 
 h3 {
-	font-family: 'Droid Serif', serif;
+	font-family: 'Gafata', serif;
 	font-size: 26px;
 
 }
@@ -45,12 +42,11 @@ h3 {
 h4 {
 	font-family:'Scada', sans-serif;
 	font-size: 30px;
-	border-bottom: 3px solid #353738;
     line-height: 38px;
     padding-bottom: 3px;
     display: inline-block;
     letter-spacing:1px;
-    margin: 20px 0 20px;
+    margin: 20px 0 10px;
  
 	
 }
@@ -61,9 +57,9 @@ h4 span {
 }
 
 h5 {
-	font-family:'Scada', sans-serif;
+	font-family:'Gafata', sans-serif;
 	font-size: 13px;
-	border-bottom: 3px solid #999;
+	/*border-bottom: 3px solid #999;*/
 	line-height: 150%;
 	padding-bottom: 3px;
 	display: inline-block;
@@ -74,8 +70,8 @@ h5 {
 }
 
 p, ul {
-	font-size: 18px;
-	line-height: 26px;
+	font-size: 22px;
+	line-height: 150%;
 	margin-bottom: 25px;
 	font-family: 'Gilda Display', serif;
 }
@@ -131,23 +127,48 @@ header .back2home {
 }
 
 header {
-	margin-bottom: 30px;
-	border-bottom: 1px solid #DB0AAE;
-}
-
-header p {
-	margin: 0;
-	display: inline;
+	background-color: #353738;
+	padding: 50px 0 40px;
+	margin: 0 0 30px 0;	
 }
 
 header nav {
-	/*margin: 0 0 0 90px;*/
-	display: inline;
+	
 }
 
-header nav p {
-	letter-spacing: 1px;
+header nav ul {
+	width: 80%;
+	max-width: 760px;
+	margin: 0 auto;
+	height: 30px;
+	list-style-type: none;
+	border-top: 1px solid #666665;
 }
+
+header nav ul li {
+	font-family: 'Gafata', serif;
+	font-size: 14px;
+	text-transform: uppercase;
+	margin: 0;
+	letter-spacing: 1px;
+	float: left;
+	margin: -1px 0 0;
+}
+
+header ul li a {
+	color: #666665;
+	padding: 18px 0;
+	display: inline-block;
+	text-decoration: none;
+	min-width: 70px;
+}
+
+header nav ul li a.active {
+	color: #fff;
+	border-top: 1px solid #fff;
+	
+}
+
 
 header p span {
 	letter-spacing: 5px;
@@ -157,6 +178,13 @@ header p span {
 
 /* main content */
 .main-content {
+	width: 80%;
+	max-width: 760px;
+	margin: 0 auto;
+}
+
+.main-content li {
+	margin: 3px 0;
 }
 
 
@@ -203,7 +231,11 @@ footer  {
 footer p,
 footer ul {
 	font-size: 14px;
-	margin: 0 30px;
+	margin: 0 30px 0 0;
+}
+
+footer ul {
+	margin-left: 10px;
 }
 
 footer address {
@@ -216,7 +248,7 @@ footer .elsewhere,
 footer .about {
 	width: 33.3%;
 	float: left;
-	background-color: #353738;
+	/*background-color: #353738;*/
 	min-height: 200px;
 }
 

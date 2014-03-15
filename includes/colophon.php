@@ -4,7 +4,7 @@
 			
 			
 			<address class="vcard">
-			<p>Copyright &copy; 2013 <a href="http://mike-p.co.uk/" class="url" rel="me">Mike Smith</a>.</p> 
+			<p>Copyright &copy; 2014 <a href="http://mike-p.co.uk/" class="url" rel="me">Mike Smith</a>.</p> 
 			<p><a href="mailto:hello@mike-p.co.uk" class="email fn">Mike Smith</a> is a <span class="role">business analyst</span> living in <span class="adr"><span class="locality">London</span>, <span class="country-name">England</span></span>.
 			</p>
 			</address>

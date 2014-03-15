@@ -1,4 +1,5 @@
 <meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Gafata' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Scada|Gilda+Display' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/layout.css?v=1">

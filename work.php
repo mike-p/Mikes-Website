@@ -12,7 +12,7 @@
 		<div class="main-content" role="main">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			<h4>Which?</h4>
-			<p>I am currently working on various major updates to the reviews section of the website (re-designing the whole stack, UX experience and content...)</p>
+			<p>I am currently working on various major updates to the reviews section of the website (re-designing the whole stack, UX experience, content and new features)</p>
 			
 			<h4>Zoocha</h4>
 			<p>I co-founded Zoocha in 2009 with the aim for it to become the leading Drupal development agency in the UK.  Within 3 years we built up a client base that includes Argos, Boden, Debenhams, Gamesworkshop, Mydex, Oceans Rattan Furniture and Tesco to name but a few and completed a diverse range of projects (e-commerce, property portals to Facebook apps).</p>
@@ -20,9 +20,9 @@
 				<li><a href="http://argos.co.uk" rel="nofollow" target="_blank"><img src="i/argos.png" alt="Argos" /></a></li>
 				<li><a href="http://boden.co.uk" rel="nofollow" target="_blank"><img src="i/boden.gif" alt="Boden" /></a></li>
 				<li><a href="http://countryside.co.uk" rel="nofollow" target="_blank"><img src="i/countryside.png" alt="Countryside" /></a></li>
-				<li><a href="http://hotelswaps.jpg" rel="nofollow" target="_blank"><img src="i/hotelswaps.jpg" alt="HotelSwaps" /></a></li>
+				<li><a href="http://hotelswaps.com" rel="nofollow" target="_blank"><img src="i/hotelswaps.jpg" alt="HotelSwaps" /></a></li>
 				<li><a href="http://multiyork.co.uk" rel="nofollow" target="_blank"><img src="i/multiyork.jpg" alt="Multiyork" /></a></li>
-				<li><a href="http://multiyork.co.uk" rel="nofollow" target="_blank"><img src="i/oceans.png" alt="Oceans Rattan Furniture" /></a></li>
+				<li><a href="http://oceansrattanfurniture.com/" rel="nofollow" target="_blank"><img src="i/oceans.png" alt="Oceans Rattan Furniture" /></a></li>
 			</ul>
 			
 			<p class="clearfix">At Zoocha I was the Operations Director which covered the day to day running of the business and managing all the projects.  I also worked on the technical scoping aspects of the projects and identifying relevant strategies.</p>

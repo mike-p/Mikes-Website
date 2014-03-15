@@ -13,26 +13,24 @@
 			
 			<h4>Agile Business Analyst</h4>
 			<ul>
-				<li>Drive scoping and requirement gathering; understanding the key deliverables and clearly communicating with stakeholders.</li>
-				<li>Facilitation of interactive workshops to gather requirements successfully.</li>
-				<li>The key point of contact for project scope and deliverables.</li>
-				<li>Backlog grooming</li>
-				<li>User Story writing, acceptance criteria and all things Agile (scrum)</li>
+				<li>Clear and concise requirement gathering and documentation</li>
+				<li>The key point of contact for project scope and deliverables</li>
+				<li>Maintaining an organised product backlog</li>
+				<li>User story writing, acceptance criteria and all things Agile (SCRUM)</li>
 				<li>BDD with Given, When, Then scenarios</li>
 			</ul>
 			<h4>Strengths</h4>
 			<ul>
 				<li>Change leader; initiate, manage and deliver change.</li>
 				<li>Experienced at creating documentation in a relevant medium and using terminology required for the target audience.</li>
-				<li>Highly skilled at mentoring junior developers and designers and how to meet their objectives and progress.</li>
-				<li>Experience in both working and leading in Agile and Waterfall approaches.</li>
+				<li>Highly skilled at mentoring fellow BA's</li>
 			</ul>
-			<h4>Key Achievements</h4>
+			<!--<h4>Key Achievements</h4>
 			<ul>
 				<li>Successfully grew Zoocha from ground up to 20 employees in 3 years; funded by retained income; clients include Argos, iNTERTAIN, Multiyork, Mydex.</li>
 				<li>Responsible for programme planning including resource allocation, budget and all areas of project delivery.</li>
 				<li>Created vibrant culture to "exceed expectations" and strive to be the best.</li>
-			</ul>
+			</ul>-->
 			<h4>Qualifications</h4>
 			<ul>
 				<li>PRINCE2 Practitioner (2012) Candidate number: P2R/869563 - QA (<a href="http://www.apmg-international.com/SCRQuery.aspx?exam=p2">APMG</a>)</li>
