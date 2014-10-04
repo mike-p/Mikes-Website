@@ -30,7 +30,7 @@
 			<h4>Sorriso</h4>
 			<p>I worked at Sorriso for a year in between my trips to South America and West Africa.  I was brought in to utilise my experience with Telecoms and building web applications and was responsible for building out a universal online billing application.</p>
 			
-			<h4>RI3K (Quarlyst)</h4>
+			<h4>RI3K (Qatarlyst)</h4>
 			<p>RI3K provide an online trading service for the global insurance and reinsurance industry.  I was a lead Interface Developer and introduced front end standards across the various platforms and helped mentor junior developers.</p>
 						
 			<h4>Oracle</h4>
