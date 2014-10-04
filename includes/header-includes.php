@@ -13,3 +13,4 @@
 <!--[if lt IE 9]>
 <script src="/js/html5shiv.js"></script>
 <![endif]-->
+<link rel="alternate" hreflang="x-default" href="http://mike-p.co.uk/" />

@@ -132,9 +132,6 @@ header {
 	margin: 0 0 30px 0;	
 }
 
-header nav {
-	
-}
 
 header nav ul {
 	width: 80%;
@@ -226,6 +223,8 @@ footer  {
 	width: 80%;
 	max-width: 760px;
 	margin: 20px auto;
+	background-color: rgba(128, 128, 128, 0.01);
+	
 }
 
 footer p,
@@ -262,16 +261,18 @@ footer .global-nav .contact {
 	}
 	
 	body .inner-body {
-		width: 90%;
+		/*width: 90%;*/
 	}
 	
 	.main-content {
 		width: auto;
 		float: none;
+		margin: 0 10px;
 	}
 	
 	header {
-		padding-bottom: 10px;
+		padding: 0;
+		margin: 0;
 	}
 	
 	header .jump2nav {
@@ -289,13 +290,41 @@ footer .global-nav .contact {
 		margin-top: 60px;
 	}
 	
+	header nav ul {
+		width: auto;
+		margin: 0 ;
+		padding: 0 10px;
+		height: auto;
+		list-style-type: none;
+	}
+	
+	header nav ul li {
+		float: none;
+	}
+	
+	header nav ul li a {
+		padding: 2px 0;
+	}
+	
 	.global-nav {
-    	width: auto;
+    		
+    }
+    
+    footer  {
+    	padding: 0 10px 10px;
+    	width: 100%;
+    	margin: 0;
+    }
+    
+    footer .global-nav,
+    footer .elsewhere,
+    footer .about {
+    	width: 90%%;
     	float: none;
-    	margin: 30px 0 0;
     	border: none;
     	border-top: 1px solid #DEDEDE;
-    	
-    }
+    	min-height: 0;
+    	margin: 15px 0 0;
+	
  
 }

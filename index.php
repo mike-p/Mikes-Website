@@ -8,10 +8,20 @@
 </head>
 <body>
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<header>
+			<nav>
+				<ul>
+				<li><a class="active" href="/">Home</a></li>
+				<li><a href="about" title="My core skills">About</a></li> 
+				<li><a href="work" title="A bit about my work history">Work</a></li>
+				<li><a href="interests" title="Some of my interests">Fun</a> </li>
+				<li><a href="contact" title="Lets talk">Lets Talk</a></li>
+				</ul> 
+			</nav>
+		</header>
 		<div class="main-content" role="main">
 			<h4>Who?</h4>
-			<p>My name is Mike Smith and I am an experienced e-commerce <strong>Agile Business Analyst</strong> working at <a href="http://which.co.uk" rel="nofollow">Which?</a>.  	
+			<p>My name is Mike Smith and I am an experienced e-commerce <strong>lead agile business analyst</strong> working at <a href="http://which.co.uk" rel="nofollow">Which?</a>.  	
 			</p>
 			<h4>About?</h4>
 			<p>I have a particular interest in <strong>web e-commerce &amp; technologies</strong>.  Recently I have been successfully using a BDD approach within a cross functional team for projects within Which?. </p>

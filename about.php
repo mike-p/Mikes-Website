@@ -8,7 +8,17 @@
 </head>
 <body id="about">
 	<div class="inner-body"> 
-		<?php include 'includes/header.php' ?>
+		<header>
+			<nav>
+				<ul>
+				<li><a href="/">Home</a></li>
+				<li><a class="active" href="about" title="My core skills">About</a></li> 
+				<li><a href="work" title="A bit about my work history">Work</a></li>
+				<li><a href="interests" title="Some of my interests">Fun</a> </li>
+				<li><a  href="contact" title="Lets talk">Lets Talk</a></li>
+				</ul> 
+			</nav>
+		</header>
 		<div class="main-content" role="main">
 			
 			<h4>Agile Business Analyst</h4>
@@ -38,15 +48,14 @@
 			</ul>
 			<h4>Technical Skills</h4>
 			<ul>
-			<li>BDD (inc cucumber)</li>
+			<li>BDD (inc gherkin)</li>
 			<li>Hand coded HTML 4/5, CSS, JS</li>
 			<li>Drupal &amp; many modules</li>
 			<li>XML/XSL</li>
-			<li>ASP, .NET, PHP, Java/Scala Environments</li>
+			<li>Experience in ASP, .NET, PHP, Java/Scala, Ruby environments</li>
 			<li>Git(hub)/SVN</li>
 			<li>Mac/PC literate</li>
 			<li>Google Docs/Open Office/MS Office</li>
-			<li>Basic UML</li>
 			<li>Test Director/Mantis/Bugzilla</li>
 			<li>Google Analytics &amp; Webmaster Tools</li>
 			<li>Jira, Pivotal tracker, Basecamp</li>

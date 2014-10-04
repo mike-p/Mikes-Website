@@ -8,7 +8,17 @@
 </head>
 <body id="work">
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<header>
+				<nav>
+				<ul>
+				<li><a href="/">Home</a></li>
+				<li><a href="about" title="My core skills">About</a></li> 
+				<li><a class="active" href="work" title="A bit about my work history">Work</a></li>
+				<li><a href="interests" title="Some of my interests">Fun</a> </li>
+				<li><a href="contact" title="Lets talk">Lets Talk</a></li>
+				</ul> 
+			</nav>
+		</header>
 		<div class="main-content" role="main">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			<h4>Which?</h4>

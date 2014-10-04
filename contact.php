@@ -8,7 +8,17 @@
 </head>
 <body>
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		 <header>
+		 	<nav>
+		 		<ul>
+		 		<li><a href="/">Home</a></li>
+		 		<li><a href="about" title="My core skills">About</a></li> 
+		 		<li><a href="work" title="A bit about my work history">Work</a></li>
+		 		<li><a href="interests" title="Some of my interests">Fun</a> </li>
+		 		<li><a class="active" href="contact" title="Lets talk">Lets Talk</a></li>
+		 		</ul> 
+		 	</nav>
+		 </header>
 		<div class="main-content" role="main">
 			<h4>Contact Me</h4>
 			<p>If you would like to discuss job opportunities or get a copy of my CV please email me at <a href="mailto:hello@mike-p.co.uk">hello@mike-p.co.uk</a> and we can discuss.</p>
