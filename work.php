@@ -22,7 +22,7 @@
 		<div class="main-content" role="main">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			<h4>Which?</h4>
-			<p>I am currently working on various major updates to the reviews section of the website (re-designing the whole stack, UX experience, content and new features)</p>
+			<p>I am currently working on various major updates to the reviews area of the main website.  Working in a cross functionality SCRUM team we are re-writing the whole stack. </p>
 			
 			<h4>Zoocha</h4>
 			<p>I co-founded Zoocha in 2009 with the aim for it to become the leading Drupal development agency in the UK.  Within 3 years we built up a client base that includes Argos, Boden, Debenhams, Gamesworkshop, Mydex, Oceans Rattan Furniture and Tesco to name but a few and completed a diverse range of projects (e-commerce, property portals to Facebook apps).</p>
@@ -38,7 +38,7 @@
 			<p class="clearfix">At Zoocha I was the Operations Director which covered the day to day running of the business and managing all the projects.  I also worked on the technical scoping aspects of the projects and identifying relevant strategies.</p>
 			
 			<h4>Sorriso</h4>
-			<p>I worked at Sorriso for a year in between my trips to South America and West Africa.  I was brought in to utilise my experience with Telecoms and building web applications and was responsible for building out a universal online billing application.</p>
+			<p>I worked at Sorriso for a year in between my trips to South America and West Africa.  I was brought in to utilise my experience with Telecoms and building web applications and was responsible for building out the front-end of a universal online billing application.</p>
 			
 			<h4>RI3K (Qatarlyst)</h4>
 			<p>RI3K provide an online trading service for the global insurance and reinsurance industry.  I was a lead Interface Developer and introduced front end standards across the various platforms and helped mentor junior developers.</p>
