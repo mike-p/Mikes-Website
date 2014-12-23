@@ -131,10 +131,16 @@ header ul li a {
 	min-width: 70px;
 }
 
-header nav ul li a.active {
+header nav ul li a.active,
+header nav ul li a.active:hover {
 	color: #fff;
+	border-top: 1px solid #db0aae;
+	padding-top: 17px;
+}
+
+header nav ul li a:hover {
 	border-top: 1px solid #fff;
-	
+	padding-top: 17px;
 }
 
 header p span {
@@ -205,10 +211,15 @@ footer ul {
 
 footer ul {
 	list-style-type: none;
-	overflow: auto;
 	margin-bottom: 10px;
+	flex-direction: row;
+	display: flex;
+}
+
+footer ul li {
 
 }
+
 
 footer address {
 	clear: both;
@@ -221,7 +232,7 @@ footer .elsewhere {
 
 footer .global-nav li,
 footer .elsewhere li {
-	float: left;
+	/*float: left;*/
 	margin-right: 5px;
 }
 
@@ -305,13 +316,14 @@ a.google {
 		float: none;
 	}
 	
-	header nav ul li a {
+	header nav ul li a,
+	header nav ul li a.active,
+	header nav ul li a:hover,
+	header nav ul li a.active:hover {
 		padding: 2px 0;
 	}
 	
-	.global-nav {
-    		
-    }
+
     
     footer  {
     	padding: 0 10px 10px;
