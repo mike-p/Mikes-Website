@@ -22,8 +22,6 @@
 		<div class="main-content" role="main">
 			<h4>Contact Me</h4>
 			<p>If you would like to discuss job opportunities or get a copy of my CV please email me at <a href="mailto:hello@mike-p.co.uk">hello@mike-p.co.uk</a> and we can discuss.</p>
-			<h4>About</h4>
-			<p>I hand coded this site from scratch.  The design will get better and there should be a blog on its way.</p>
 		</div>
 	</div>
 	<footer>

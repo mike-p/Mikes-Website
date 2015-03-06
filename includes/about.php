@@ -5,10 +5,10 @@
 <div class="elsewhere">
 		<h5>Elsewhere on the WWW</h5>
 		<ul>
-			<li><a rel="nofollow" href="http://www.linkedin.com/in/mikepfsmith">LinkedIn</a></li>
-			<li><a rel="nofollow" href="http://twitter.com/mike_p">Twitter</a></li>
-			<li><a rel="nofollow" href="http://www.flickr.com/photos/mike-p/">Flickr</a></li>
-			<li><a rel="nofollow" href="https://plus.google.com/109525103062590269831?rel=author">Google +</a></li>
+			<li><a class="linkedin" rel="nofollow" href="http://www.linkedin.com/in/mikepfsmith">LinkedIn</a></li>
+			<li><a class="twitter" rel="nofollow" href="http://twitter.com/mike_p">Twitter</a></li>
+			<li><a class="flickr" rel="nofollow" href="http://www.flickr.com/photos/mike-p/">Flickr</a></li>
+			<li><a class="google" rel="nofollow" href="https://plus.google.com/109525103062590269831?rel=author">Google +</a></li>
 		</ul>
 </div>
 		

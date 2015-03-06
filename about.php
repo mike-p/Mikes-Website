@@ -15,33 +15,36 @@
 				<li><a class="active" href="about" title="My core skills">About</a></li> 
 				<li><a href="work" title="A bit about my work history">Work</a></li>
 				<li><a href="interests" title="Some of my interests">Fun</a> </li>
-				<li><a  href="contact" title="Lets talk">Lets Talk</a></li>
+				<li><a href="contact" title="Lets talk">Lets Talk</a></li>
 				</ul> 
 			</nav>
 		</header>
 		<div class="main-content" role="main">
+<<<<<<< HEAD
 			
 			<h4>Lead Digital Business Analyst</h4>
+=======
+			<h4>Lead Business Analyst</h4>
+>>>>>>> origin/master
 			<ul>
 				<li>Clear and concise requirement gathering and documentation</li>
 				<li>The key point of contact for project scope and deliverables</li>
 				<li>Maintaining an organised product backlog</li>
 				<li>User story writing, acceptance criteria and all things Agile (SCRUM)</li>
-				<li>BDD with Given, When, Then scenarios</li>
+				<li>BDD with Gherkin</li>
 			</ul>
-			<h4>Strengths</h4>
+			<h4>Leadership</h4>
 			<ul>
 				<li>Change leader; initiate, manage and deliver change.</li>
+<<<<<<< HEAD
 				<li>Experienced at creating documentation in a relevant medium and using terminology required for the target audience.</li>
 				<li>Highly skilled at mentoring fellow BA's</li>
 				<li>Defining and shaping the BA practice within digital at Which?</li>
+=======
+				<li>Collaborate closely with both development and business teams to deliver new features</li>
+				<li>Highly skilled at mentoring fellow BA's and helping with their career progression</li>
+>>>>>>> origin/master
 			</ul>
-			<!--<h4>Key Achievements</h4>
-			<ul>
-				<li>Successfully grew Zoocha from ground up to 20 employees in 3 years; funded by retained income; clients include Argos, iNTERTAIN, Multiyork, Mydex.</li>
-				<li>Responsible for programme planning including resource allocation, budget and all areas of project delivery.</li>
-				<li>Created vibrant culture to "exceed expectations" and strive to be the best.</li>
-			</ul>-->
 			<h4>Qualifications</h4>
 			<ul>
 				<li>PRINCE2 Practitioner (2012) Candidate number: P2R/869563 - QA (<a href="http://www.apmg-international.com/SCRQuery.aspx?exam=p2">APMG</a>)</li>
