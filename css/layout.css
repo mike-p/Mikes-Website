@@ -1,11 +1,12 @@
 /* Global styles */
 body {
-	font-family: helvetica, sans-serif;
+	font-family: 'Raleway', helvetica, sans-serif;
 	font-size: 16px;
-	color: #353738;
+	color: #d8d8d7;
 	line-height: 110%;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
+	background-color: #353738;
 }
 
 h1,
@@ -16,7 +17,6 @@ h4 {
 }
 
 h1 {
-	font-family:'Voces', cursive;
 	font-size: 40px;
 }
 	
@@ -26,18 +26,17 @@ h2 {
 }
 
 h3 {
-	font-family: 'Gafata', serif;
 	font-size: 26px;
 }
 
 h4 {
-	font-family:'Scada', sans-serif;
 	font-size: 30px;
     line-height: 38px;
     padding-bottom: 3px;
     display: inline-block;
     letter-spacing:1px;
     margin: 20px 0 10px;	
+    color: #fff;
 }
 
 h4 span {
@@ -46,7 +45,6 @@ h4 span {
 }
 
 h5 {
-	font-family:'Gafata', sans-serif;
 	font-size: 13px;
 	line-height: 150%;
 	padding-bottom: 3px;
@@ -58,8 +56,7 @@ h5 {
 p, ul {
 	font-size: 22px;
 	line-height: 150%;
-	margin-bottom: 25px;
-	font-family: 'Gilda Display', serif;
+	margin-bottom: 35px;
 }
 
 
@@ -69,7 +66,7 @@ ul {
 }
 
 a {
-	color: #999;	
+	color: #fff;	
 }
 
 a:hover {
@@ -99,7 +96,6 @@ header .global-nav a.active {
 
 /* header */
 header {
-	background-color: #353738;
 	padding: 50px 0 40px;
 	margin: 0 0 30px 0;	
 }
@@ -114,7 +110,6 @@ header nav ul {
 }
 
 header nav ul li {
-	font-family: 'Gafata', serif;
 	font-size: 14px;
 	text-transform: uppercase;
 	margin: 0;
@@ -124,7 +119,6 @@ header nav ul li {
 }
 
 header ul li a {
-	color: #666665;
 	padding: 18px 0;
 	display: inline-block;
 	text-decoration: none;
@@ -197,7 +191,7 @@ footer  {
 	clear: both;
 	width: 80%;
 	max-width: 760px;
-	margin: 70px auto 0;
+	margin: 90px auto 0;
 	background-color: rgba(128, 128, 128, 0.1);
 	
 }
@@ -334,7 +328,7 @@ a.google {
     footer .global-nav,
     footer .elsewhere,
     footer .about {
-    	width: 90%%;
+    	width: 90%;
     	float: none;
     	border: none;
     	

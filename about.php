@@ -5,7 +5,7 @@
 	<link rel="prev" title="home" href="http://mike-p.co.uk" />
 	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
 	<title>Skills |  Mike Smith | Senior digital product manager for LEGO.com</title>
-</head>
+</head> 
 <body id="about">
 	<div class="inner-body"> 
 		<header>
@@ -21,47 +21,16 @@
 		</header>
 		<div class="main-content" role="main">
 			
-			<h4>Lead Digital Business Analyst</h4>
+			<h4>A what?</h4>
 
 
-			<ul>
-				<li>Clear and concise requirement gathering and documentation</li>
-				<li>The key point of contact for project scope and deliverables</li>
-				<li>Maintaining an organised product backlog</li>
-				<li>User story writing, acceptance criteria and all things Agile (SCRUM)</li>
-				<li>BDD with Gherkin</li>
-			</ul>
-			<h4>Leadership</h4>
-			<ul>
-				<li>Change leader; initiate, manage and deliver change.</li>
-
-				<li>Experienced at creating documentation in a relevant medium and using terminology required for the target audience.</li>
-				<li>Highly skilled at mentoring fellow BA's</li>
-				<li>Defining and shaping the BA practice within digital at Which?</li>
-
-				<li>Collaborate closely with both development and business teams to deliver new features</li>
-				<li>Highly skilled at mentoring fellow BA's and helping with their career progression</li>
-
-			</ul>
-			<h4>Qualifications</h4>
-			<ul>
-				<li>PRINCE2 Practitioner (2012) Candidate number: P2R/869563 - QA (<a href="http://www.apmg-international.com/SCRQuery.aspx?exam=p2">APMG</a>)</li>
-				<li>BSc (Hons) Computing and Management – 2:1, Bradford University</li>
-			</ul>
-			<h4>Technical Skills</h4>
-			<ul>
-			<li>BDD (inc gherkin)</li>
-			<li>Hand coded HTML 4/5, CSS, JS</li>
-			<li>Drupal &amp; many modules</li>
-			<li>XML/XSL</li>
-			<li>Experience in ASP, .NET, PHP, Java/Scala, Ruby environments</li>
-			<li>Git(hub)/SVN</li>
-			<li>Mac/PC literate</li>
-			<li>Google Docs/Open Office/MS Office</li>
-			<li>Test Director/Mantis/Bugzilla</li>
-			<li>Google Analytics &amp; Webmaster Tools</li>
-			<li>Jira, Pivotal tracker, Basecamp</li>
-			</ul>
+			<p>This is where people speak in the third person and drop as many buzzwords in as possible (<strong>digital transformation, leadership, innovation</strong> blah blah blah)</p>
+			
+			<p>....</p>
+			
+			<p>.
+			
+			<p>I work with people in a <strong>polite</strong> manner delivering interesting and hopefully useful (and maybe fun) products.</p>
 			
 		</div>
 	</div>

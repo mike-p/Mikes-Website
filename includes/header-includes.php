@@ -1,7 +1,6 @@
 <meta charset="utf-8">
-<link href="http://fonts.googleapis.com/css?family=Gafata" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=Scada%7cGilda+Display" rel="stylesheet" type="text/css">
-<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><link rel="stylesheet" type="text/css" href="css/reset.css">
 <link rel="stylesheet" type="text/css" href="css/layout.css?v=1">
 <meta name="description" content="Lead digital busines analyst working at Which? in London">
 

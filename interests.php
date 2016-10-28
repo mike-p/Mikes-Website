@@ -20,11 +20,7 @@
 			</nav>
 		</header>
 		<div class="main-content" role="main">
-			<h4>Mystery Dining</h4>
-			<p>
-			In the evenings I don my spy uniform and become a mystery dinner.  This involves visiting well known restaurants and sitting down to a lovely meal; after which a report is written up on all aspects of the restaurant - service, appearance, food, atmosphere and whether would personally you recommend it.  I generally do this twice a month but unfortunately I can’t tell you where or when...otherwise it wouldn't be a mystery...</p>
-			
-			<h4>Cooking</h4>
+						<h4>Cooking</h4>
 			<p>Whilst not a very good cook I do very much enjoy spending the time trying to perfect a green curry and various other forms of spicy food.</p>
 			
 			<h4>Snow</h4>

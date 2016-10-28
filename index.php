@@ -22,16 +22,15 @@
 			</nav>
 		</header>
 		<div class="main-content" role="main">
-			<h4>Who?</h4>
-
+			<h4>Hi!</h4>
+			
 			<p>My name is Mike Smith and I am an experienced digital <strong>product manager</strong> working at <a href="http://lego.com" rel="nofollow">LEGO.com</a>.  	
 
 			
 			</p>
-			<h4>About?</h4>
-			<p>I have a particular interest in <strong>web technologies</strong> and iterative development.  </p>
-			<h4>Where?</h4>
-			<p>I have been involved in the interweb for the last 12 years at some great <a href="/work">places</a> and in my spare time have a couple of  <a href="/interests">interests</a> to keep me busy.</p>
+		
+			
+			<p>I have been involved in the interweb for the last 15 years at some great <a href="/work">places</a> and in my spare time have a couple of  <a href="/interests">interests</a> to keep me busy.</p>
 		</div>
 		<footer>
 			<nav id="nav" class="global-nav">
