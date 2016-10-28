@@ -4,7 +4,7 @@
 	<?php include 'includes/header-includes.php' ?>
 	<link rel="prev" title="skills" href="http://mike-p.co.uk/skills" />
 	<link rel="next" title="interests" href="http://mike-p.co.uk/interests" />
-	<title>Work | Mike Smith | Lead Digital Business Analyst in London</title>
+	<title>Work | Mike Smith | Senior digital product manager for LEGO.com</title>
 </head>
 <body id="work">
 	<div class="inner-body">
@@ -22,13 +22,11 @@
 		<div class="main-content" role="main">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			<h4>Which?</h4>
-<<<<<<< HEAD
+
 			<p>I am currently working on a complete re-write of the reviews section of the website (re-designing the whole stack, UX experience, content and new features).</p>
 			
 			<p>When that isn't keeping me busy I lead the BA practice within Digital and help my fellow BA's and work on their career development.</p>
-=======
-			<p>I am currently working on various major updates to the reviews area of the main website.  Working in a cross functionality SCRUM team we are re-writing the whole stack. </p>
->>>>>>> origin/master
+
 			
 			<h4>Zoocha</h4>
 			<p>I co-founded Zoocha in 2009 with the aim for it to become the leading Drupal development agency in the UK.  Within 3 years we built up a client base that includes Argos, Boden, Debenhams, Gamesworkshop, Mydex, Oceans Rattan Furniture and Tesco to name but a few and completed a diverse range of projects (e-commerce, property portals to Facebook apps).</p>

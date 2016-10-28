@@ -4,7 +4,7 @@
 	<?php include 'includes/header-includes.php' ?>
 	<link rel="prev" title="home" href="http://mike-p.co.uk" />
 	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
-	<title>Skills |  Mike Smith | Lead Digital Business Analyst in London</title>
+	<title>Skills |  Mike Smith | Senior digital product manager for LEGO.com</title>
 </head>
 <body id="about">
 	<div class="inner-body"> 
@@ -20,12 +20,10 @@
 			</nav>
 		</header>
 		<div class="main-content" role="main">
-<<<<<<< HEAD
 			
 			<h4>Lead Digital Business Analyst</h4>
-=======
-			<h4>Lead Business Analyst</h4>
->>>>>>> origin/master
+
+
 			<ul>
 				<li>Clear and concise requirement gathering and documentation</li>
 				<li>The key point of contact for project scope and deliverables</li>
@@ -36,14 +34,14 @@
 			<h4>Leadership</h4>
 			<ul>
 				<li>Change leader; initiate, manage and deliver change.</li>
-<<<<<<< HEAD
+
 				<li>Experienced at creating documentation in a relevant medium and using terminology required for the target audience.</li>
 				<li>Highly skilled at mentoring fellow BA's</li>
 				<li>Defining and shaping the BA practice within digital at Which?</li>
-=======
+
 				<li>Collaborate closely with both development and business teams to deliver new features</li>
 				<li>Highly skilled at mentoring fellow BA's and helping with their career progression</li>
->>>>>>> origin/master
+
 			</ul>
 			<h4>Qualifications</h4>
 			<ul>
