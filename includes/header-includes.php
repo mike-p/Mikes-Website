@@ -1,8 +1,9 @@
 <meta charset="utf-8">
 
-<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"><link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/layout.css?v=2">
-<meta name="description" content="Lead digital busines analyst working at Which? in London">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Raleway:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="css/layout.css?v=3">
+<meta name="description" content="Head of Product, London, UK">
 
 <meta name="viewport" content="width=device-width" />
 <link rel="author" href="/contact" title="About the author" />
@@ -14,4 +15,3 @@
 <script src="/js/html5shiv.js"></script>
 <![endif]-->
 <link rel="alternate" hreflang="x-default" href="http://mike-p.co.uk/" />
-
