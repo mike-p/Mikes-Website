@@ -2,7 +2,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Raleway:wght@100&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/reset.css">
-<link rel="stylesheet" type="text/css" href="css/layout.css?v=3">
+<link rel="stylesheet" type="text/css" href="css/layout.css?v=4">
 <meta name="description" content="Head of Product, London, UK">
 
 <meta name="viewport" content="width=device-width" />

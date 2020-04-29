@@ -22,7 +22,8 @@ h1 {
 	
 h2 {
 	font-size: 30px;
-	font-weight: bold;
+	padding-bottom: 10px;
+	color: #999999;
 }
 
 h3 {
@@ -36,7 +37,7 @@ h4 {
     padding-bottom: 10px;
     display: inline-block;
     letter-spacing:1px;
-    margin: 20px 0 10px;	
+    margin: 20px 0 0;	
 }
 
 h4 span {
@@ -63,6 +64,10 @@ p, ul {
 ul {
 	list-style-type: disc;
 	margin-left: 20px;
+}
+
+ul ul {
+	list-style-type: '- ';
 }
 
 
@@ -97,17 +102,19 @@ header .global-nav a.active {
 /* header */
 header {
 	padding: 50px 0 40px;
-	margin: 0 0 30px 0;	
+	margin: 0 auto 0;	
+	width: 80%;
+	max-width: 760px;
 }
 
 header nav ul {
-	width: 80%;
 	max-width: 760px;
 	margin: 0 auto;
-	height: 30px;
 	list-style-type: none;
 	border-top: 1px solid #666665;
 	font-family: 'Raleway', helvetica, serif;
+	font-weight: bold;
+	background-color: rgba(128, 128, 128, 0.1);
 
 }
 
@@ -116,7 +123,7 @@ header nav ul li {
 	text-transform: uppercase;
 	margin: 0;
 	letter-spacing: 1px;
-	float: left;
+	display: inline-block;
 	margin: -1px 0 0;
 }
 
@@ -252,18 +259,19 @@ a.twitter {
 		width: 100%;
 	}
 	
-	
 	.main-content {
 		width: auto;
 		float: none;
-		margin: 0 10px;
+		margin: 50px 5px 0;
 	}
-	
+
 	header {
-		padding: 0;
-		margin: 0;
+		position: fixed;
+		top: 0;
+		width: 100%;
+		padding: 0 0 20px;
+		background-color: #000;
 	}
-	
 	header .jump2nav {
 		display: block;
 	}
@@ -274,6 +282,8 @@ a.twitter {
 		display: block;
 		width: 50px;
 	}
+
+	
 	
 	header span {
 		margin-top: 60px;
@@ -324,7 +334,7 @@ a.twitter {
 	/* this is dark */
 	body {
 		color: #d8d8d7;
-		background-color: #353738;
+		background-color: #000;
 	  }
 	  a {
 		color: #fff;	
