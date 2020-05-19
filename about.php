@@ -66,6 +66,7 @@
 
 			<h3>Previous roles (2002 - 2009)</h3>
 			<p>Engineering and business analyst roles at Tesco.com, Oracle & RI3K</p>
+			<p>New hosting</p>
 
 
 		</div>
