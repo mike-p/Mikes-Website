@@ -5,7 +5,7 @@
 	<?php include 'includes/header-includes.php' ?>
 	<link rel="prev" title="home" href="http://mike-p.co.uk" />
 	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
-	<title>Skills | Mike Smith | Senior digital product manager for LEGO.com</title>
+	<title>Skills | Mike Smith | Head of Product</title>
 </head>
 
 <body id="about">
@@ -66,7 +66,7 @@
 
 			<h3>Previous roles (2002 - 2009)</h3>
 			<p>Engineering and business analyst roles at Tesco.com, Oracle & RI3K</p>
-			<p>New hosting</p>
+
 
 
 		</div>
