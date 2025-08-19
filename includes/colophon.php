@@ -5,7 +5,7 @@
 			
 			<address class="vcard">
 			<p>Copyright &copy; <?php echo date('Y'); ?> <a href="http://mike-p.co.uk/" class="url" rel="me">Mike Smith</a>.</p> 
-			<p><a href="mailto:hi@mike-p.co.uk" class="email fn">Mike Smith</a> is a <span class="role">product manager</span> living in <span class="adr"><span class="locality">Hertfordshire</span>, <span class="country-name">England</span></span>.
+			<p><a href="mailto:hello@mike-p.co.uk" class="email fn">Mike Smith</a> is a <span class="role">Head of product</span> living in <span class="adr"><span class="locality">Hertfordshire</span>, <span class="country-name">England</span></span>.
 			</p>
 			</address>
 			
