@@ -6,7 +6,7 @@
 	<link rel="prev" title="interests" href="http://mike-p.co.uk/interests" />
 	<link rel="next" title="home" href="http://mike-p.co.uk" />
 	<title>Contact | Mike Smith | Product Director</title>
-</head>
+</head> 
 
 <body>
 	<div class="inner-body">

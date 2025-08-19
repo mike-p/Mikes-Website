@@ -49,7 +49,6 @@
 			<?php include 'includes/about.php' ?>
 			<?php include 'includes/colophon.php' ?> 
 		</footer>
-
 	</div>
 
 </body>
