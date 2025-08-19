@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
-<?php include 'includes/analytics.php' ?>
 <head>
 	<?php include 'includes/header-includes.php' ?>
 	<link rel="prev" title="contact" href="http://mike-p.co.uk/contact" />
 	<link rel="next" title="skills" href="http://mike-p.co.uk/skills" />
 
-	<title>Home | Mike Smith | Head of product</title>
+	<title>Home | Mike Smith | Product Director</title>
 
 </head>
 <body>

@@ -4,7 +4,7 @@
 	<?php include 'includes/header-includes.php' ?>
 	<link rel="prev" title="skills" href="http://mike-p.co.uk/skills" />
 	<link rel="next" title="interests" href="http://mike-p.co.uk/interests" />
-	<title>Work | Mike Smith | Senior digital product manager for LEGO.com</title>
+	<title>Work | Mike Smith | Product Director</title>
 </head>
 <body id="work">
 	<div class="inner-body">
