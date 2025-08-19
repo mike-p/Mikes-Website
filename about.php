@@ -5,13 +5,13 @@
 	<link rel="prev" title="home" href="http://mike-p.co.uk" />
 	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
 	<title>Skills |  Mike Smith | Senior digital product manager for LEGO.com</title>
-</head> 
+</head>
 <body id="about">
 	<div class="inner-body"> 
 		<header>
 			<nav>
 				<ul>
-				<li><a href="/">Home</a></li>
+				<li><a href="/">Home </a></li>
 				<li><a class="active" href="about" title="My core skills">About</a></li> 
 				<li><a href="work" title="A bit about my work history">Work</a></li>
 				<li><a href="interests" title="Some of my interests">Fun</a> </li>
@@ -21,16 +21,9 @@
 		</header>
 		<div class="main-content" role="main">
 			
-			<h4>A what?</h4>
-
-
-			<p>This is where people speak in the third person and drop as many buzzwords in as possible (<strong>digital transformation, leadership, innovation</strong> blah blah blah)</p>
+			<h4>A Product Person</h4>
 			
-			<p>....</p>
-			
-			<p>.
-			
-			<p>I work with people in a <strong>polite</strong> manner delivering interesting and hopefully useful (and maybe fun) products.</p>
+			<p>I work with people in a <strong>polite</strong> manner delivering interesting and hopefully useful (and maybe fun) products on web and app.</p>
 			
 		</div>
 	</div>
@@ -50,5 +43,5 @@
 		<?php include 'includes/colophon.php' ?>
 	</footer>
 	
-	<?php include 'includes/analytics.php' ?></body>
+	</body>
 </html>

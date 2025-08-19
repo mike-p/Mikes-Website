@@ -11,7 +11,7 @@
 		<header>
 				<nav>
 				<ul>
-				<li><a href="/">Home</a></li>
+				<li><a href="https://experts.staging5.atheneum-dev.com/">Home</a></li>
 				<li><a href="about" title="My core skills">About</a></li> 
 				<li><a class="active" href="work" title="A bit about my work history">Work</a></li>
 				<li><a href="interests" title="Some of my interests">Fun</a> </li>
@@ -21,6 +21,15 @@
 		</header>
 		<div class="main-content" role="main">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
+			<h4>FutureLearn</h4>
+			<h5>: Group product manager</h5>
+			<p>Focusing on improving supply and the learner experience on both web and app.</p>
+
+			<h4>News UK</h4>
+			<h5>: Head of product</h5>
+			<p>Working on the <A href="newskit.co.uk">News UK design system</a> and platform</p>
+			
+			
 			<h4>LEGO.com</h4>
 			<h5>Senior product manager</h5>
 			<p>As the product manager for LEGO.com I'm involved in a whole bunch of things that I can't really reveal here.  But they are awesome.</p>
@@ -31,7 +40,7 @@
 
 			
 			<h4>Zoocha</h4>
-			<h5>Strategy director</h5>
+			<h5>Product director</h5>
 			<p>I co-founded Zoocha in 2009 with the aim for it to become the leading Drupal development agency in the UK.  Within 3 years we built up a client base that includes Argos, Boden, Debenhams, Gamesworkshop, Mydex, Oceans Rattan Furniture and Tesco to name but a few and completed a diverse range of projects (e-commerce, property portals to Facebook apps).</p>
 						
 						
@@ -59,11 +68,11 @@
 		<nav id="nav" class="global-nav">
 			<h5>A bit about me</h5>
 			<ul>
-				<li><a class="active" href="/">Home</a></li>
-				<li><a href="/skills" title="My core skills">Skills</a></li>
-				<li><a href="/work" title="A bit about my work history">Work</a></li>
-				<li><a href="/interests" title="Some of my interests">Interests</a></li>
-				<li class="contact"><a href="/contact" title="Lets chat">Lets Talk</a></li>
+				<li><a class="active" href="https://experts.staging5.atheneum-dev.com/">Home</a></li>
+				<li><a href="https://experts.staging5.atheneum-dev.com/skills" title="My core skills">Skills</a></li>
+				<li><a href="https://experts.staging5.atheneum-dev.com/work" title="A bit about my work history">Work</a></li>
+				<li><a href="https://experts.staging5.atheneum-dev.com/interests" title="Some of my interests">Interests</a></li>
+				<li class="contact"><a href="https://experts.staging5.atheneum-dev.com/contact" title="Lets chat">Lets Talk</a></li>
 			</ul>
 			
 		</nav>
