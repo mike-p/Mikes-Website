@@ -11,19 +11,15 @@
   <changefreq>weekly</changefreq>
 </url>
 <url>
+  <loc>http://mike-p.co.uk/strategy</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
   <loc>http://mike-p.co.uk/work</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
   <loc>http://mike-p.co.uk/skills</loc>
-  <changefreq>weekly</changefreq>
-</url>
-<url>
-  <loc>http://mike-p.co.uk/interests</loc>
-  <changefreq>monthly</changefreq>
-</url>
-<url>
-  <loc>http://mike-p.co.uk/contact</loc>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>

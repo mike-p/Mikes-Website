@@ -1,13 +1,5 @@
-<div class="about">
-		<h5>About this site</h5>
-		<p> This is an area where I experiment with bits of HTML and CSS.  So some things may look slightly off.</p>
-</div>
-<div class="elsewhere">
-		<h5>Elsewhere on the WWW</h5>
-		<ul>
-			<li><a class="linkedin" rel="nofollow" href="http://www.linkedin.com/in/mikepfsmith">LinkedIn</a></li>
-			<li><a class="twitter" rel="nofollow" href="http://twitter.com/mike_p">Twitter</a></li>
-			<li><a class="flickr" rel="nofollow" href="http://www.flickr.com/photos/mike-p/">Flickr</a></li>
-		</ul>
-</div>
-		
+<div class="contact-me">
+				<h4>Let's Connect!</h4>
+				<p>I'm always interested in exploring new opportunities in product leadership, AI strategy, and transformative product development.</p>
+				<p><a class="primary-cta" href="mailto:mike.p.smith@gmail.com">Get in touch by email</a> | <a class="secondary-cta" href="https://www.linkedin.com/in/mikepfsmith/" target="_blank">Connect via LinkedIn</a></p>
+			</div>
