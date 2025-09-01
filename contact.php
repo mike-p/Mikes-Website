@@ -10,16 +10,21 @@
 
 <body>
 	<div class="inner-body">
-		 <header>
-		 	<nav>
-		 		<ul>
-		 		<li><a href="/">Home</a></li>
-		 		<li><a href="about" title="My core skills">About</a></li> 
-		 		<li><a href="work" title="A bit about my work history">Work</a></li>
-		 		<li><a href="interests" title="Some of my interests">Fun</a> </li>
-		 		<li><a class="active" href="contact" title="Lets talk">Lets Talk</a></li>
-		 		</ul> 
-		 	</nav>
+		<header>
+			<div class="nav-container">
+				<div class="back-home">
+					<a href="/"><span>Mike Smith</span></a>
+				</div>
+				<nav class="site-nav" aria-label="Navigation">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="about" title="My core skills">About</a></li> 
+						<li><a href="work" title="A bit about my work history">Work</a></li>
+						<li><a href="interests" title="Some of my interests">Fun</a> </li>
+						<li><a class="active" href="contact" title="Lets talk">Lets Talk</a></li>
+						</ul> 
+		 		</nav>
+</div>
 		 </header>
 		<div class="main-content" role="main">
 			<h4>Contact Me</h4>
@@ -27,17 +32,6 @@
 		</div>
 	</div>
 	<footer>
-		<nav id="nav" class="global-nav">
-			<h5>A bit about me</h5>
-			<ul>
-				<li><a class="active" href="/">Home</a></li>
-				<li><a href="/skills" title="My core skills">Skills</a></li>
-				<li><a href="/work" title="A bit about my work history">Work</a></li>
-				<li><a href="/interests" title="Some of my interests">Interests</a></li>
-				<li class="contact"><a href="contact" title="Lets chat">Lets Talk</a></li>
-			</ul>
-
-		</nav>
 		<?php include 'includes/about.php' ?>
 		<?php include 'includes/colophon.php' ?>
 	</footer>
