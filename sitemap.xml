@@ -4,22 +4,29 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://mike-p.co.uk/</loc>
+  <loc>https://mike-p.co.uk/</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mike-p.co.uk/strategy</loc>
+  <loc>https://mike-p.co.uk/product-strategy</loc>
   <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://mike-p.co.uk/work</loc>
+  <loc>https://mike-p.co.uk/product-team-AI-vibe-coding</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>https://mike-p.co.uk/hire-me</loc>
   <changefreq>monthly</changefreq>
 </url>
 <url>
-  <loc>http://mike-p.co.uk/skills</loc>
+  <loc>https://mike-p.co.uk/work</loc>
+  <changefreq>monthly</changefreq>
+</url>
+<url>
+  <loc>https://mike-p.co.uk/skills</loc>
   <changefreq>monthly</changefreq>
 </url>
 </urlset>

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
+<html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<!--<link rel="prev" title="contact" href="http://mike-p.co.uk/contact">-->
-	<!--<link rel="next" title="skills" href="http://mike-p.co.uk/skills">-->
+	<link rel="next" title="Strategy" href="https://mike-p.co.uk/product-strategy">
 	<title>Product Leader London | AI & Growth Expert</title>
 </head>
 <body>
@@ -15,7 +14,9 @@
 				</div>
 				<nav class="site-nav" aria-label="Navigation">
 					<ul>
-						<li><a href="strategy" title="Product Strategy & Process">Product Strategy & Process</a></li> 
+						<li><a href="product-strategy" title="Product Strategy & Process">Product Strategy</a></li> 
+                        <li><a href="product-team-AI-vibe-coding" title="Vibe Coding in Product Teams">Vibe Coding</a></li> 
+						<li><a href="hire-me" title="Product Strategy & Process">How I can help!<span class="available-now">Available now!</span></a></li> 
 					</ul> 
 				</nav>	
 			</div>
@@ -26,9 +27,9 @@
 				<h1 class="title">Product leader driving growth with AI and scalable product approaches</h1>
 				<div class="intro">
 					<ul>
-						<li>Over 20 years digital experience, <strong>over 12 years</strong> in product management with a proven track record in senior leadership roles (lead/head of/director) </li>
-						<li>Expertise in the full product lifecycle, from initial '0→1' development and optimising mature products </li>
-						<li>Lead various <strong>AI initiatives</strong> - both consumer and internally facing products </li>
+						<li>Over 20 years digital experience, <strong class="marker-highlight">over 12 years</strong> in product management with a proven track record in senior leadership roles (lead/head of/director) </li>
+						<li>Expertise in the full product lifecycle, from initial <strong class="marker-highlight">'0→1' development</strong> and <strong class="marker-highlight">optimising mature</strong> products &amp; platforms</li>
+						<li>Lead various <strong class="marker-highlight">AI initiatives</strong> - both consumer and internally facing products </li>
 						<li>Proven success leading product initiatives at organisations including <a href="https://lego.com" target="_blank">LEGO</a>, <a href="http://thetimes.com" target="_blank">News UK/The Times</a>, <a href="http://which.co.uk" target="_blank">Which?</a>, <a href="http://futurelearn.com" target="_blank">FutureLearn</a>, and <a href="http://atheneum.ai" target="_blank">Atheneum</a> </li>
 					</ul>
 				</div>	
@@ -39,5 +40,6 @@
 			<?php include 'includes/colophon.php' ?>
 		</footer>
 	</div>
+	<?php include 'includes/footer-includes.php' ?>
 </body>
 </html>
