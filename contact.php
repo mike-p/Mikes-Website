@@ -3,8 +3,8 @@
 
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="interests" href="http://mike-p.co.uk/interests" />
-	<link rel="next" title="home" href="http://mike-p.co.uk" />
+	<link rel="prev" title="interests" href="https://mike-p.co.uk/interests" />
+	<link rel="next" title="home" href="https://mike-p.co.uk" />
 	<title>Contact | Mike Smith | Product Director</title>
 </head>
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
+<html lang="en" dir="ltr">
 <?php include 'includes/analytics.php' ?>
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="work" href="http://mike-p.co.uk/work" />
-	<link rel="next" title="contact" href="http://mike-p.co.uk/contact" />
+	<link rel="prev" title="work" href="https://mike-p.co.uk/work" />
+	<link rel="next" title="contact" href="https://mike-p.co.uk/contact" />
 	<title>Interests | Mike Smith | Product Director</title>
 </head>
 

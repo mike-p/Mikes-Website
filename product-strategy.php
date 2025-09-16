@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
+<html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<!--<link rel="prev" title="contact" href="http://mike-p.co.uk/contact">
-	<link rel="next" title="skills" href="http://mike-p.co.uk/skills">-->
+	<link rel="prev" title="Home" href="https://mike-p.co.uk/">
+	<link rel="next" title="Hire Me" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
 	<title>Product Strategy & Scaling Teams</title>
 </head>
 <body>
@@ -15,7 +15,10 @@
 				</div>
 				<nav class="site-nav" aria-label="Navigation">
 					<ul>
-						<li><a href="strategy" title="Product Strategy & Process" class="active">Product Strategy & Process</a></li> 
+						<li><a href="strategy" title="Product Strategy & Process" class="active">Product Strategy</a></li> 
+                        <li><a href="product-team-AI-vibe-coding" title="Vibe Coding in Product Teams">Vibe Coding</a></li> 
+						<li><a href="hire-me" title="Hire me!">How I can help!<span class="available-now">Available now!</span></a></li> 
+
 					</ul> 
 				</nav>	
 			</div>
@@ -26,14 +29,14 @@
 
                 
                 <div class="content-container">
-                    <h2 class="headline">Product Strategy</h2>
+                    <h2 class="headline" id="execution">Product Strategy</h2>
                     <p>A template to help coalesce around a product strategy (for a squad or a set of squads)</p>
                     <ul class="highlights">
                         <li><a target="_blank" href="https://mike-p-co-uk.notion.site/Product-strategy-e58119893ab345a29bc34cbfe624186e">1-pager template</a></li>
                     </ul>
                 </div>
                 <div class="content-container">
-                    <h2 class="headline">Product Review Process</h2>
+                    <h2 class="headline">Execution - Product Review Process</h2>
                     <p>A product review process as the titles suggests is a framework for shipping products that have a clear strategy, vision and measurable impact.  This is a scalable approach that can be used across squads and tribes.</p>
                     <p>This is a living document that has been used in various guises at different companies.  It is designed to be flexible and adaptable to the needs of the business.</p>
                     <p>A note of caution, I've seen these also be very disruptive and essentially cause the complete opposite of what they are designed to do.  If you are going to implement something like this, please ensure that it is a collaborative approach and not a top down mandate.</p>

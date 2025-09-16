@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
+<html lang="en" dir="ltr">
 
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="skills" href="http://mike-p.co.uk/skills" />
-	<link rel="next" title="interests" href="http://mike-p.co.uk/interests" />
-	<title>Work | Mike Smith | Product Director</title>
+	<link rel="prev" title="Hire me!" href="https://mike-p.co.uk/hire-me" />
+	<link rel="next" title="interests" href="https://mike-p.co.uk/interests" />
+	<title>Product at LEGO, News UK, Which?, FutureLearn</title>
 </head>
 
 <body id="work">
@@ -30,7 +30,11 @@
 			<div class="main-content" role="main">
 			<div class="content-container">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
-			<h2 class="sub-headline">FutureLearn - Group product manager</h2>
+			
+			<h2 class="sub-headline">Atheneum : Global Hed of product</h2>
+			<p>Bringing product thinking to Atheneum and launching our <a href="https://apps.apple.com/us/app/atheneum-hub/id1568998155"</a>first expert app</a></p>
+			
+			<h2 class="sub-headline">FutureLearn : Group product manager</h2>
 			<p>Focusing on improving supply and the learner experience on both web and app.</p>
 
 			<h2 class="sub-headline">News UK : Head of product</h2>

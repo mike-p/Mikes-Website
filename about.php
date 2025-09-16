@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" itemscope itemtype="http://schema.org/Person">
+<html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="home" href="http://mike-p.co.uk" />
-	<link rel="next" title="work" href="http://mike-p.co.uk/work" />
+	<link rel="prev" title="home" href="https://mike-p.co.uk" />
+	<link rel="next" title="work" href="https://mike-p.co.uk/work" />
 	<title>Skills |  Mike Smith | Product Director</title>
 </head>
 <body id="about">

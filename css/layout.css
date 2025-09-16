@@ -115,8 +115,20 @@ header .site-nav {
 header .site-nav ul li {
 	text-transform: uppercase;
 	font-size: 0.9rem;
-	margin: 0 0 0 20px;
+	margin: 0 0 0 10px;
+	padding: 0 0 0 10px;
 	display: inline-block;
+	border-left: 1px solid #737373;
+	line-height: 1em;
+	text-align: center;
+	vertical-align: middle;
+
+}
+
+header .site-nav ul li:first-child {
+	border: none;
+	margin-left: 0;
+	padding-left: 0;
 }
 
 header .site-nav ul li a {
@@ -124,19 +136,115 @@ header .site-nav ul li a {
 	display: inline-block;
 	text-decoration: none;
 	font-weight: 300;
+	position: relative;
+	letter-spacing: 0.025em;
+
 }
 
 header .site-nav ul li a.active {
 	color: #000;
-
 }
 
-header .site-nav ul li a:hover {
-	text-decoration: underline
+header .site-nav ul li a::after {
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background-color: currentColor;
+	transition: width 0.3s ease, left 0.3s ease;
+}
+
+header .site-nav ul li a:hover::after,
+header .site-nav ul li a:focus::after {
+	width: 100%;
+	left: 0;
 }
 
 
-/*/******************* main content /********************/
+
+header .available-now {
+	position: absolute;
+	top: -20px;
+	right: -35px;
+	font-size: 0.8rem;
+	line-height: 0.8rem;
+	background: linear-gradient(135deg, #00d4ff, #0099cc);
+	color: white;
+	padding: 4px 8px;
+	border-radius: 12px;
+	box-shadow: 0 2px 8px rgba(0, 212, 255, 0.3);
+	transform: scale(0);
+	opacity: 0;
+	animation: badgeAppear 1s ease-out 1s forwards;
+	z-index: 10;
+	width: 90px;
+	text-transform: none;
+	text-align: center;
+}
+
+header .available-now::before {
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: linear-gradient(135deg, #00d4ff, #0099cc);
+	border-radius: 14px;
+	z-index: -1;
+	opacity: 0;
+	animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Page load animation */
+@keyframes badgeAppear {
+	0% {
+		transform: scale(0) rotate(-175deg);
+		opacity: 0;
+	}
+
+	50% {
+		transform: scale(1.1) rotate(-5deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1) rotate(5deg);
+		opacity: 1;
+	}
+}
+
+/* Subtle pulse animation */
+@keyframes pulseGlow {
+
+	0%,
+	100% {
+		opacity: 0;
+		transform: scale(1);
+	}
+
+	50% {
+		opacity: 0.3;
+		transform: scale(1.05);
+	}
+}
+
+/* Hover effect on parent */
+header li:hover .available-now {
+	transform: scale(1.05);
+	box-shadow: 0 4px 12px rgba(0, 212, 255, 0.5);
+}
+
+/* Stop animations after 5 seconds */
+header .available-now.animations-ended::before {
+	animation: none;
+}
+
+
+
+/******************** main content /********************/
 .main-content {
 	max-width: 53rem;
 	margin: 0 auto;
@@ -149,6 +257,28 @@ header .site-nav ul li a:hover {
 
 .main-content a {
 	color: #000000;
+}
+
+.marker-highlight {
+	background: linear-gradient(120deg, #ffeb3b 0%, #fff176 100%);
+	background-repeat: no-repeat;
+	background-size: 0% 0.3em;
+	background-position: left 95%;
+	color: #000000;
+	font-weight: 500;
+	padding: 0 2px;
+	text-decoration: none;
+	animation: marker-draw 0.8s ease-out 1.5s forwards;
+}
+
+@keyframes marker-draw {
+	from {
+		background-size: 0% 0.3em;
+	}
+
+	to {
+		background-size: 100% 0.3em;
+	}
 }
 
 
