@@ -9,6 +9,15 @@ body {
 	background-color: #fff;
 }
 
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+	* {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
+
 p,
 ul {
 	line-height: 1.7rem;
@@ -71,11 +80,11 @@ a:visited {
 header {
 	margin: 0 auto 0;
 	background-color: #ffffffe6;
-	opacity: 0.9;
 	border-bottom: 1px solid #f2f2f2;
 	position: fixed;
 	width: 100%;
 	top: 0;
+
 }
 
 header .nav-container {
@@ -83,6 +92,7 @@ header .nav-container {
 	max-width: 1024px;
 	margin: 0 auto;
 	align-items: center;
+	height: 4rem;
 }
 
 .back-home {
@@ -91,15 +101,35 @@ header .nav-container {
 	color: #000000;
 	text-align: left;
 	vertical-align: middle;
-	width: 50px;
+	width: 30px;
 	margin: 0 0 0 20px;
 }
 
 .back-home a {
-	background: url(../i/home.png) no-repeat left center;
-	padding: 0 0 0 30px;
-	text-decoration: none;
+	display: block;
+	height: 2em;
+	color: #000;
 }
+
+.back-home a svg {
+	/*background: url(../i/home.png) no-repeat left center;*/
+	/*padding: 0 0 0 30px;*/
+	text-decoration: none;
+	transition: transform 0.3s;
+
+}
+
+
+/* Color: hsl(0 0% 45%) - muted gray */
+.back-home a:hover svg {
+	transform: scale(1.1);
+
+
+}
+
+/* Hover effects */
+
+
 
 .back-home a span {
 	display: none;
@@ -160,6 +190,28 @@ header .site-nav ul li a:hover::after,
 header .site-nav ul li a:focus::after {
 	width: 100%;
 	left: 0;
+}
+
+/* Visible focus styles for accessibility */
+*:focus-visible {
+	outline: 2px solid #000;
+	outline-offset: 2px;
+}
+
+/* Skip link styling */
+.skip-link {
+	position: absolute;
+	top: -40px;
+	left: 10px;
+	background: #000;
+	color: #fff;
+	padding: 8px 12px;
+	border-radius: 2px;
+	text-decoration: none;
+}
+
+.skip-link:focus {
+	top: 10px;
 }
 
 
@@ -306,7 +358,9 @@ header .available-now.animations-ended::before {
 .main-content .intro li {
 	line-height: 1.8rem;
 	margin: 0 0 10px;
-	padding-left: 10px;
+	/* To create hanging indent */
+	text-indent: -1.25em;
+	padding-left: 1.2em;
 }
 
 
@@ -334,6 +388,7 @@ header .available-now.animations-ended::before {
 	font-size: 1.5rem;
 	margin: 30px 0 10px;
 	color: #000000;
+	/* override margin for consistency */
 	margin: 40px 0 15px;
 }
 
@@ -367,6 +422,17 @@ header .available-now.animations-ended::before {
 	box-shadow: 0 1px 3px 0 hsl(0 0% 0% / .1), 0 1px 2px -1px hsl(0 0% 0% / .1);
 	padding: 2rem 4rem;
 	text-align: center;
+}
+
+/* Subtle hover and focus states for CTAs */
+.primary-cta:hover,
+.primary-cta:focus-visible {
+	filter: brightness(1.1);
+}
+
+.secondary-cta:hover,
+.secondary-cta:focus-visible {
+	border-color: #d0d0d0;
 }
 
 .contact-me h4 {

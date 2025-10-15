@@ -7,21 +7,7 @@
 </head>
 <body>
 	<div class="inner-body">
-		<header>
-			<div class="nav-container">
-				<div class="back-home">
-					<a href="/"><span>Mike Smith</span></a>
-				</div>
-				<nav class="site-nav" aria-label="Navigation">
-					<ul>
-						<li><a href="product-strategy" title="Product Strategy & Process" >Product Strategy</a></li>
-						<li><a href="product-team-AI-vibe-coding" title="Vibe Coding in Product Teams">Vibe Coding</a></li> 
-                        <li><a href="hire-me" title="Hire me!" class="active">How I can help!<span class="available-now">Available now!</span></a></li> 
-
-					</ul> 
-				</nav>	
-			</div>
-		</header>
+		<?php include 'includes/header.php' ?>
 		<main aria-label="Main content">
 			<div class="main-content" role="main">
 				<h1 class="title">Let's work together!</h1>

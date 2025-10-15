@@ -26,7 +26,7 @@
 				</nav>
 			</div>
 		</header>
-		<main aria-label="Main content">
+		<main aria-label="Main content" id="main">
 			<div class="main-content" role="main">
 			<div class="content-container">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
@@ -38,7 +38,7 @@
 			<p>Focusing on improving supply and the learner experience on both web and app.</p>
 
 			<h2 class="sub-headline">News UK : Head of product</h2>
-			<p>Working on the <A href="newskit.co.uk">News UK design system</a> and platform</p>
+			<p>Working on the <A href="https://newskit.co.uk" target="_blank">News UK design system</a> and platform</p>
 			
 			
 			<h2 class="sub-headline">LEGO.com : Senior product manager</h2>

@@ -8,7 +8,7 @@
 </head>
 <body id="about">
 	<div class="inner-body">
-		<header>
+    	<header>
 			<div class="nav-container">
 				<div class="back-home">
 					<a href="/"><span>Mike Smith</span></a>
@@ -24,7 +24,7 @@
 				</nav>
 			</div>
 		</header>
-		<div class="main-content" role="main">
+		<div class="main-content" role="main" id="main">
 			
 			<h4>A Product Person</h4>
 			

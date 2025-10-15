@@ -8,21 +8,7 @@
 </head>
 <body>
 	<div class="inner-body">
-		<header>
-			<div class="nav-container">
-				<div class="back-home">
-					<a href="/"><span>Mike Smith</span></a>
-				</div>
-				<nav class="site-nav" aria-label="Navigation">
-					<ul>
-						<li><a href="strategy" title="Product Strategy & Process" class="active">Product Strategy</a></li> 
-                        <li><a href="product-team-AI-vibe-coding" title="Vibe Coding in Product Teams">Vibe Coding</a></li> 
-						<li><a href="hire-me" title="Hire me!">How I can help!<span class="available-now">Available now!</span></a></li> 
-
-					</ul> 
-				</nav>	
-			</div>
-		</header>
+		<?php include 'includes/header.php' ?>
 		<main aria-label="Main content">
 			<div class="main-content" role="main">
 				<h1 class="title">Scalable approach for a coherent product strategy and supporting process</h1>
@@ -32,7 +18,7 @@
                     <h2 class="headline" id="execution">Product Strategy</h2>
                     <p>A template to help coalesce around a product strategy (for a squad or a set of squads)</p>
                     <ul class="highlights">
-                        <li><a target="_blank" href="https://mike-p-co-uk.notion.site/Product-strategy-e58119893ab345a29bc34cbfe624186e">1-pager template</a></li>
+                        <li><a target="_blank" href="https://mike-p-co-uk.notion.site/Product-strategy-e58119893ab345a29bc34cbfe624186e">Product Strategy template</a></li>
                     </ul>
                 </div>
                 <div class="content-container">
@@ -44,7 +30,7 @@
                         <li><a target="_blank" href="https://mike-p-co-uk.notion.site/Product-Review-Process-2311fc27ee2c80e09202d42ab91b407b">Product Review Process</a></li>
                     </ul>
                     
-                     <h3 class="sub-headline">Templates</h2>
+                     <h3 class="sub-headline">Templates</h3>
                     <p>These templates are to help a squad break down a product strategy into meaningful impact.  These can be used in an overarching product review process. </p>
                     <ul class="highlights">
                         <li><a target="_blank" href="https://mike-p-co-uk.notion.site/Product-1-pager-2311fc27ee2c80e380a1ee01ba53813d">1-pager template</a></li>
