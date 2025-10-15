@@ -2,27 +2,13 @@
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="next" title="Strategy" href="https://mike-p.co.uk/product-strategy">
+	<link rel="next" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
 	<title>Product Leader London | AI & Growth Expert</title>
 </head>
 <body>
 	<div class="inner-body">
-		<header>
-			<div class="nav-container">
-				<div class="back-home">
-					<a href="/"><span>Mike Smith</span></a>
-				</div>
-				<nav class="site-nav" aria-label="Navigation">
-					<ul>
-						<li><a href="product-strategy" title="Product Strategy & Process">Product Strategy</a></li> 
-                        <li><a href="product-team-AI-vibe-coding" title="Vibe Coding in Product Teams">Vibe Coding</a></li> 
-						<li><a href="hire-me" title="Product Strategy & Process">How I can help!<span class="available-now">Available now!</span></a></li> 
-					</ul> 
-				</nav>	
-			</div>
-			
-		</header>
-		<main aria-label="Main content">
+    	<?php include 'includes/header.php' ?>
+		<main id="main" aria-label="Main content">
 			<div class="main-content" role="main">
 				<h1 class="title">Product leader driving growth with AI and scalable product approaches</h1>
 				<div class="intro">
