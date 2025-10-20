@@ -3,3 +3,9 @@
 .htaccess
 .htaccess
 router.php
+.prettierrc.json
+.php-cs-fixer.cache
+.prettierignore
+.vscode/settings.json
+.vscode/settings.json
+.htaccess

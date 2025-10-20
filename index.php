@@ -2,8 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="next" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
-	<title>Product Leader London | AI & Growth Expert</title>
+    <link rel="next" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
 </head>
 <body>
 	<div class="inner-body">

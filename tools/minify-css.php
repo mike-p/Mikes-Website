@@ -35,6 +35,4 @@ if ($ok === false) {
 
 fwrite(STDOUT, "Minified CSS written to: {$target}\n");
 exit(0);
-<?php
-
-
+ 

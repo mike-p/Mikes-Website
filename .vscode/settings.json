@@ -1,4 +1,16 @@
 {
+    "editor.formatOnSave": true,
+	"[php]": {
+		"editor.defaultFormatter": "HookyQR.beautify"
+	},
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "prettier.useTabs": true,
+    "prettier.tabWidth": 4,
+    "prettier.printWidth": 100
+}
+{
     "cSpell.words": [
         "optimising",
         "organisations",

@@ -3,9 +3,8 @@
 <?php include 'includes/analytics.php' ?>
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="work" href="https://mike-p.co.uk/work" />
-	<link rel="next" title="contact" href="https://mike-p.co.uk/contact" />
-	<title>Interests | Mike Smith | Product Director</title>
+    <link rel="prev" title="work" href="https://mike-p.co.uk/work" />
+    <link rel="next" title="contact" href="https://mike-p.co.uk/contact" />
 </head>
 
 <body>

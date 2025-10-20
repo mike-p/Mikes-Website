@@ -3,9 +3,8 @@
 
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="Hire me!" href="https://mike-p.co.uk/hire-me" />
-	<link rel="next" title="interests" href="https://mike-p.co.uk/interests" />
-	<title>Product at LEGO, News UK, Which?, FutureLearn</title>
+    <link rel="prev" title="Hire me!" href="https://mike-p.co.uk/hire-me" />
+    <link rel="next" title="interests" href="https://mike-p.co.uk/interests" />
 </head>
 
 <body id="work">
@@ -28,7 +27,7 @@
 		</header>
 		<main aria-label="Main content" id="main">
 			<div class="main-content" role="main">
-			<div class="content-container">
+				<div class="content-container">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			
 			<h2 class="sub-headline">Atheneum : Global Hed of product</h2>
@@ -63,7 +62,7 @@
 
 			<h2 class="sub-headline">Tesco.com : Developer</h2>
 			<p>Where it all began, arriving as a fresh faced graduate I joined the content team and progressed to the development team working on all elements of the Tesco.com team and learning the joys of e-commerce.</p>
-</div>
+			</div>
 
 
 		</div>
