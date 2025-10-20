@@ -2,9 +2,8 @@
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="home" href="https://mike-p.co.uk" />
-	<link rel="next" title="work" href="https://mike-p.co.uk/work" />
-	<title>Skills |  Mike Smith | Product Director</title>
+    <link rel="prev" title="home" href="https://mike-p.co.uk" />
+    <link rel="next" title="work" href="https://mike-p.co.uk/work" />
 </head>
 <body id="about">
 	<div class="inner-body">

@@ -2,9 +2,8 @@
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="Home" href="https://mike-p.co.uk/product-strategy">
-	<link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
-	<title>Product Strategy & Scaling Teams</title>
+    <link rel="prev" title="Home" href="https://mike-p.co.uk/product-strategy">
+    <link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
 </head>
 <body>
 	<div class="inner-body">

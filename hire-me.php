@@ -2,8 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-	<link rel="prev" title="strategy" href="https://mike-p.co.uk/product-strategy">
-	<title>Product Strategy & Scaling Teams</title>
+    <link rel="prev" title="strategy" href="https://mike-p.co.uk/product-strategy">
 </head>
 <body>
 	<div class="inner-body">
@@ -18,10 +17,10 @@
                     <p>My goal is to provide the strategic oversight and hands-on execution you need to move your product forward, exactly when you need it most.
                     </p>
                 </div>
-                <div class="content-container">
+                <div class="content-container"> 
+					
                     <h2 class="headline">How I Can Help You</h2>
 <p>My experience is broad, covering everything from early-stage startups to scaling mature products in global organisations. Here's how I can apply that expertise to your business:</p>
-
 <h3 class="sub-headline">Shape Your Product Strategy & Roadmap</h3>
 <p> If you lack a clear direction, I can help define a compelling product vision that aligns with your business goals. We'll build and refine a product strategy and create an actionable roadmap that your entire team can rally behind </p>
 
@@ -41,8 +40,8 @@
 <p>  With a background that includes engineering and leading major replatforming projects for brands like LEGO.com & Which?, I am adept at working with technical teams to overcome complex challenges and ensure technology choices serve the product and the user.</p>
                 </div>
             </div>
-                
 		</main>
+
 		<footer>
 			<?php include 'includes/about.php' ?>
 			<?php include 'includes/colophon.php' ?>
