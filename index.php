@@ -9,15 +9,159 @@
     	<?php include 'includes/header.php' ?>
 		<main id="main" aria-label="Main content">
 			<div class="main-content" role="main">
+				
+				<!-- Hero Section -->
+				<section class="hero-section">
 				<h1 class="title">Product leader driving growth with AI and scalable product approaches</h1>
+					
 				<div class="intro">
-					<ul>
-						<li>Over 20 years digital experience, <strong class="marker-highlight">over 12 years</strong> in product management with a proven track record in senior leadership roles (lead/head of/director) </li>
-						<li>Expertise in the full product lifecycle, from initial <strong class="marker-highlight">'0→1' development</strong> and <strong class="marker-highlight">optimising mature</strong> products &amp; platforms</li>
-						<li>Lead various <strong class="marker-highlight">AI initiatives</strong> - both consumer and internally facing products </li>
-						<li>Proven success leading product initiatives at organisations including <a href="https://lego.com" target="_blank">LEGO</a>, <a href="http://thetimes.com" target="_blank">News UK/The Times</a>, <a href="http://which.co.uk" target="_blank">Which?</a>, <a href="http://futurelearn.com" target="_blank">FutureLearn</a>, and <a href="http://atheneum.ai" target="_blank">Atheneum</a> </li>
-					</ul>
+						<p>I'm a <strong class="marker-highlight">London-based product leader</strong> with over 20 years of digital experience and 12+ years in senior product management roles. I specialise in leveraging AI to drive growth, leading 0→1 product development, and scaling mature platforms across diverse industries.</p>
+						
+						<p>My career spans <strong class="marker-highlight">publishing, EdTech, expert networks, and consumer products</strong>—delivering results at organisations including <a href="https://lego.com" target="_blank">LEGO</a>, <a href="http://thetimes.com" target="_blank">News UK/The Times</a>, <a href="http://futurelearn.com" target="_blank">FutureLearn</a>, <a href="http://atheneum.ai" target="_blank">Atheneum</a>, and <a href="http://which.co.uk" target="_blank">Which?</a></p>
+					</div>
+				</section>
+
+				<!-- Quick Navigation -->
+				<nav class="section-nav" aria-label="Page sections">
+					<a href="#ai-leadership" class="section-nav-item">
+						<span class="nav-number">01</span>
+						<span class="nav-label">AI Leadership</span>
+					</a>
+					<a href="#industry-expertise" class="section-nav-item">
+						<span class="nav-number">02</span>
+						<span class="nav-label">Industries</span>
+					</a>
+					<a href="#product-approach" class="section-nav-item">
+						<span class="nav-number">03</span>
+						<span class="nav-label">Approach</span>
+					</a>
+					<a href="#connect" class="section-nav-item">
+						<span class="nav-number">04</span>
+						<span class="nav-label">Connect</span>
+					</a>
+				</nav>
+
+				<!-- AI Leadership Section -->
+				<section id="ai-leadership" class="content-section">
+					<div class="section-header">
+						<span class="section-number">01</span>
+						<h2 class="section-title">AI Product Leadership</h2>
+					</div>
+					<div class="section-content">
+						<p class="section-intro">I've led AI initiatives that deliver measurable impact for both consumers and internal teams:</p>
+						<div class="highlight-cards">
+							<div class="highlight-card">
+								<h3 class="card-title">Internal Platform</h3>
+								<p class="card-metric">30% efficiency gains</p>
+								<p>Led product strategy for an AI-powered workflow that achieved up to 30% efficiency gains. Success came from product-led workflow redesign that seamlessly integrated AI capabilities into new processes.</p>
+							</div>
+							<div class="highlight-card">
+								<h3 class="card-title">B2C Features</h3>
+								<p class="card-metric">2X data points</p>
+								<p>Shipped consumer-facing AI products that 2X increased profile data points on expert profiles, enhancing user experience and expert value.</p>
+							</div>
+						</div>
+						<p class="section-summary">My approach combines AI innovation with practical product thinking—ensuring technology serves real user needs and business outcomes.</p>
+					</div>
+				</section>
+
+				<!-- Industry Expertise Section -->
+				<section id="industry-expertise" class="content-section">
+					<div class="section-header">
+						<span class="section-number">02</span>
+						<h2 class="section-title">Cross-Industry Expertise</h2>
+					</div>
+					<div class="section-content">
+					<p class="section-intro">I bring diverse sector experience that informs better product decisions:</p>
+					<div class="industry-grid">
+						<div class="industry-item">
+							<div class="industry-header">
+								<h3 class="industry-name">Expert Networks/Insight</h3>
+								<div class="industry-badges">
+									<span class="industry-badge badge-b2b">B2B</span>
+									<span class="industry-badge badge-saas">SaaS</span>
+									<span class="industry-badge badge-pe">PE-Backed</span>
+								</div>
+							</div>
+							<p class="industry-company">Atheneum</p>
+							<p>Launched first expert mobile app and brought product thinking to a global B2B platform</p>
+						</div>
+						<div class="industry-item">
+							<div class="industry-header">
+								<h3 class="industry-name">EdTech</h3>
+								<div class="industry-badges">
+									<span class="industry-badge badge-b2c">B2C</span>
+									<span class="industry-badge badge-saas">SaaS</span>
+								</div>
+							</div>
+							<p class="industry-company">FutureLearn</p>
+							<p>Improved supply-side operations and learner experience across web and native apps</p>
+						</div>
+						<div class="industry-item">
+							<div class="industry-header">
+								<h3 class="industry-name">Publishing</h3>
+								<div class="industry-badges">
+									<span class="industry-badge badge-b2c">B2C</span>
+								</div>
+							</div>
+							<p class="industry-company">News UK/The Times/Which?</p>
+							<p>Built and scaled the <a href="https://newskit.co.uk" target="_blank">News UK design system</a> and platform infrastructure</p>
+						</div>
+						<div class="industry-item">
+							<div class="industry-header">
+								<h3 class="industry-name">Consumer Products</h3>
+								<div class="industry-badges">
+									<span class="industry-badge badge-b2c">B2C</span>
+								</div>
+							</div>
+							<p class="industry-company">LEGO</p>
+							<p>Managed product initiatives for LEGO.com, one of the world's most recognised brands</p>
+						</div>
+					</div>
+					</div>
+				</section>
+
+				<!-- Product Approach Section -->
+				<section id="product-approach" class="content-section">
+					<div class="section-header">
+						<span class="section-number">03</span>
+						<h2 class="section-title">Product Approach</h2>
+					</div>
+					<div class="section-content">
+						<p class="section-intro">Whether building new products from scratch or optimising established platforms, I focus on:</p>
+						<div class="approach-list">
+							<div class="approach-item">
+								<div class="approach-icon">→</div>
+								<div class="approach-content">
+									<h3>0→1 Development</h3>
+									<p>Validating ideas quickly and shipping MVPs that prove value</p>
+								</div>
+							</div>
+							<div class="approach-item">
+								<div class="approach-icon">→</div>
+								<div class="approach-content">
+									<h3>Scaling & Optimisation</h3>
+									<p>Using data and experimentation to improve mature products</p>
+								</div>
+							</div>
+							<div class="approach-item">
+								<div class="approach-icon">→</div>
+								<div class="approach-content">
+									<h3>Cross-Functional Leadership</h3>
+									<p>Building alignment across engineering, design, data, and business teams</p>
+								</div>
+							</div>
+							<div class="approach-item">
+								<div class="approach-icon">→</div>
+								<div class="approach-content">
+									<h3>AI Integration</h3>
+									<p>Thoughtfully applying AI where it creates genuine user or business value</p>
+								</div>
+							</div>
 				</div>	
+			</div>
+		</section>
+
 			</div>
 		</main>
 		<footer>
