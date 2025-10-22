@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Disallow technical directories
+Disallow: /includes/
+Disallow: /tools/
+Disallow: /css/
+Disallow: /js/
+Disallow: /i/
+
+# Disallow backup files
+Disallow: /css/layout-backup-*.css
+
+# Sitemap location
+Sitemap: https://mike-p.co.uk/sitemap.xml
+

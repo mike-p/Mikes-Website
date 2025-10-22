@@ -9,3 +9,4 @@ setTimeout(() => {
 }, 5000);
 
 </script>
+<script src="/js/section-nav.js"></script>

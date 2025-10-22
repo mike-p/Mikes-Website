@@ -3,34 +3,17 @@
 
 <head>
 	<?php include 'includes/header-includes.php' ?>
-    <link rel="prev" title="Hire me!" href="https://mike-p.co.uk/hire-me" />
-    <link rel="next" title="interests" href="https://mike-p.co.uk/interests" />
 </head>
 
 <body id="work">
 	<div class="inner-body">
-		<header>
-			<div class="nav-container">
-				<div class="back-home">
-					<a href="/"><span>Mike Smith</span></a>
-				</div>
-				<nav class="site-nav" aria-label="Navigation">
-					<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="about" title="My core skills">About</a></li> 
-					<li><a class="active" href="work" title="A bit about my work history">Work</a></li>
-					<li><a href="interests" title="Some of my interests">Fun</a> </li>
-					<li><a href="contact" title="Lets talk">Lets Talk</a></li>
-					</ul> 
-				</nav>
-			</div>
-		</header>
+		<?php include 'includes/header.php' ?>
 		<main aria-label="Main content" id="main">
 			<div class="main-content" role="main">
 				<div class="content-container">
 			<p>I have had the pleasure of working at some amazing places with some very talented people...</p> 
 			
-			<h2 class="sub-headline">Atheneum : Global Hed of product</h2>
+			<h2 class="sub-headline">Atheneum : Product Director</h2>
 			<p>Bringing product thinking to Atheneum and launching our <a href="https://apps.apple.com/us/app/atheneum-hub/id1568998155"</a>first expert app</a></p>
 			
 			<h2 class="sub-headline">FutureLearn : Group product manager</h2>
