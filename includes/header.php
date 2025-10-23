@@ -1,16 +1,3 @@
-<?php
-// Get the current filename without extension
-$currentPage = basename($_SERVER['PHP_SELF'], '.php');
-
-// Define your nav items (filename => display name)
-$navItems = [
-    'product-strategy' => 'Product Strategy',
-    'product-team-AI-vibe-coding' => 'Vibe Coding',
-    'hire-me' => 'How Can I Help'
-];
-?>
-
-            
 <a class="skip-link" href="#main">Skip to content</a>
 <header>
     <div class="nav-container">                
@@ -22,16 +9,6 @@ $navItems = [
             </a>
         </div>
 
-        <nav class="site-nav" aria-label="Primary">
-            <ul>
-                <?php foreach ($navItems as $file => $name): ?>
-                    <li>
-                        <a href="<?= $file ?>" title="<?= $name ?>" class="<?= ($currentPage === $file) ? 'active' : '' ?>">
-                            <?= $name ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul> 
-        </nav>
+        <?php include 'includes/nav.php' ?>
     </div>
 </header>

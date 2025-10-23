@@ -3,7 +3,7 @@
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 $isHomepage = ($currentPage === 'index');
 ?>
-<section id="connect" class="page-section">
+<section id="connect" class="content-section">
 	<div class="section-header">
 		<?php if ($isHomepage): ?>
 		<span class="section-number">04</span>
