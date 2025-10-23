@@ -57,7 +57,7 @@
 							</div>
 							<div class="highlight-card">
 								<h3 class="card-title">B2C Features</h3>
-								<p class="card-metric">2X data points</p>
+								<p class="card-metric">Doubled profile data</p>
 								<p>Shipped consumer-facing AI products that 2X increased profile data points on expert profiles, enhancing user experience and expert value.</p>
 							</div>
 						</div>

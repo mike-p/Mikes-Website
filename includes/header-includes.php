@@ -79,13 +79,67 @@ $cssHref = (!$isLocal && file_exists(__DIR__ . '/../' . $minPath)) ? $minPath : 
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Mike Smith",
+  "alternateName": "Mike P Smith",
   "jobTitle": "Product Leader",
+  "description": "London-based product leader with over 20 years of digital experience and 12+ years in senior product management roles. Specialises in leveraging AI to drive growth, leading 0→1 product development, and scaling mature platforms.",
   "url": "https://mike-p.co.uk/",
   "image": "https://mike-p.co.uk/i/logo.png",
-  "address": "London, UK",
-  "workLocation": "London",
+  "email": "mike.p.smith@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "London",
+    "addressCountry": "UK"
+  },
+  "workLocation": {
+    "@type": "Place",
+    "name": "London"
+  },
+  "knowsAbout": [
+    "Product Management",
+    "AI Product Leadership", 
+    "Product Strategy",
+    "0-to-1 Product Development",
+    "EdTech",
+    "Expert Networks",
+    "Publishing",
+    "SaaS",
+    "B2B",
+    "B2C"
+  ],
+  "hasOccupation": {
+    "@type": "Occupation",
+    "name": "Product Leader",
+    "occupationalCategory": "Product Management",
+    "skills": "AI Product Leadership, Product Strategy, 0→1 Development, Platform Scaling, Cross-functional Leadership"
+  },
+  "alumniOf": [
+    {
+      "@type": "Organization",
+      "name": "LEGO"
+    },
+    {
+      "@type": "Organization", 
+      "name": "News UK"
+    },
+    {
+      "@type": "Organization",
+      "name": "The Times"
+    },
+    {
+      "@type": "Organization",
+      "name": "FutureLearn"
+    },
+    {
+      "@type": "Organization",
+      "name": "Atheneum"
+    },
+    {
+      "@type": "Organization",
+      "name": "Which?"
+    }
+  ],
   "sameAs": [
-    "https://www.linkedin.com/in/mikep-smith",
+    "https://www.linkedin.com/in/mikepfsmith/",
     "https://github.com/mike-p"
   ]
 }

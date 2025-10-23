@@ -1,6 +1,22 @@
 User-agent: *
 Allow: /
 
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 # Disallow technical directories
 Disallow: /includes/
 Disallow: /tools/
