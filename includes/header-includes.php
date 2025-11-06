@@ -11,7 +11,8 @@
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $host = $_SERVER['HTTP_HOST'] ?? 'mike-p.co.uk';
 $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
-$currentUrl = $scheme . '://' . $host . rtrim($path, '/');
+$normalizedPath = ($path === '/' ? '' : rtrim($path, '/'));
+$currentUrl = $scheme . '://' . $host . $normalizedPath;
 
 $title = 'Mike Smith | Product Leader';
 $description = 'Product leader in London. AI products and 0→1 development. Open to opportunities.';
@@ -42,17 +43,24 @@ switch ($path) {
         $title = 'Work | Mike Smith';
         $description = 'Selected experience at LEGO, News UK, Which?, FutureLearn and more.';
         break;
+    case '/404.php':
+    case '/404':
+        $title = 'Page Not Found | Mike Smith';
+        $description = 'The page you\'re looking for doesn\'t exist.';
+        break;
 }
 ?>
 <title><?= htmlspecialchars($title, ENT_QUOTES) ?></title>
 <meta name="description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>">
-<link rel="canonical" href="<?= htmlspecialchars($currentUrl ?: 'https://mike-p.co.uk/', ENT_QUOTES) ?>/">
+<?php if ($path !== '/404.php' && $path !== '/404'): ?>
+<link rel="canonical" href="<?= htmlspecialchars($currentUrl ?: 'https://mike-p.co.uk', ENT_QUOTES) ?>">
+<?php endif; ?>
 
 <!-- Open Graph / Twitter -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="<?= htmlspecialchars($title, ENT_QUOTES) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>">
-<meta property="og:url" content="<?= htmlspecialchars($currentUrl, ENT_QUOTES) ?>/">
+<meta property="og:url" content="<?= htmlspecialchars($currentUrl, ENT_QUOTES) ?>">
 <meta property="og:image" content="<?= htmlspecialchars($image, ENT_QUOTES) ?>">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="<?= htmlspecialchars($title, ENT_QUOTES) ?>">
@@ -72,7 +80,7 @@ $cssHref = (!$isLocal && file_exists(__DIR__ . '/../' . $minPath)) ? $minPath : 
 <link rel="author" href="/contact" title="About the author">
 <link rel="Shortcut Icon" type="image/ico" href="favicon.ico">
 <meta name="author" content="Mike Smith (Mike-p)">
-<meta name="robots" content="index,follow">
+<meta name="robots" content="<?= ($path === '/404.php' || $path === '/404') ? 'noindex,nofollow' : 'index,follow' ?>">
 <meta name="referrer" content="unsafe-url">
 <script type="application/ld+json"> 
 {
@@ -82,7 +90,7 @@ $cssHref = (!$isLocal && file_exists(__DIR__ . '/../' . $minPath)) ? $minPath : 
   "alternateName": "Mike P Smith",
   "jobTitle": "Product Leader",
   "description": "London-based product leader with over 20 years of digital experience and 12+ years in senior product management roles. Specialises in leveraging AI to drive growth, leading 0→1 product development, and scaling mature platforms.",
-  "url": "https://mike-p.co.uk/",
+  "url": "https://mike-p.co.uk",
   "image": "https://mike-p.co.uk/i/logo.png",
   "email": "mike.p.smith@gmail.com",
   "address": {

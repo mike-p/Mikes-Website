@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-    <link rel="prev" title="Home" href="https://mike-p.co.uk/">
+    <link rel="prev" title="Home" href="https://mike-p.co.uk">
     <link rel="next" title="Hire Me" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
 </head>
 <body>
