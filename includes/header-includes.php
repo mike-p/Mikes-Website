@@ -10,43 +10,53 @@
 // -------- Dynamic SEO & Meta --------
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $host = $_SERVER['HTTP_HOST'] ?? 'mike-p.co.uk';
-$scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$scheme = 'https';
 $normalizedPath = ($path === '/' ? '' : rtrim($path, '/'));
 $currentUrl = $scheme . '://' . $host . $normalizedPath;
 
-$title = 'Mike Smith | Product Leader';
-$description = 'Product leader in London. AI products and 0→1 development. Open to opportunities.';
-$image = $scheme . '://' . $host . '/i/logo.png';
+$pageMeta = (isset($pageMeta) && is_array($pageMeta)) ? $pageMeta : [];
+
+$title = $pageMeta['title'] ?? 'Mike Smith | Product Leader';
+$description = $pageMeta['description'] ?? 'Product leader in London. AI products and 0→1 development. Open to opportunities.';
+$image = $pageMeta['image'] ?? $scheme . '://' . $host . '/i/logo.png';
+$ogType = $pageMeta['og_type'] ?? 'website';
 
 switch ($path) {
     case '/':
-        $title = 'Product Leader London | AI & Growth Expert';
-        $description = 'Product leader driving growth with AI and scalable product approaches.';
+        $title = $pageMeta['title'] ?? 'Product Leader London | AI & Growth Expert';
+        $description = $pageMeta['description'] ?? 'Product leader driving growth with AI and scalable product approaches.';
         break;
     case '/product-strategy':
-        $title = 'Product Strategy | Mike Smith';
-        $description = 'Approach to product strategy and decision-making that accelerates growth.';
+        $title = $pageMeta['title'] ?? 'Product Strategy | Mike Smith';
+        $description = $pageMeta['description'] ?? 'Approach to product strategy and decision-making that accelerates growth.';
         break;
     case '/product-team-AI-vibe-coding':
-        $title = 'Vibe Coding for Product Teams | Mike Smith';
-        $description = 'Lightweight AI workflows to speed up discovery, delivery, and comms.';
+        $title = $pageMeta['title'] ?? 'Vibe Coding for Product Teams | Mike Smith';
+        $description = $pageMeta['description'] ?? 'Lightweight AI workflows to speed up discovery, delivery, and comms.';
         break;
     case '/hire-me':
-        $title = 'How I Can Help | Mike Smith';
-        $description = 'Interim leadership, AI product development, and 0→1 execution.';
+        $title = $pageMeta['title'] ?? 'How I Can Help | Mike Smith';
+        $description = $pageMeta['description'] ?? 'Interim leadership, AI product development, and 0→1 execution.';
         break;
     case '/about':
-        $title = 'About | Mike Smith';
-        $description = 'Skills and background as a product leader across top organisations.';
+        $title = $pageMeta['title'] ?? 'About | Mike Smith';
+        $description = $pageMeta['description'] ?? 'Skills and background as a product leader across top organisations.';
         break;
     case '/work':
-        $title = 'Work | Mike Smith';
-        $description = 'Selected experience at LEGO, News UK, Which?, FutureLearn and more.';
+        $title = $pageMeta['title'] ?? 'Work | Mike Smith';
+        $description = $pageMeta['description'] ?? 'Selected experience at LEGO, News UK, Which?, FutureLearn and more.';
         break;
     case '/404.php':
     case '/404':
-        $title = 'Page Not Found | Mike Smith';
-        $description = 'The page you\'re looking for doesn\'t exist.';
+        $title = $pageMeta['title'] ?? 'Page Not Found | Mike Smith';
+        $description = $pageMeta['description'] ?? 'The page you\'re looking for doesn\'t exist.';
+        break;
+    default:
+        if (strpos($path, '/journal') === 0) {
+            $title = $pageMeta['title'] ?? 'Journal | Mike Smith';
+            $description = $pageMeta['description'] ?? 'Notes and musings on product leadership, AI, and the craft of building teams.';
+            $ogType = $pageMeta['og_type'] ?? 'article';
+        }
         break;
 }
 ?>
@@ -57,7 +67,7 @@ switch ($path) {
 <?php endif; ?>
 
 <!-- Open Graph / Twitter -->
-<meta property="og:type" content="website">
+<meta property="og:type" content="<?= htmlspecialchars($ogType, ENT_QUOTES) ?>">
 <meta property="og:title" content="<?= htmlspecialchars($title, ENT_QUOTES) ?>">
 <meta property="og:description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>">
 <meta property="og:url" content="<?= htmlspecialchars($currentUrl, ENT_QUOTES) ?>">
@@ -67,18 +77,17 @@ switch ($path) {
 <meta name="twitter:description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>">
 <meta name="twitter:image" content="<?= htmlspecialchars($image, ENT_QUOTES) ?>">
 
-<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="/css/reset.css">
 <?php
 // Use unminified CSS locally for easier debugging; minified elsewhere when available
 $isLocal = $host === 'localhost' || $host === '127.0.0.1';
-$minPath = 'css/layout.min.css';
-$devPath = 'css/layout.css?v=' . microtime(true);
-$cssHref = (!$isLocal && file_exists(__DIR__ . '/../' . $minPath)) ? $minPath : $devPath;
+$minFile = __DIR__ . '/../css/layout.min.css';
+$cssHref = (!$isLocal && file_exists($minFile)) ? '/css/layout.min.css' : '/css/layout.css?v=' . microtime(true);
 ?>
 <link rel="stylesheet" type="text/css" href="<?= htmlspecialchars($cssHref, ENT_QUOTES) ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="author" href="/contact" title="About the author">
-<link rel="Shortcut Icon" type="image/ico" href="favicon.ico">
+<link rel="Shortcut Icon" type="image/ico" href="/favicon.ico">
 <meta name="author" content="Mike Smith (Mike-p)">
 <meta name="robots" content="<?= ($path === '/404.php' || $path === '/404') ? 'noindex,nofollow' : 'index,follow' ?>">
 <meta name="referrer" content="unsafe-url">

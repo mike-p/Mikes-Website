@@ -1,21 +1,30 @@
 <?php
-// Get the current filename without extension
-$currentPage = basename($_SERVER['PHP_SELF'], '.php');
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
+$segments = array_values(array_filter(explode('/', trim($requestPath, '/'))));
+$currentSegment = $segments[0] ?? '';
 
-// Define your nav items (filename => display name)
 $navItems = [
     'product-strategy' => 'Product Strategy',
     'product-team-AI-vibe-coding' => 'Vibe Coding',
-    'hire-me' => 'How Can I Help'
+    'hire-me' => 'How Can I Help',
 ];
+
+$buildUrl = function (string $path): string {
+    return '/' . ltrim($path, '/');
+};
 ?>
 
 <nav class="site-nav" aria-label="Primary">
     <ul>
-        <?php foreach ($navItems as $file => $name): ?>
+        <?php foreach ($navItems as $path => $name): ?>
             <li>
-                <a href="<?= $file ?>" title="<?= $name ?>" class="<?= ($currentPage === $file) ? 'active' : '' ?>">
-                    <?= $name ?>
+                <?php
+                $isActive = ($currentSegment === $path);
+                $titleAttr = htmlspecialchars($name, ENT_QUOTES);
+                $href = htmlspecialchars($buildUrl($path), ENT_QUOTES);
+                ?>
+                <a href="<?= $href ?>" title="<?= $titleAttr ?>" class="<?= $isActive ? 'active' : '' ?>">
+                    <?= $titleAttr ?>
                 </a>
             </li>
         <?php endforeach; ?>

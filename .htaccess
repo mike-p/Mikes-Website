@@ -1,9 +1,16 @@
 # Turn on Rewrite Engine
 RewriteEngine On
 
+# Serve dynamic sitemap
+RewriteRule ^sitemap\.xml$ /sitemap.php [L]
+
 # Step 1: Redirect any .php URLs to remove extension (e.g., /page.php -> /page)
 RewriteCond %{THE_REQUEST} \s/+([^?\s]*?)\.php[\s?] [NC]
 RewriteRule ^ /%1? [R=301,L]
+
+# Step 1b: Journal friendly URLs
+RewriteRule ^journal$ /journal.php [QSA,L]
+RewriteRule ^journal/([A-Za-z0-9-]+)$ /journal.php?slug=$1 [QSA,L]
 
 # Step 2: Redirect URLs with trailing slashes to remove slash (e.g., /page/ -> /page)
 # EXCEPT for root directory
