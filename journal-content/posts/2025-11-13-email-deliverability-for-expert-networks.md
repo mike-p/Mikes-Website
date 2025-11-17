@@ -13,15 +13,11 @@ I'm not a technical marketer, but I’ve seen enough to know there are **three b
 Deliverability starts with trust. In email terms, that means the internet needs to be sure you are who you say you are.
 
 -   Use a **custom sending domain**, not a generic Gmail or Outlook address.
--   Set up **SPF, DKIM, and DMARC** — the trio of records that prove authenticity. ([valimail.com](https://www.valimail.com/blog/dmarc-dkim-spf-explained/?utm_source=chatgpt.com))
--   If it’s a new domain, **warm it up slowly** over a few weeks. Don’t go from zero to ten thousand sends overnight. ([help.zoho.com](https://help.zoho.com/portal/en/kb/marketing-automation/deliverability-guide/best-practices/articles/how-to-warm-up-sender-domain?utm_source=chatgpt.com))
+-   Set up **SPF, DKIM, and DMARC** — the trio of records that prove authenticity. ([Valimail: SPF, DKIM and DMARC explained](https://www.valimail.com/blog/dmarc-dkim-spf-explained/?utm_source=mike-p.co.uk))
+-   If it’s a new domain, **warm it up slowly** over a few weeks. Don’t go from zero to ten thousand sends overnight. ([Zoho: How to warm up your sender domain](https://help.zoho.com/portal/en/kb/marketing-automation/deliverability-guide/best-practices/articles/how-to-warm-up-sender-domain?utm_source=mike-p.co.uk))
 
 For initial outreach, it can help to use a **dedicated domain** rather than your main company one. It keeps your day-to-day communications protected if anything goes wrong — like a sudden spike in bounces or spam flags.  
 Once you’ve built a relationship with someone, switch back to your **primary domain** for ongoing contact. It’s a subtle but important distinction: new contacts get a clean, low-risk domain; established relationships get your trusted one.
-
-If you want to dig deeper into the technicals, these are great starting points:  
-→ [Valimail: SPF, DKIM and DMARC explained](https://www.valimail.com/blog/dmarc-dkim-spf-explained/)  
-→ [Zoho: How to warm up your sender domain](https://help.zoho.com/portal/en/kb/marketing-automation/deliverability-guide/best-practices/articles/how-to-warm-up-sender-domain)
 
 ### 2. The email itself — keep it simple
 

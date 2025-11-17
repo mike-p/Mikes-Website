@@ -13,7 +13,7 @@
 				<h1 class="title">Scalable approach for a coherent product strategy and supporting process</h1>
 
 				<div class="intro">
-					<p>Effective product strategy requires both vision and process. I've developed scalable frameworks that help teams align on strategy and execute with clarity across squads and organizations.</p>
+					<p>Effective product strategy requires both vision and process. I've developed scalable frameworks that help teams align on strategy and execute with clarity across squads and organisations. A full list of the templates mentioned below can be found <a href="/template">here</a>.</p>
 				</div>
 
 				<section class="page-section">
@@ -27,7 +27,7 @@
 							<div class="resource-content">
 								<h3 class="resource-title">Product Strategy Template</h3>
 								<p>Comprehensive framework for defining vision, goals, and strategic initiatives</p>
-								<a target="_blank" href="https://mike-p-co-uk.notion.site/Product-strategy-e58119893ab345a29bc34cbfe624186e" class="resource-link">View Template →</a>
+								<a href="/template/product-strategy-template" class="resource-link">View Template →</a>
 							</div>
 						</div>
 					</div>
@@ -51,7 +51,7 @@
 							<div class="resource-content">
 								<h3 class="resource-title">Product Review Process</h3>
 								<p>Framework for maintaining strategic clarity while shipping at scale</p>
-								<a target="_blank" href="https://mike-p-co-uk.notion.site/Product-Review-Process-2311fc27ee2c80e09202d42ab91b407b" class="resource-link">View Framework →</a>
+								<a href="/template/product-review-process" class="resource-link">View Framework →</a>
 							</div>
 						</div>
 					</div>
@@ -68,17 +68,17 @@
 							<div class="template-card">
 								<h3 class="template-title">1-Pager Template</h3>
 								<p>Concise format for pitching and aligning on product initiatives</p>
-								<a target="_blank" href="https://mike-p-co-uk.notion.site/Product-1-pager-2311fc27ee2c80e380a1ee01ba53813d" class="template-link">Use Template →</a>
+								<a href="/template/1-pager-template" class="template-link">Use Template →</a>
 							</div>
 							<div class="template-card">
 								<h3 class="template-title">PRD Template</h3>
 								<p>Detailed product requirements documentation structure</p>
-								<a target="_blank" href="https://www.notion.so/mike-p-co-uk/Product-PRD-2311fc27ee2c8041a625f2a6bcaa64b9?source=copy_link" class="template-link">Use Template →</a>
+								<a href="/template/prd-template" class="template-link">Use Template →</a>
 							</div>
 							<div class="template-card">
 								<h3 class="template-title">Impact Assessment</h3>
 								<p>Framework for measuring and communicating product impact</p>
-								<a target="_blank" href="https://mike-p-co-uk.notion.site/Product-Impact-Assessment-2311fc27ee2c80c88ed7fe571a5b3173" class="template-link">Use Template →</a>
+								<a href="/template/impact-assessment" class="template-link">Use Template →</a>
 							</div>
 						</div>
 					</div>

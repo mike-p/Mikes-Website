@@ -10,6 +10,8 @@
 // -------- Dynamic SEO & Meta --------
 $path = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
 $host = $_SERVER['HTTP_HOST'] ?? 'mike-p.co.uk';
+// Normalize to non-www canonical domain
+$host = preg_replace('/^www\./i', '', $host);
 $scheme = 'https';
 $normalizedPath = ($path === '/' ? '' : rtrim($path, '/'));
 $currentUrl = $scheme . '://' . $host . $normalizedPath;

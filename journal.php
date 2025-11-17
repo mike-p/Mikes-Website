@@ -6,15 +6,6 @@ $postsDirectory = __DIR__ . '/journal-content/posts';
 $entries = loadJournalEntries($postsDirectory);
 $slug = isset($_GET['slug']) ? trim((string) $_GET['slug']) : null;
 
-// Ensure sitemap.xml remains up to date whenever the journal is viewed.
-$baseUrl = sitemapBaseUrl();
-$sitemapPath = __DIR__ . '/sitemap.xml';
-$sitemapXml = buildSitemapXml($baseUrl, $entries);
-
-if (is_writable(__DIR__) || (file_exists($sitemapPath) && is_writable($sitemapPath))) {
-    @file_put_contents($sitemapPath, $sitemapXml);
-}
-
 if (($slug === null || $slug === '') && ($_SERVER['REQUEST_URI'] ?? '') !== '') {
     $requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '';
     if (preg_match('#^/journal/([^/]+)$#', rtrim($requestPath, '/'), $matches)) {
@@ -73,7 +64,7 @@ if ($currentEntry !== null) {
                                 <li class="journal-list-item">
                                     <div class="journal-meta">
                                         <time datetime="<?= htmlspecialchars($entry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
-                                            <?= htmlspecialchars($entry['date']->format('j M Y'), ENT_QUOTES) ?>
+                                            <?= htmlspecialchars($entry['date']->format('d-m-Y'), ENT_QUOTES) ?>
                                         </time>
                                     </div>
                                     <div class="journal-content">
@@ -97,7 +88,7 @@ if ($currentEntry !== null) {
                             <p class="journal-entry-meta">
                                 <a class="journal-back-link" href="/journal">← Journal</a>
                                 <time datetime="<?= htmlspecialchars($currentEntry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
-                                    <?= htmlspecialchars($currentEntry['date']->format('j M Y'), ENT_QUOTES) ?>
+                                    <?= htmlspecialchars($currentEntry['date']->format('d-m-Y'), ENT_QUOTES) ?>
                                 </time>
                             </p>
                             <h1 id="journal-entry-title" class="title"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
