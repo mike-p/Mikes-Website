@@ -15,10 +15,10 @@
 					<p>Are you a founder who needs to focus on the bigger picture, or a leader of a company that requires senior product expertise without the full-time commitment?</p>
 				</div>
 
-				<div class="service-intro">
+				<!-- <div class="service-intro">
 					<p>I partner with businesses as a <strong>fractional product leader</strong> to install effective product strategies, lead high-performing teams, and deliver measurable results.</p>
 					<p>My goal is to provide the strategic oversight and hands-on execution you need to move your product forward, exactly when you need it most.</p>
-				</div>
+				</div> -->
 
 				<section class="page-section">
 					<div class="section-header">

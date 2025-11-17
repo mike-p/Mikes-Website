@@ -1,6 +1,10 @@
 # Turn on Rewrite Engine
 RewriteEngine On
 
+# Redirect www to non-www (canonical domain)
+RewriteCond %{HTTP_HOST} ^www\.mike-p\.co\.uk$ [NC]
+RewriteRule ^(.*)$ https://mike-p.co.uk/$1 [R=301,L]
+
 # Serve dynamic sitemap
 RewriteRule ^sitemap\.xml$ /sitemap.php [L]
 
@@ -22,6 +26,7 @@ RewriteRule ^(.+)/$ /$1 [R=301,L]
 RewriteRule ^strategy$ /product-strategy [R=301,L]
 RewriteRule ^skills$ /hire-me [R=301,L]
 RewriteRule ^product-team-vibe-coding$ /product-team-AI-vibe-coding [R=301,L]
+RewriteRule ^interests$ /journal [R=301,L]
 
 # Step 4: Internal rewrite - serve .php files without extension showing
 RewriteCond %{REQUEST_FILENAME} !-f

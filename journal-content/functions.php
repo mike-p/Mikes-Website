@@ -4,9 +4,10 @@
  * Load and parse journal entries stored as Markdown files with optional front matter.
  *
  * @param string $directory Absolute path to the posts directory.
+ * @param bool   $includeFuture Include entries with a date in the future.
  * @return array<int, array<string, mixed>> Sorted entries (newest first).
  */
-function loadJournalEntries(string $directory): array
+function loadJournalEntries(string $directory, bool $includeFuture = false): array
 {
     if (!is_dir($directory)) {
         return [];
@@ -18,6 +19,9 @@ function loadJournalEntries(string $directory): array
     foreach ($files as $file) {
         $entry = parseJournalEntry($file);
         if ($entry !== null) {
+            if (!$includeFuture && ($entry['is_future'] ?? false)) {
+                continue;
+            }
             $entries[] = $entry;
         }
     }
@@ -57,18 +61,24 @@ function parseJournalEntry(string $file): ?array
 
     $title = $frontMatter['title'] ?? generateTitleFromSlug($slug);
     $dateString = $frontMatter['date'] ?? date('Y-m-d', filemtime($file) ?: time());
+    $timezone = journalTimezone();
 
     try {
-        $date = new DateTimeImmutable($dateString);
+        $date = new DateTimeImmutable($dateString, $timezone);
     } catch (Exception $e) {
-        $date = new DateTimeImmutable('@' . (filemtime($file) ?: time()));
+        $date = (new DateTimeImmutable('@' . (filemtime($file) ?: time())))->setTimezone($timezone);
     }
+
+    $normalizedDate = $date->setTime(0, 0);
+    $today = new DateTimeImmutable('today', $timezone);
+    $isFuture = $normalizedDate > $today;
 
     return [
         'slug' => $slug,
         'title' => $title,
         'summary' => $frontMatter['summary'] ?? '',
-        'date' => $date,
+        'date' => $normalizedDate,
+        'is_future' => $isFuture,
         'content' => $content,
     ];
 }
@@ -91,6 +101,10 @@ function renderJournalMarkdown(string $markdown): string
     $html = '';
     $paragraphLines = [];
     $inList = false;
+    $inTable = false;
+    $tableRows = [];
+    $tableHeader = null;
+    $tableSeparator = null;
 
     $flushParagraph = function () use (&$paragraphLines, &$html) {
         if (empty($paragraphLines)) {
@@ -109,12 +123,80 @@ function renderJournalMarkdown(string $markdown): string
         }
     };
 
+    $flushTable = function () use (&$inTable, &$tableRows, &$tableHeader, &$tableSeparator, &$html) {
+        if (!$inTable || $tableHeader === null) {
+            return;
+        }
+
+        $html .= '<table>';
+        $html .= '<thead><tr>';
+        foreach ($tableHeader as $cell) {
+            $html .= '<th>' . formatInlineMarkdown(trim($cell)) . '</th>';
+        }
+        $html .= '</tr></thead>';
+        $html .= '<tbody>';
+        foreach ($tableRows as $row) {
+            $html .= '<tr>';
+            foreach ($row as $cell) {
+                $html .= '<td>' . formatInlineMarkdown(trim($cell)) . '</td>';
+            }
+            $html .= '</tr>';
+        }
+        $html .= '</tbody></table>';
+
+        $inTable = false;
+        $tableRows = [];
+        $tableHeader = null;
+        $tableSeparator = null;
+    };
+
     foreach ($lines as $line) {
         $trimmed = trim($line);
+
+        // Check if this is a table row (starts with | and has multiple |)
+        $isTableRow = preg_match('/^\|.+\|$/', $trimmed) && substr_count($trimmed, '|') >= 2;
+
+        if ($isTableRow) {
+            // Parse table row
+            $cells = array_map('trim', explode('|', $trimmed));
+            // Remove empty first/last elements from split
+            $cells = array_filter($cells, fn($cell) => $cell !== '');
+            $cells = array_values($cells);
+
+            // Check if this is a separator row (contains only dashes, colons, spaces, and pipes)
+            $isSeparator = preg_match('/^[\|\s:\-]+$/', $trimmed);
+
+            if ($isSeparator) {
+                // This is the separator row, header should already be set
+                if ($tableHeader !== null) {
+                    $tableSeparator = $cells;
+                    $inTable = true;
+                }
+            } elseif ($tableHeader === null) {
+                // This is the header row
+                $tableHeader = $cells;
+                $inTable = true;
+            } else {
+                // This is a data row
+                $tableRows[] = $cells;
+            }
+            continue;
+        } else {
+            // Not a table row, flush any open table
+            $flushTable();
+        }
 
         if ($trimmed === '') {
             $flushParagraph();
             $closeList();
+            continue;
+        }
+
+        // Check for horizontal rule (---, ***, or ___ with at least 3 characters)
+        if (preg_match('/^([-*_])(\1{2,})$/', $trimmed, $matches)) {
+            $flushParagraph();
+            $closeList();
+            $html .= '<hr>';
             continue;
         }
 
@@ -137,11 +219,20 @@ function renderJournalMarkdown(string $markdown): string
             continue;
         }
 
+        // Check for blockquote
+        if (preg_match('/^>\s+(.*)$/', $trimmed, $matches)) {
+            $flushParagraph();
+            $closeList();
+            $html .= '<blockquote>' . formatInlineMarkdown($matches[1]) . '</blockquote>';
+            continue;
+        }
+
         $paragraphLines[] = $trimmed;
     }
 
     $flushParagraph();
     $closeList();
+    $flushTable();
 
     return $html;
 }
@@ -184,11 +275,29 @@ function formatInlineMarkdown(string $text): string
     // Links [label](url)
     $escaped = preg_replace_callback(
         '/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/',
-        static fn ($matches) => sprintf(
-            '<a href="%s">%s</a>',
-            htmlspecialchars($matches[2], ENT_QUOTES),
-            htmlspecialchars($matches[1], ENT_QUOTES)
-        ),
+        static function ($matches) {
+            $url = $matches[2];
+            $label = $matches[1];
+            $escapedUrl = htmlspecialchars($url, ENT_QUOTES);
+            $escapedLabel = htmlspecialchars($label, ENT_QUOTES);
+            
+            // Check if link is external (not on mike-p.co.uk domain)
+            $isExternal = !preg_match('/^https?:\/\/(www\.)?mike-p\.co\.uk(\/|$)/i', $url);
+            
+            if ($isExternal) {
+                return sprintf(
+                    '<a href="%s" target="_blank" rel="noopener noreferrer" class="external-link">%s</a>',
+                    $escapedUrl,
+                    $escapedLabel
+                );
+            }
+            
+            return sprintf(
+                '<a href="%s">%s</a>',
+                $escapedUrl,
+                $escapedLabel
+            );
+        },
         $escaped
     );
 
@@ -257,6 +366,19 @@ function journalExcerpt(array $entry, int $length = 160): string
 }
 
 /**
+ * Return the timezone used for journal scheduling.
+ */
+function journalTimezone(): DateTimeZone
+{
+    static $tz = null;
+    if ($tz === null) {
+        $tz = new DateTimeZone('Europe/London');
+    }
+
+    return $tz;
+}
+
+/**
  * Determine the fully-qualified base URL for sitemap generation.
  */
 function sitemapBaseUrl(): string
@@ -281,9 +403,10 @@ function sitemapBaseUrl(): string
  *
  * @param string $baseUrl
  * @param array<int, array<string, mixed>> $entries
+ * @param array<int, array<string, mixed>> $templates
  * @return string
  */
-function buildSitemapXml(string $baseUrl, array $entries): string
+function buildSitemapXml(string $baseUrl, array $entries, array $templates = []): string
 {
     $staticUrls = [
         [
@@ -336,6 +459,11 @@ function buildSitemapXml(string $baseUrl, array $entries): string
             'changefreq' => 'daily',
             'priority' => '0.9',
         ],
+        [
+            'loc' => $baseUrl . '/template',
+            'changefreq' => 'monthly',
+            'priority' => '0.8',
+        ],
     ];
 
     $lines = [
@@ -360,6 +488,10 @@ function buildSitemapXml(string $baseUrl, array $entries): string
     }
 
     foreach ($entries as $entry) {
+        if (($entry['is_future'] ?? false)) {
+            continue;
+        }
+
         $loc = $baseUrl . '/journal/' . $entry['slug'];
         $lastMod = $entry['date'] instanceof DateTimeInterface
             ? $entry['date']->format('Y-m-d')
@@ -372,6 +504,28 @@ function buildSitemapXml(string $baseUrl, array $entries): string
         }
         $lines[] = '  <changefreq>monthly</changefreq>';
         $lines[] = '  <priority>0.6</priority>';
+        $lines[] = '</url>';
+    }
+
+    // Add templates to sitemap
+    if (!empty($templates)) {
+        $lines[] = '';
+    }
+
+    foreach ($templates as $template) {
+        $loc = $baseUrl . '/template/' . $template['slug'];
+        $templateFile = $template['file'] ?? '';
+        $lastMod = ($templateFile !== '' && file_exists($templateFile) && filemtime($templateFile))
+            ? date('Y-m-d', filemtime($templateFile))
+            : '';
+
+        $lines[] = '<url>';
+        $lines[] = '  <loc>' . htmlspecialchars($loc, ENT_XML1) . '</loc>';
+        if ($lastMod !== '') {
+            $lines[] = '  <lastmod>' . htmlspecialchars($lastMod, ENT_XML1) . '</lastmod>';
+        }
+        $lines[] = '  <changefreq>monthly</changefreq>';
+        $lines[] = '  <priority>0.7</priority>';
         $lines[] = '</url>';
     }
 
