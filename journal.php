@@ -1,4 +1,6 @@
 <?php
+// Include HTTP headers (must be before any output)
+include __DIR__ . '/includes/http-headers.php';
 
 require __DIR__ . '/journal-content/functions.php';
 
@@ -53,7 +55,7 @@ if ($currentEntry !== null) {
                 <?php if ($currentEntry === null): ?>
                     <section class="page-header" aria-labelledby="journal-page-title">
                         <h1 id="journal-page-title" class="title">Journal</h1>
-                        <p class="page-intro">Random musings and working notes from the product trenches.</p>
+                        <p class="page-intro">Random musings and working notes from the product trenches. <a href="/work">Learn more about my experience</a>.</p>
                     </section>
 
                     <?php if (empty($entries)): ?>

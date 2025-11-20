@@ -6,6 +6,7 @@ $currentSegment = $segments[0] ?? '';
 $navItems = [
     'product-strategy' => 'Product Strategy',
     'product-team-AI-vibe-coding' => 'Vibe Coding',
+    'work' => 'Work',
     'hire-me' => 'How Can I Help',
 ];
 

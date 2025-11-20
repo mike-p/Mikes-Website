@@ -1,3 +1,7 @@
+<?php
+// Include HTTP headers (must be before any output)
+include 'includes/http-headers.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -12,7 +16,7 @@
 				<h1 class="title">Let's work together!</h1>
 
 				<div class="intro">
-					<p>Are you a founder who needs to focus on the bigger picture, or a leader of a company that requires senior product expertise without the full-time commitment?</p>
+					<p>Are you a founder who needs to focus on the bigger picture, or a leader of a company that requires senior product expertise without the full-time commitment? <a href="/work">View my experience</a>.</p>
 				</div>
 
 				<!-- <div class="service-intro">
@@ -30,7 +34,7 @@
 						<div class="services-list">
 							<div class="service-item">
 								<h3>Shape Your Product Strategy & Roadmap</h3>
-								<p>If you lack a clear direction, I can help define a compelling product vision that aligns with your business goals. We'll build and refine a product strategy and create an actionable roadmap that your entire team can rally behind.</p>
+								<p>If you lack a clear direction, I can help define a compelling product vision that aligns with your business goals. We'll build and refine a product strategy and create an actionable roadmap that your entire team can rally behind. <a href="/product-strategy">See my product strategy framework</a>.</p>
 							</div>
 
 							<div class="service-item">
@@ -45,12 +49,12 @@
 
 							<div class="service-item">
 								<h3>Launch New Products (0→1) or Optimise Existing Ones</h3>
-								<p>I have deep expertise in both creating new products from scratch and optimising mature platforms for growth. I can lead the discovery process for a new venture or dive into your data to find opportunities, as I did when I increased a subscriber base by 18% at The Times.</p>
+								<p>I have deep expertise in both creating new products from scratch and optimising mature platforms for growth. I can lead the discovery process for a new venture or dive into your data to find opportunities, as I did when I increased a subscriber base by 18% at The Times. <a href="/work">See examples of my 0→1 work</a>.</p>
 							</div>
 
 							<div class="service-item">
 								<h3>Unlock Growth with AI & Innovation</h3>
-								<p>Technology is moving fast. I can help you identify and leverage new opportunities, including using generative AI to create transformative growth. In my current role, I'm delivering AI products that have already resulted in 32% efficiency gains.</p>
+								<p>Technology is moving fast. I can help you identify and leverage new opportunities, including using generative AI to create transformative growth. In my current role, I'm delivering AI products that have already resulted in 32% efficiency gains. <a href="/product-team-AI-vibe-coding">Learn about my AI approach</a>.</p>
 							</div>
 
 							<div class="service-item">

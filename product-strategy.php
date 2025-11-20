@@ -1,3 +1,7 @@
+<?php
+// Include HTTP headers (must be before any output)
+include 'includes/http-headers.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -13,7 +17,7 @@
 				<h1 class="title">Scalable approach for a coherent product strategy and supporting process</h1>
 
 				<div class="intro">
-					<p>Effective product strategy requires both vision and process. I've developed scalable frameworks that help teams align on strategy and execute with clarity across squads and organisations. A full list of the templates mentioned below can be found <a href="/template">here</a>.</p>
+					<p>Effective product strategy requires both vision and process. I've developed scalable frameworks that help teams align on strategy and execute with clarity across squads and organisations. A full list of the templates mentioned below can be found <a href="/template">here</a>. <a href="/work">See how I've applied this in practice</a>.</p>
 				</div>
 
 				<section class="page-section">

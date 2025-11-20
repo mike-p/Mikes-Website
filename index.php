@@ -1,3 +1,7 @@
+<?php
+// Include HTTP headers (must be before any output)
+include 'includes/http-headers.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -15,9 +19,9 @@
 				<h1 class="title">Product leader driving growth with AI and scalable product approaches</h1>
 					
 				<div class="intro">
-						<p>I'm a <strong class="marker-highlight">London-based product leader</strong> with over 20 years of digital experience and 12+ years in senior product management roles. I specialise in leveraging AI to drive growth, leading 0→1 product development, and scaling mature platforms across diverse industries.</p>
+						<p>I'm a <strong class="marker-highlight">London-based product leader</strong> with over 20 years of digital experience and 12+ years in senior product management roles. I specialise in leveraging AI to drive growth, leading 0→1 product development, and scaling mature platforms across diverse industries. <a href="/work">View my work experience</a>.</p>
 						
-						<p>My career spans <strong class="marker-highlight">publishing, EdTech, expert networks, and consumer products</strong>—delivering results at organisations including <a href="https://lego.com" target="_blank">LEGO</a>, <a href="http://thetimes.com" target="_blank">News UK/The Times</a>, <a href="http://futurelearn.com" target="_blank">FutureLearn</a>, <a href="http://atheneum.ai" target="_blank">Atheneum</a>, and <a href="http://which.co.uk" target="_blank">Which?</a></p>
+						<p>My career spans <strong class="marker-highlight">publishing, EdTech, expert networks, and consumer products</strong>—delivering results at organisations including <a href="https://lego.com" target="_blank">LEGO</a>, <a href="http://thetimes.com" target="_blank">News UK/The Times</a>, <a href="http://futurelearn.com" target="_blank">FutureLearn</a>, <a href="http://atheneum.ai" target="_blank">Atheneum</a>, and <a href="http://which.co.uk" target="_blank">Which?</a> <a href="/work">See my full work history</a>.</p>
 					</div>
 				</section>
 
@@ -61,7 +65,7 @@
 								<p>Shipped consumer-facing AI products that 2X increased profile data points on expert profiles, enhancing user experience and expert value.</p>
 							</div>
 						</div>
-						<p class="section-summary">My approach combines AI innovation with practical product thinking—ensuring technology serves real user needs and business outcomes.</p>
+						<p class="section-summary">My approach combines AI innovation with practical product thinking—ensuring technology serves real user needs and business outcomes. <a href="/journal">Read more about my AI approach</a> and <a href="/product-team-AI-vibe-coding">learn how I use vibe coding in product teams</a>.</p>
 					</div>
 				</section>
 
@@ -158,7 +162,8 @@
 									<p>Thoughtfully applying AI where it creates genuine user or business value</p>
 								</div>
 							</div>
-				</div>	
+				</div>
+				<p class="section-summary" style="margin-top: 2rem;">I've developed scalable frameworks for product strategy and execution. <a href="/product-strategy">Explore my product strategy framework</a>.</p>
 			</div>
 		</section>
 
