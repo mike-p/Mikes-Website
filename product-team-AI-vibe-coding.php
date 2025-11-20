@@ -1,3 +1,7 @@
+<?php
+// Include HTTP headers (must be before any output)
+include 'includes/http-headers.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
@@ -13,7 +17,7 @@
 				<h1 class="title">Vibe coding in product - does it really work? (Yes!)</h1>
 
 				<div class="intro">
-					<p>Vibe coding is transforming how product teams approach discovery and prototyping. Here's what I've learned implementing it across product management, design, and success teams.</p>
+					<p>Vibe coding is transforming how product teams approach discovery and prototyping. Here's what I've learned implementing it across product management, design, and success teams. <a href="/work">See my product leadership experience</a>.</p>
 				</div>
 
 				<section class="page-section">

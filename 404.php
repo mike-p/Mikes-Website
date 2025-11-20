@@ -1,11 +1,13 @@
+<?php
+// Set 404 status code first
+http_response_code(404);
+// Include HTTP headers (must be before any output)
+include 'includes/http-headers.php';
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<?php 
-	// Set 404 status code
-	http_response_code(404);
-	include 'includes/header-includes.php' 
-	?>
+	<?php include 'includes/header-includes.php' ?>
 </head>
 <body>
 	<div class="inner-body">
@@ -37,7 +39,6 @@
 		<?php include 'includes/colophon.php' ?>
 	</footer>
 
-	<?php include 'includes/analytics.php' ?>
 </body>
 </html>
 

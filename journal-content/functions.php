@@ -415,26 +415,6 @@ function buildSitemapXml(string $baseUrl, array $entries, array $templates = [])
             'priority' => '1.0',
         ],
         [
-            'loc' => $baseUrl . '/#ai-leadership',
-            'changefreq' => 'weekly',
-            'priority' => '0.8',
-        ],
-        [
-            'loc' => $baseUrl . '/#industry-expertise',
-            'changefreq' => 'weekly',
-            'priority' => '0.8',
-        ],
-        [
-            'loc' => $baseUrl . '/#product-approach',
-            'changefreq' => 'weekly',
-            'priority' => '0.8',
-        ],
-        [
-            'loc' => $baseUrl . '/#connect',
-            'changefreq' => 'weekly',
-            'priority' => '0.8',
-        ],
-        [
             'loc' => $baseUrl . '/hire-me',
             'changefreq' => 'monthly',
             'priority' => '0.9',

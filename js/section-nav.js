@@ -11,48 +11,7 @@
         return; // Exit if no navigation or sections found
     }
 
-    // Mobile menu toggle functionality
-    let isNavExpanded = false;
-
-    function toggleNav() {
-        isNavExpanded = !isNavExpanded;
-        if (isNavExpanded) {
-            nav.classList.add('expanded');
-        } else {
-            nav.classList.remove('expanded');
-        }
-    }
-
-    // On mobile, toggle menu when tapping the nav area
-    if (nav && window.innerWidth <= 1024) {
-        nav.addEventListener('click', function(e) {
-            // Toggle if clicking on the nav itself or the ::before pseudo-element
-            // Don't toggle if clicking directly on a nav item link
-            if (!e.target.classList.contains('section-nav-item') && 
-                !e.target.closest('.section-nav-item')) {
-                toggleNav();
-                e.stopPropagation();
-            }
-        });
-
-        // Close menu after clicking a nav item
-        navItems.forEach(item => {
-            item.addEventListener('click', function(e) {
-                setTimeout(() => {
-                    isNavExpanded = false;
-                    nav.classList.remove('expanded');
-                }, 100);
-            });
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!nav.contains(e.target) && isNavExpanded) {
-                isNavExpanded = false;
-                nav.classList.remove('expanded');
-            }
-        });
-    }
+    // Mobile navigation - no toggle needed, always visible
 
     // Function to update active nav item
     function updateActiveNav() {

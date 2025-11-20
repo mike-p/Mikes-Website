@@ -45,8 +45,8 @@ switch ($path) {
         $description = $pageMeta['description'] ?? 'Skills and background as a product leader across top organisations.';
         break;
     case '/work':
-        $title = $pageMeta['title'] ?? 'Work | Mike Smith';
-        $description = $pageMeta['description'] ?? 'Selected experience at LEGO, News UK, Which?, FutureLearn and more.';
+        $title = $pageMeta['title'] ?? 'Work Experience | Mike Smith | Product Leader';
+        $description = $pageMeta['description'] ?? '20+ years of product leadership experience at leading companies including LEGO, News UK, FutureLearn, Atheneum, Which?, Oracle, and Tesco. Timeline of career progression from web developer to product director.';
         break;
     case '/404.php':
     case '/404':

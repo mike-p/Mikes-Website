@@ -1,12 +1,34 @@
-.vscode/sftp.json
+# Dependencies
+node_modules/
+package-lock.json
+
+# Playwright
+/tests/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+# OS
 .DS_Store
-.htaccess
-.htaccess
-router.php
-.prettierrc.json
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PHP
+vendor/
+
+# Local scripts (not for deployment)
+*.sh
+*.command
+
+# IDE workspace files
+*.code-workspace
+
+# Code formatter cache
 .php-cs-fixer.cache
-.prettierignore
-.vscode/settings.json
-.vscode/settings.json
 .htaccess
-sitemap.xml
+.htaccess
