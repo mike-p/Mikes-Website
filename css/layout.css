@@ -467,6 +467,11 @@ header .available-now.animations-ended::before {
 	margin-bottom: 1.25rem;
 }
 
+/* Utility class for intro spacing */
+.intro--spaced-bottom {
+	margin-bottom: 2rem;
+}
+
 /******************** journal ********************/
 .page-header {
 	margin-bottom: 3rem;
@@ -837,6 +842,11 @@ header .available-now.animations-ended::before {
 	line-height: 1.8;
 }
 
+/* Utility class for additional top margin on section-intro */
+.section-intro--spaced {
+	margin-top: 1rem;
+}
+
 .section-summary {
 	font-size: 1.05rem;
 	color: #525252;
@@ -844,6 +854,11 @@ header .available-now.animations-ended::before {
 	padding-top: 2rem;
 	border-top: 1px solid #e6e6e6;
 	font-style: italic;
+}
+
+/* Utility class for section-summary with custom top margin */
+.section-summary--custom-margin {
+	margin-top: 2rem;
 }
 
 /* ===================== Highlight Cards ===================== */
@@ -1390,9 +1405,7 @@ html {
 }
 
 
-.cv-company-group .cv-role-item .cv-timeline-marker {
-	/* legacy marker removed - split layout uses pseudo-dots */
-}
+/* Legacy marker removed - split layout uses pseudo-dots */
 
 .cv-timeline-content {
 	position: relative;

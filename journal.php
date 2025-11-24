@@ -46,6 +46,36 @@ if ($currentEntry !== null) {
 <html lang="en" dir="ltr">
 <head>
     <?php include __DIR__ . '/includes/header-includes.php'; ?>
+    <?php
+    // Add prev/next navigation for individual journal posts
+    if ($currentEntry !== null && !empty($entries)) {
+        $currentIndex = null;
+        // Find current entry index in the sorted array (newest first)
+        foreach ($entries as $index => $entry) {
+            if ($entry['slug'] === $currentEntry['slug']) {
+                $currentIndex = $index;
+                break;
+            }
+        }
+        
+        if ($currentIndex !== null) {
+            // Prev = older post (next in array since sorted newest first)
+            if ($currentIndex < count($entries) - 1) {
+                $prevEntry = $entries[$currentIndex + 1];
+                echo '    <link rel="prev" title="' . htmlspecialchars($prevEntry['title'], ENT_QUOTES) . '" href="https://mike-p.co.uk/journal/' . htmlspecialchars($prevEntry['slug'], ENT_QUOTES) . '">' . PHP_EOL;
+            }
+            
+            // Next = newer post (previous in array since sorted newest first)
+            if ($currentIndex > 0) {
+                $nextEntry = $entries[$currentIndex - 1];
+                echo '    <link rel="next" title="' . htmlspecialchars($nextEntry['title'], ENT_QUOTES) . '" href="https://mike-p.co.uk/journal/' . htmlspecialchars($nextEntry['slug'], ENT_QUOTES) . '">' . PHP_EOL;
+            }
+        }
+    } elseif ($currentEntry === null) {
+        // Journal index page
+        echo '    <link rel="prev" title="Home" href="https://mike-p.co.uk">' . PHP_EOL;
+    }
+    ?>
 </head>
 <body>
     <div class="inner-body">

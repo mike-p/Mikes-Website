@@ -35,6 +35,9 @@ RewriteEngine On
 # URL Rewriting Rules
 # ============================================
 
+# Redirect /defaultsite to root domain (must come before www redirect to avoid double redirect)
+RewriteRule ^defaultsite/?$ https://mike-p.co.uk/ [R=301,L]
+
 # Redirect www to non-www (canonical domain)
 RewriteCond %{HTTP_HOST} ^www\.mike-p\.co\.uk$ [NC]
 RewriteRule ^(.*)$ https://mike-p.co.uk/$1 [R=301,L]

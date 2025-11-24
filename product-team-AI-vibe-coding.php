@@ -6,8 +6,8 @@ include 'includes/http-headers.php';
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-    <link rel="prev" title="Home" href="https://mike-p.co.uk/product-strategy">
-    <link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
+    <link rel="prev" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
+    <link rel="next" title="How I Can Help" href="https://mike-p.co.uk/hire-me">
 </head>
 <body>
 	<div class="inner-body">

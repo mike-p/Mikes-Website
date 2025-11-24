@@ -7,6 +7,8 @@ include 'includes/http-headers.php';
 
 <head>
 	<?php include 'includes/header-includes.php' ?>
+    <link rel="prev" title="Home" href="https://mike-p.co.uk">
+    <link rel="next" title="How I Can Help" href="https://mike-p.co.uk/hire-me">
 </head>
 
 <body id="work" class="layout-split">
@@ -17,7 +19,7 @@ include 'includes/http-headers.php';
 				<div class="content-container">
 					<h1 class="title">Work Experience</h1>
 					
-					<div class="intro" style="margin-bottom: 2rem;">
+					<div class="intro intro--spaced-bottom">
 						<p>Over 20 years of digital experience across product leadership roles. <a href="/hire-me">Interested in working together?</a></p>
 					</div>
 					

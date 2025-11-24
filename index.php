@@ -163,7 +163,7 @@ include 'includes/http-headers.php';
 								</div>
 							</div>
 				</div>
-				<p class="section-summary" style="margin-top: 2rem;">I've developed scalable frameworks for product strategy and execution. <a href="/product-strategy">Explore my product strategy framework</a>.</p>
+				<p class="section-summary section-summary--custom-margin">I've developed scalable frameworks for product strategy and execution. <a href="/product-strategy">Explore my product strategy framework</a>.</p>
 			</div>
 		</section>
 

@@ -56,6 +56,36 @@ if ($currentTemplate !== null) {
 <html lang="en" dir="ltr">
 <head>
     <?php include __DIR__ . '/includes/header-includes.php'; ?>
+    <?php
+    // Add prev/next navigation for individual template pages
+    if ($currentTemplate !== null && !empty($templates)) {
+        $currentIndex = null;
+        // Find current template index in the sorted array (alphabetical)
+        foreach ($templates as $index => $template) {
+            if ($template['slug'] === $currentTemplate['slug']) {
+                $currentIndex = $index;
+                break;
+            }
+        }
+        
+        if ($currentIndex !== null) {
+            // Prev = previous in alphabetical order
+            if ($currentIndex > 0) {
+                $prevTemplate = $templates[$currentIndex - 1];
+                echo '    <link rel="prev" title="' . htmlspecialchars($prevTemplate['title'], ENT_QUOTES) . '" href="https://mike-p.co.uk/template/' . htmlspecialchars($prevTemplate['slug'], ENT_QUOTES) . '">' . PHP_EOL;
+            }
+            
+            // Next = next in alphabetical order
+            if ($currentIndex < count($templates) - 1) {
+                $nextTemplate = $templates[$currentIndex + 1];
+                echo '    <link rel="next" title="' . htmlspecialchars($nextTemplate['title'], ENT_QUOTES) . '" href="https://mike-p.co.uk/template/' . htmlspecialchars($nextTemplate['slug'], ENT_QUOTES) . '">' . PHP_EOL;
+            }
+        }
+    } elseif ($currentTemplate === null) {
+        // Template index page
+        echo '    <link rel="prev" title="Home" href="https://mike-p.co.uk">' . PHP_EOL;
+    }
+    ?>
     <style>
         /* Notion-like template styles */
         .template-viewer {

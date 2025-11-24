@@ -7,7 +7,7 @@ include 'includes/http-headers.php';
 <head>
 	<?php include 'includes/header-includes.php' ?>
     <link rel="prev" title="Home" href="https://mike-p.co.uk">
-    <link rel="next" title="Hire Me" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
+    <link rel="next" title="Vibe Coding for Product Teams" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
 </head>
 <body>
 	<div class="inner-body">
