@@ -6,7 +6,8 @@ include 'includes/http-headers.php';
 <html lang="en" dir="ltr">
 <head>
 	<?php include 'includes/header-includes.php' ?>
-    <link rel="prev" title="strategy" href="https://mike-p.co.uk/product-strategy">
+    <link rel="prev" title="Work" href="https://mike-p.co.uk/work">
+    <link rel="next" title="Journal" href="https://mike-p.co.uk/journal">
 </head>
 <body>
 	<div class="inner-body">
@@ -73,7 +74,7 @@ include 'includes/http-headers.php';
 		<footer>
 			<?php include 'includes/about.php' ?>
 			<?php include 'includes/colophon.php' ?>
-		</footer>
+		</footer> 
 	</div>
 </body>
 </html>

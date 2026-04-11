@@ -58,10 +58,10 @@ The markdown renderer now supports:
 -   Blockquotes
 -   Tables
 -   Horizontal rules
+-   Ordered lists
 
 I'm considering adding:
 
--   Ordered lists
 -   Code blocks with syntax highlighting
 -   Nested lists
 -   Task lists (checkboxes)
@@ -70,4 +70,4 @@ But for now, the templates work great and people can download them as markdown f
 
 ---
 
-**TL;DR:** Moved 5 product templates from Notion to self-hosted markdown files with a Notion-like UI. Added table and horizontal rule support to the markdown renderer. The whole thing took about 2.5 hours, with only 2 small bugs to fix. Templates are now SEO-friendly, downloadable, and look great. The system is extensible — just add a markdown file to the templates folder and it appears automatically.
+**TL;DR:** Moved 5 product templates from Notion to self-hosted markdown files with a Notion-like UI. Added table and horizontal rule support to the markdown renderer. The whole thing took about 2.5 hours, with only 2 small bugs to fix. Templates are now SEO-friendly, downloadable, and look great (I hope!). The system is extensible - just add a markdown file to the templates folder and it appears automatically.

@@ -8,6 +8,7 @@ $navItems = [
     'product-team-AI-vibe-coding' => 'Vibe Coding',
     'work' => 'Work',
     'hire-me' => 'How Can I Help',
+    'journal' => 'Journal',
 ];
 
 $buildUrl = function (string $path): string {
@@ -17,13 +18,20 @@ $buildUrl = function (string $path): string {
 
 <nav class="site-nav" aria-label="Primary">
     <ul>
-        <?php foreach ($navItems as $path => $name): ?>
+        <?php 
+        $itemCount = count($navItems);
+        $index = 0;
+        foreach ($navItems as $path => $name): 
+            $index++;
+            $isLast = ($index === $itemCount);
+            $isActive = ($currentSegment === $path);
+            $titleAttr = htmlspecialchars($name, ENT_QUOTES);
+            $href = htmlspecialchars($buildUrl($path), ENT_QUOTES);
+        ?>
+            <?php if ($isLast): ?>
+                <li class="nav-separator">|</li>
+            <?php endif; ?>
             <li>
-                <?php
-                $isActive = ($currentSegment === $path);
-                $titleAttr = htmlspecialchars($name, ENT_QUOTES);
-                $href = htmlspecialchars($buildUrl($path), ENT_QUOTES);
-                ?>
                 <a href="<?= $href ?>" title="<?= $titleAttr ?>" class="<?= $isActive ? 'active' : '' ?>">
                     <?= $titleAttr ?>
                 </a>

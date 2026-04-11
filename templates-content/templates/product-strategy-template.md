@@ -1,6 +1,6 @@
 ---
 title: Product Strategy Template
-description: Comprehensive framework for defining vision, goals, and strategic initiatives
+description: Free product strategy template for defining vision, goals, and strategic initiatives. Comprehensive framework helps product leaders align teams, prioritize work, and communicate strategy effectively.
 slug: product-strategy-template
 ---
 

@@ -7,6 +7,8 @@ include 'includes/http-headers.php';
 
 <head>
 	<?php include 'includes/header-includes.php' ?>
+    <link rel="prev" title="Vibe Coding" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
+    <link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
 </head>
 
 <body id="work" class="layout-split">

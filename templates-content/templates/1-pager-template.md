@@ -1,6 +1,6 @@
 ---
 title: 1-Pager Template
-description: Concise format for pitching and aligning on product initiatives
+description: Free product management template for pitching initiatives and aligning teams. Concise one-page format helps product managers frame problems, opportunities, and ideas before building solutions.
 slug: 1-pager-template
 ---
 
