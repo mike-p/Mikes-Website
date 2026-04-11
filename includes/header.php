@@ -18,10 +18,5 @@ $homeHref = '/';
         <div class="<?= htmlspecialchars($navContainerClass, ENT_QUOTES) ?>">
             <?php include __DIR__ . '/nav.php'; ?>
         </div>
-
-        <a class="site-identifier" href="/journal" aria-label="Journal">
-            <span class="site-identifier__subtitle">Notes & Musings</span>
-            <span class="site-identifier__title">Journal</span>
-        </a>
     </div>
 </header>

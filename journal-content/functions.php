@@ -100,7 +100,7 @@ function renderJournalMarkdown(string $markdown): string
     $lines = preg_split("/(\r\n|\n|\r)/", $markdown);
     $html = '';
     $paragraphLines = [];
-    $inList = false;
+    $inList = false; // false, 'ul', or 'ol'
     $inTable = false;
     $tableRows = [];
     $tableHeader = null;
@@ -117,8 +117,11 @@ function renderJournalMarkdown(string $markdown): string
     };
 
     $closeList = function () use (&$inList, &$html) {
-        if ($inList) {
+        if ($inList === 'ul') {
             $html .= '</ul>';
+            $inList = false;
+        } elseif ($inList === 'ol') {
+            $html .= '</ol>';
             $inList = false;
         }
     };
@@ -209,11 +212,25 @@ function renderJournalMarkdown(string $markdown): string
             continue;
         }
 
+        // Check for numbered list (1. 2. 3. etc.)
+        if (preg_match('/^\d+\.\s+(.*)$/', $trimmed, $matches)) {
+            $flushParagraph();
+            if ($inList !== 'ol') {
+                $closeList();
+                $html .= '<ol>';
+                $inList = 'ol';
+            }
+            $html .= '<li>' . formatInlineMarkdown($matches[1]) . '</li>';
+            continue;
+        }
+
+        // Check for unordered list (-, *, +)
         if (preg_match('/^[-*+]\s+(.*)$/', $trimmed, $matches)) {
             $flushParagraph();
-            if (!$inList) {
+            if ($inList !== 'ul') {
+                $closeList();
                 $html .= '<ul>';
-                $inList = true;
+                $inList = 'ul';
             }
             $html .= '<li>' . formatInlineMarkdown($matches[1]) . '</li>';
             continue;
@@ -270,6 +287,25 @@ function parseFrontMatter(string $frontMatter): array
  */
 function formatInlineMarkdown(string $text): string
 {
+    // Process inline code FIRST to protect content from other markdown processing
+    // Extract code blocks BEFORE escaping, then escape code content only once
+    $codePlaceholders = [];
+    $placeholderIndex = 0;
+    
+    $text = preg_replace_callback(
+        '/`(.+?)`/s',
+        function ($matches) use (&$codePlaceholders, &$placeholderIndex) {
+            // Use HTML comment format as placeholder - won't be processed by markdown patterns
+            $placeholder = '<!--CODE' . $placeholderIndex . '-->';
+            // Escape code content only once
+            $codePlaceholders[$placeholder] = '<code>' . htmlspecialchars($matches[1], ENT_QUOTES) . '</code>';
+            $placeholderIndex++;
+            return $placeholder;
+        },
+        $text
+    );
+
+    // Now escape the rest of the text (with placeholders)
     $escaped = htmlspecialchars($text, ENT_QUOTES);
 
     // Links [label](url)
@@ -309,12 +345,12 @@ function formatInlineMarkdown(string $text): string
     $escaped = preg_replace('/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/s', '<em>$1</em>', $escaped);
     $escaped = preg_replace('/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/s', '<em>$1</em>', $escaped);
 
-    // Inline code `code`
-    $escaped = preg_replace_callback(
-        '/`(.+?)`/s',
-        static fn ($matches) => '<code>' . htmlspecialchars($matches[1], ENT_QUOTES) . '</code>',
-        $escaped
-    );
+    // Restore code blocks - replace placeholders with actual code HTML
+    foreach ($codePlaceholders as $placeholder => $codeHtml) {
+        // The placeholder will be HTML-escaped (<!-- becomes &lt;!--), so replace the escaped version
+        $escapedPlaceholder = htmlspecialchars($placeholder, ENT_QUOTES);
+        $escaped = str_replace($escapedPlaceholder, $codeHtml, $escaped);
+    }
 
     return $escaped;
 }

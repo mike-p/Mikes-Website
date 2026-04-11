@@ -37,9 +37,9 @@ Total debugging time: **~1 hour 55 mins**, spread across the afternoon.
 
 ## 5. Credits burned
 
--   Roughly **35k tokens** of GPT-5 Codex usage (about **$7** in API credits) to iterate, debug, and polish.
+-   Roughly **35k tokens** of GPT-5 Codex usage (about **£6** in API credits) to iterate, debug, and polish.
 -   All work completed in a single sitting (~4.5 hours including writing this retro).
 
 ---
 
-**TL;DR:** GPT-5 Codex paired programming let me ship a fully functional, styled journal (with routing, SEO, sitemap, and a custom nav experience) in an afternoon. The rework wasn’t zero — seven bugs, multiple design pivots, and some classic environment gremlins — but the velocity made it absolutely worth the credits. Now that the scaffolding is in place, future posts (like this one) are just a markdown file away.
+**TL;DR:** GPT-5 Codex paired programming let me ship a fully functional, styled journal (with routing, SEO, sitemap, and a custom nav experience) in an afternoon. The rework wasn’t zero - seven bugs, multiple design pivots, and some classic environment gremlins - but the velocity made it absolutely worth the credits. Now that the scaffolding is in place, future posts (like this one) are just a markdown file away.

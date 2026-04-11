@@ -88,7 +88,6 @@ $cssHref = (!$isLocal && file_exists($minFile)) ? '/css/layout.min.css' : '/css/
 ?>
 <link rel="stylesheet" type="text/css" href="<?= htmlspecialchars($cssHref, ENT_QUOTES) ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="author" href="/contact" title="About the author">
 <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico">
 <meta name="author" content="Mike Smith (Mike-p)">
 <meta name="robots" content="<?= ($path === '/404.php' || $path === '/404') ? 'noindex,nofollow' : 'index,follow' ?>">

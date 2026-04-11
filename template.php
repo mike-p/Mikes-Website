@@ -24,7 +24,7 @@ if ($slug !== null && $slug !== '') {
     if ($currentTemplate === null) {
         http_response_code(404);
     }
-}
+} 
 
 // Handle download request
 if (isset($_GET['download']) && $currentTemplate !== null) {
@@ -41,7 +41,7 @@ if (isset($_GET['download']) && $currentTemplate !== null) {
 
 $pageMeta = [
     'title' => 'Product Templates | Mike Smith',
-    'description' => 'Product strategy and execution templates for teams.',
+    'description' => 'Free product management templates and frameworks for product teams. Download PRD templates, product strategy frameworks, 1-pagers, and impact assessments to align teams and execute with clarity.',
     'og_type' => 'website',
 ];
 

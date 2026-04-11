@@ -1,6 +1,6 @@
 ---
 title: Product Review Process
-description: Framework for maintaining strategic clarity while shipping at scale
+description: Free product review process framework for maintaining strategic clarity while shipping at scale. Helps product teams decouple strategic thinking from sprint execution, inspired by Stripe and Airbnb.
 slug: product-review-process
 ---
 
@@ -35,7 +35,7 @@ It provides space for strategic thinking, cross-functional feedback, and roadmap
 -   **Cross-functional:** Can include Design, Engineering Leads, PMs, and optionally stakeholders (Marketing, Ops, etc.)
 -   **Flexible agenda:** Each week’s topics depend on which artifacts are submitted
 -   **Hosted and organised by Product**. The agenda is sent out at the beginning of the week after weekly team meeting.
--   **Ritualised format:** Each artefact gets 10-15 mins. If longer is needed, let Tom & Nina know beforehand.
+-   **Ritualised format:** Each artefact gets 10-15 mins. If longer is needed, let the host know beforehand.
 
 ### Why It Works
 

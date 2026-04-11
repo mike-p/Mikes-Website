@@ -1,6 +1,6 @@
 ---
 title: PRD Template
-description: Detailed product requirements documentation structure
+description: Free product requirements document (PRD) template for product managers. Comprehensive structure helps teams define solutions, scope features, and align on implementation before development.
 slug: prd-template
 ---
 
