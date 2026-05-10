@@ -1,24 +1,26 @@
 <?php
 // Include HTTP headers (must be before any output)
-include 'includes/http-headers.php';
+include __DIR__ . '/includes/http-headers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<?php include 'includes/header-includes.php' ?>
+	<?php include __DIR__ . '/includes/header-includes.php'; ?>
     <link rel="prev" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
     <link rel="next" title="Work" href="https://mike-p.co.uk/work">
 </head>
-<body>
+<body class="page-site">
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content" role="main">
-				<h1 class="title">Vibe coding in product - does it really work? (Yes!)</h1>
+			<div class="main-content main-content--site" role="main">
+				<header class="hero-section">
+				<h1 class="title heading-serif">Vibe coding in product — does it really work? (Yes!)</h1>
 
 				<div class="intro">
 					<p>Vibe coding is transforming how product teams approach discovery and prototyping. Here's what I've learned implementing it across product management, design, and success teams. <a href="/work">See my product leadership experience</a>.</p>
 				</div>
+				</header>
 
 				<section class="page-section" id="ai-adoption">
 					<div class="section-header">
@@ -43,7 +45,9 @@ include 'includes/http-headers.php';
 					</div>
 					<div class="section-content">
 						<p>It has been a hugely positive step - as can be seen with what has been created:</p>
-						<p style="margin: 2rem 0;"><img src="i/loveable.png" alt="Vibe coding in product teams" style="max-width:100%; height:auto; border: 1px solid #e6e6e6;"></p>
+						<figure class="page-site-figure">
+							<img src="/i/loveable.png" alt="Screenshot: vibe coding outputs used in product discovery">
+						</figure>
 					</div>
 				</section>
 
@@ -71,13 +75,12 @@ include 'includes/http-headers.php';
 						</div>
 					</div>
 				</section>
-				<?php include 'includes/about.php' ?>
-
 
             </div>
 		</main>
 		<footer>
-			<?php include 'includes/colophon.php' ?>
+			<?php include __DIR__ . '/includes/about.php'; ?>
+			<?php include __DIR__ . '/includes/colophon.php'; ?>
 		</footer>
 	</div>
 </body>

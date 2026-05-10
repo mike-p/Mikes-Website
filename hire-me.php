@@ -1,24 +1,26 @@
 <?php
 // Include HTTP headers (must be before any output)
-include 'includes/http-headers.php';
+include __DIR__ . '/includes/http-headers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<?php include 'includes/header-includes.php' ?>
+	<?php include __DIR__ . '/includes/header-includes.php'; ?>
     <link rel="prev" title="Work" href="https://mike-p.co.uk/work">
     <link rel="next" title="Journal" href="https://mike-p.co.uk/journal">
 </head>
-<body>
+<body class="page-site">
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content" role="main">
-				<h1 class="title">Let's work together!</h1>
+			<div class="main-content main-content--site" role="main">
+				<header class="hero-section">
+				<h1 class="title heading-serif">Let's work together!</h1>
 
 				<div class="intro">
 					<p>Are you a founder who needs to focus on the bigger picture, or a leader of a company that requires senior product expertise without the full-time commitment? <a href="/work">View my experience</a>.</p>
 				</div>
+				</header>
 
 				<!-- <div class="service-intro">
 					<p>I partner with businesses as a <strong>fractional product leader</strong> to install effective product strategies, lead high-performing teams, and deliver measurable results.</p>
@@ -72,9 +74,9 @@ include 'includes/http-headers.php';
 		</main>
 
 		<footer>
-			<?php include 'includes/about.php' ?>
-			<?php include 'includes/colophon.php' ?>
-		</footer> 
+			<?php include __DIR__ . '/includes/about.php'; ?>
+			<?php include __DIR__ . '/includes/colophon.php'; ?>
+		</footer>
 	</div>
 </body>
 </html>

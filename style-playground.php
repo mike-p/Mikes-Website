@@ -1,24 +1,24 @@
 <?php
 // Include HTTP headers (must be before any output)
-include 'includes/http-headers.php';
+include __DIR__ . '/includes/http-headers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<?php include 'includes/header-includes.php' ?>
+	<?php include __DIR__ . '/includes/header-includes.php'; ?>
 	<title>Style Playground | Mike Smith</title>
 	<meta name="robots" content="noindex,nofollow">
 </head>
-<body>
+<body class="page-site">
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<?php include __DIR__ . '/includes/header.php'; ?>
 		
 		<main id="main" aria-label="Main content">
-			<div class="main-content" role="main">
+			<div class="main-content main-content--site" role="main">
 				
 				<!-- Hero Section -->
 				<section class="hero-section">
-					<h1 class="title">Style Playground - All Components</h1>
+					<h1 class="title heading-serif">Style Playground — all components</h1>
 					
 					<div class="intro">
 						<p>This page showcases all the components used across the website. I'm a <strong class="marker-highlight">London-based product leader</strong> with over 20 years of digital experience. <a href="/work">View my work experience</a>.</p>
@@ -337,11 +337,11 @@ include 'includes/http-headers.php';
 		</main>
 		
 		<footer>
-			<?php include 'includes/about.php' ?>
-			<?php include 'includes/colophon.php' ?>
+			<?php include __DIR__ . '/includes/about.php'; ?>
+			<?php include __DIR__ . '/includes/colophon.php'; ?>
 		</footer>
 	</div>
 	
-	<?php include 'includes/footer-includes.php' ?>
+	<?php include __DIR__ . '/includes/footer-includes.php'; ?>
 </body>
 </html>

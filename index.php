@@ -36,7 +36,10 @@ $pageMeta = [
 								<a class="secondary-cta home-hero-cta-secondary" href="/hire-me">How I can help</a>
 							</div>
 						</div>
-						<div class="home-hero__avatar" role="presentation" aria-hidden="true"><span class="home-hero__avatar-letter" aria-hidden="true">M</span><span class="visually-hidden">Mike</span></div>
+						<div class="home-hero__avatar">
+							<img class="home-hero__avatar-img" src="/i/mike-avatar-home.jpg" alt="" width="180" height="180" decoding="async" />
+							<span class="visually-hidden">Mike</span>
+						</div>
 					</div>
 					<hr class="home-rule" />
 				</section>

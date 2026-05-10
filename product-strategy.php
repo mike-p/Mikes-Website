@@ -1,24 +1,26 @@
 <?php
 // Include HTTP headers (must be before any output)
-include 'includes/http-headers.php';
+include __DIR__ . '/includes/http-headers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-	<?php include 'includes/header-includes.php' ?>
+	<?php include __DIR__ . '/includes/header-includes.php'; ?>
     <link rel="prev" title="Home" href="https://mike-p.co.uk">
     <link rel="next" title="Vibe Coding" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
 </head>
-<body>
+<body class="page-site">
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content" role="main">
-				<h1 class="title">Scalable approach for a coherent product strategy and supporting process</h1>
+			<div class="main-content main-content--site" role="main">
+				<header class="hero-section">
+				<h1 class="title heading-serif">Scalable approach for a coherent product strategy and supporting process</h1>
 
 				<div class="intro">
 					<p>Effective product strategy requires both vision and process. I've developed scalable frameworks that help teams align on strategy and execute with clarity across squads and organisations. A full list of the templates mentioned below can be found <a href="/template">here</a>. <a href="/work">See how I've applied this in practice</a>.</p>
 				</div>
+				</header>
 
 				<section class="page-section" id="product-strategy-framework">
 					<div class="section-header">
@@ -87,12 +89,12 @@ include 'includes/http-headers.php';
 						</div>
 					</div>
 				</section>
-				<?php include 'includes/about.php' ?>
 
             </div>
 		</main>
 		<footer>
-			<?php include 'includes/colophon.php' ?>
+			<?php include __DIR__ . '/includes/about.php'; ?>
+			<?php include __DIR__ . '/includes/colophon.php'; ?>
 		</footer>
 	</div>
 </body>

@@ -1,23 +1,23 @@
 <?php
 // Include HTTP headers (must be before any output)
-include 'includes/http-headers.php';
+include __DIR__ . '/includes/http-headers.php';
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
 <head>
-	<?php include 'includes/header-includes.php' ?>
+	<?php include __DIR__ . '/includes/header-includes.php'; ?>
     <link rel="prev" title="Vibe Coding" href="https://mike-p.co.uk/product-team-AI-vibe-coding">
     <link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
 </head>
 
-<body id="work" class="layout-split">
+<body id="work" class="page-site layout-split">
 	<div class="inner-body">
-		<?php include 'includes/header.php' ?>
+		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content" role="main">
+			<div class="main-content main-content--site" role="main">
 				<div class="content-container">
-					<h1 class="title">Work Experience</h1>
+					<h1 class="title heading-serif">Work Experience</h1>
 					
 					<div class="intro" style="margin-bottom: 2rem;">
 						<p>Over 20 years of digital experience across product leadership roles. <a href="/hire-me">Interested in working together?</a></p>
@@ -293,12 +293,11 @@ include 'includes/http-headers.php';
 				</div>
 			</div>
 		</main>
+		<footer>
+			<?php include __DIR__ . '/includes/about.php'; ?>
+			<?php include __DIR__ . '/includes/colophon.php'; ?>
+		</footer>
 	</div>
-	<footer>
-		
-		<?php include 'includes/about.php' ?>
-		<?php include 'includes/colophon.php' ?>
-	</footer>
 
 </body>
 
