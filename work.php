@@ -26,7 +26,7 @@ include 'includes/http-headers.php';
 					<div class="cv-timeline">
 						
 
-						<div class="cv-company-group">
+						<div class="cv-company-group" id="atheneum">
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 									<div class="cv-date"><time datetime="2021-12">2021</time> - <time datetime="2025-10">2025</time></div>
@@ -57,7 +57,26 @@ include 'includes/http-headers.php';
 							</div>
 						</div>
 
-						<div class="cv-company-group">
+						<div class="cv-company-group" id="action-sustainability">
+							<div class="cv-timeline-item cv-company-header">
+								<div class="cv-timeline-content">
+									<div class="cv-company">Action Sustainability</div>
+									<div class="cv-company-meta">
+										<div class="cv-tags">
+											<span class="cv-tag">Sustainability</span>
+											<span class="cv-tag">Advisory</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cv-timeline-item cv-role-item">
+								<div class="cv-timeline-content">
+									<p class="cv-description">Product and digital advisory supporting sustainability programmes.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="cv-company-group" id="futurelearn">
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 									<div class="cv-date"><time datetime="2020-09">2020</time> - <time datetime="2021-12">2021</time></div>
@@ -79,11 +98,11 @@ include 'includes/http-headers.php';
 							</div>
 						</div>
 
-						<div class="cv-company-group">
+						<div class="cv-company-group" id="news-uk">
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 									<div class="cv-date"><time datetime="2017-08">2017</time> - <time datetime="2020-09">2020</time></div>
-									<div class="cv-company"><a href="https://www.news.co.uk" target="_blank" rel="noopener noreferrer" class="external-link">News UK</a></div>
+									<div class="cv-company"><a href="https://www.news.co.uk" target="_blank" rel="noopener noreferrer" class="external-link">News UK</a> <span class="cv-company-note">(The Times, The Sun, talkSPORT, and more)</span></div>
 									<div class="cv-company-meta">
 										<div class="cv-tags">
 											<span class="cv-tag">Media</span>
@@ -110,7 +129,7 @@ include 'includes/http-headers.php';
 						</div>
 
 
-						<div class="cv-company-group">
+						<div class="cv-company-group" id="lego">
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 									<div class="cv-date"><time datetime="2016-01">2016</time> - <time datetime="2017-08">2017</time></div>
@@ -132,7 +151,7 @@ include 'includes/http-headers.php';
 							</div>
 						</div>
 
-						<div class="cv-company-group">
+						<div class="cv-company-group" id="which">
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 									<div class="cv-date"><time datetime="2013-01">2013</time> - <time datetime="2016-01">2016</time></div>

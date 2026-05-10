@@ -63,11 +63,13 @@ if ($currentEntry !== null) {
                     <?php else: ?>
                         <ul class="journal-list">
                             <?php foreach ($entries as $entry): ?>
+                                <?php $journalReadMins = journalReadingMinutes($entry); ?>
                                 <li class="journal-list-item">
                                     <div class="journal-meta">
                                         <time datetime="<?= htmlspecialchars($entry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
                                             <?= htmlspecialchars($entry['date']->format('d-m-Y'), ENT_QUOTES) ?>
                                         </time>
+                                        <span class="journal-read-time"><?= (int) $journalReadMins ?> min read</span>
                                     </div>
                                     <div class="journal-content">
                                         <h2 class="journal-title">

@@ -10,30 +10,21 @@ I recently chose to enter the washing machine cycle that is the product job mark
 
 This was the single most valuable asset throughout the entire job search. A tight, confident, well-paced 2-minute intro set the tone for every conversation. Until a recruitment consultant said "that was a great 2 minute pitch that took 4 minutes". It was said with a smile on their face but feedback taken!
 
-Your elevator pitch becomes:
-
--   your opening statement,
--   your narrative anchor,
--   your first impression,
--   the thing recruiters remember when they're scanning dozens of candidates.
-
-Get this one thing right and the whole process becomes a bit easier.
-
 ---
 
 ## 2. Keep Your Motivation Simple
 
-Almost every recruiter asked some variation of **"What's motivating the move?"** The best answer was always the simplest. For me, it came down to:
+Almost every recruiter asked some variation of **"What's motivating the move?"** The best answer was always the simplest/most honest. For me, it came down to:
 
 **I want to work with great people who care about building great products.**
 
-That's it. No long backstory. No complex explanation. And honest.
+That's it.
 
 ---
 
 ## 3. Enthusiasm Goes Further Than You Think
 
-One of the biggest lessons: people respond far more to energy than credentials. Showing genuine interest and positive intent consistently made conversations better. Clearly, when it's your 4th conversation of the day and you've had 2 rejections, trying to be enthusiastic can be tough - get a coffee and go again.
+Not everyone clearly, but I found people (in this case recruiters and interviewers) respond to energy. Showing genuine interest and positive intent consistently made conversations ineresting and more fun. Clearly, when it's your 4th conversation of the day, trying to be enthusiastic can be tough - get a coffee/drink of choice and go again.
 
 ---
 
@@ -57,10 +48,10 @@ If you already have something like this, reuse it. If not, build it early and ge
 
 I spent time clarifying whether I was open to:
 
--   full-time roles,
--   contract work,
--   fractional leadership,
--   IC vs Head of Product.
+- full-time roles,
+- contract work,
+- fractional leadership,
+- IC vs Head of Product.
 
 One thing I learned: recruiters often blur titles. In your own work, _Lead_ meant IC and _Head_ meant managing PMs. Making this explicit saved a lot of confusion.
 
@@ -78,8 +69,8 @@ Special mentions to [Nicola Morse](https://www.linkedin.com/in/nicola-morse-9ba5
 
 That's it for now, at some point there may well be more.
 
--   how interviews actually unfold,
--   good and bad surprises,
--   pacing and momentum,
--   managing the emotional side,
--   what I'd do differently next time.
+- how interviews actually unfold,
+- good and bad surprises,
+- pacing and momentum,
+- managing the emotional side,
+- what I'd do differently next time.
