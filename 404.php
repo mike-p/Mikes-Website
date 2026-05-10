@@ -9,7 +9,7 @@ include __DIR__ . '/includes/http-headers.php';
 <head>
 	<?php include __DIR__ . '/includes/header-includes.php'; ?>
 </head>
-<body class="page-site">
+<body class="page-home">
 	<div class="inner-body">
     	<?php include __DIR__ . '/includes/header.php'; ?>
 		<main id="main" aria-label="Main content">
