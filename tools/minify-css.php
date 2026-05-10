@@ -1,5 +1,5 @@
 <?php
-// Simple CSS minifier script to generate css/layout.min.css from css/layout.css
+// Simple CSS minifier — writes css/layout.min.css (used on production when present). See header-includes.php.
 
 $root = dirname(__DIR__);
 $source = $root . '/css/layout.css';
@@ -17,7 +17,7 @@ if ($css === false) {
 }
 
 // Remove comments
-$min = preg_replace('!\/\*.*?\*\!/s', '', $css);
+$min = preg_replace('!\/\*.*?\*\/!s', '', $css);
 // Collapse whitespace
 $min = preg_replace('/\s+/', ' ', $min);
 // Trim spaces around CSS punctuation

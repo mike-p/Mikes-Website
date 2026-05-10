@@ -17,6 +17,8 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/product-strategy">Explore my product strategy framework</a></p>
 			<?php elseif ($currentPage === 'journal'): ?>
 				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/product-strategy">Explore my product strategy framework</a></p>
+			<?php elseif ($currentPage === 'template'): ?>
+				<p class="connect-warm-card__related">Related: <a href="/product-strategy">Product strategy frameworks</a> · <a href="/hire-me">How I can help</a></p>
 			<?php endif; ?>
 		</div>
 		<div class="connect-warm-card__actions cta-group">

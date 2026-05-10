@@ -11,7 +11,7 @@ include __DIR__ . '/includes/http-headers.php';
     <link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
 </head>
 
-<body id="work" class="page-site layout-split">
+<body id="work" class="page-home layout-split">
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
@@ -19,7 +19,7 @@ include __DIR__ . '/includes/http-headers.php';
 				<div class="content-container">
 					<h1 class="title heading-serif">Work Experience</h1>
 					
-					<div class="intro" style="margin-bottom: 2rem;">
+					<div class="intro intro--work-top">
 						<p>Over 20 years of digital experience across product leadership roles. <a href="/hire-me">Interested in working together?</a></p>
 					</div>
 					

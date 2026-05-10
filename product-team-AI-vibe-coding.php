@@ -9,18 +9,18 @@ include __DIR__ . '/includes/http-headers.php';
     <link rel="prev" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
     <link rel="next" title="Work" href="https://mike-p.co.uk/work">
 </head>
-<body class="page-site">
+<body class="page-home">
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
 			<div class="main-content main-content--site" role="main">
-				<header class="hero-section">
-				<h1 class="title heading-serif">Vibe coding in product — does it really work? (Yes!)</h1>
+				<section class="page-hero hero-section" aria-labelledby="vibe-page-title">
+				<h1 id="vibe-page-title" class="title heading-serif">Vibe coding in product — does it really work? (Yes!)</h1>
 
 				<div class="intro">
 					<p>Vibe coding is transforming how product teams approach discovery and prototyping. Here's what I've learned implementing it across product management, design, and success teams. <a href="/work">See my product leadership experience</a>.</p>
 				</div>
-				</header>
+				</section>
 
 				<section class="page-section" id="ai-adoption">
 					<div class="section-header">
