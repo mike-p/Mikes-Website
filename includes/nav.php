@@ -4,10 +4,10 @@ $segments = array_values(array_filter(explode('/', trim($requestPath, '/'))));
 $currentSegment = $segments[0] ?? '';
 
 $navItems = [
-    'product-strategy' => 'Product Strategy',
-    'product-team-AI-vibe-coding' => 'Vibe Coding',
+    'product-strategy' => 'Product strategy',
+    'product-team-AI-vibe-coding' => 'Vibe coding',
     'work' => 'Work',
-    'hire-me' => 'How Can I Help',
+    'hire-me' => 'How I can help',
     'journal' => 'Journal',
 ];
 
@@ -32,7 +32,17 @@ $buildUrl = function (string $path): string {
                 <li class="nav-separator">|</li>
             <?php endif; ?>
             <li>
-                <a href="<?= $href ?>" title="<?= $titleAttr ?>" class="<?= $isActive ? 'active' : '' ?>">
+                <?php
+                $linkClasses = [];
+                if ($isActive) {
+                    $linkClasses[] = 'active';
+                }
+                if ($path === 'journal') {
+                    $linkClasses[] = 'nav-link--journal';
+                }
+                $classAttr = $linkClasses === [] ? '' : ' class="' . htmlspecialchars(implode(' ', $linkClasses), ENT_QUOTES) . '"';
+                ?>
+                <a href="<?= $href ?>" title="<?= $titleAttr ?>"<?= $classAttr ?>>
                     <?= $titleAttr ?>
                 </a>
             </li>

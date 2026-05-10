@@ -25,8 +25,8 @@ $ogType = $pageMeta['og_type'] ?? 'website';
 
 switch ($path) {
     case '/':
-        $title = $pageMeta['title'] ?? 'Product Leader London | AI & Growth Expert';
-        $description = $pageMeta['description'] ?? 'Product leader driving growth with AI and scalable product approaches.';
+        $title = $pageMeta['title'] ?? 'Mike P | Product, AI, learning platforms & notes';
+        $description = $pageMeta['description'] ?? 'London-based Head of Product: AI, learning platforms, sustainability and product strategy. Journal, frameworks, and practical product thinking.';
         break;
     case '/product-strategy':
         $title = $pageMeta['title'] ?? 'Product Strategy | Mike Smith';
@@ -79,6 +79,9 @@ switch ($path) {
 <meta name="twitter:description" content="<?= htmlspecialchars($description, ENT_QUOTES) ?>">
 <meta name="twitter:image" content="<?= htmlspecialchars($image, ENT_QUOTES) ?>">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400;1,9..40,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/reset.css">
 <?php
 // Use unminified CSS locally for easier debugging; minified elsewhere when available

@@ -402,6 +402,25 @@ function journalExcerpt(array $entry, int $length = 160): string
 }
 
 /**
+ * Estimated reading time in minutes from entry body (markdown source).
+ *
+ * @param array<string, mixed> $entry
+ */
+function journalReadingMinutes(array $entry): int
+{
+    $text = trim((string) ($entry['content'] ?? ''));
+    if ($text === '') {
+        return 1;
+    }
+
+    $words = preg_split('/\s+/u', strip_tags($text), -1, PREG_SPLIT_NO_EMPTY);
+    $count = is_array($words) ? count($words) : 0;
+    $minutes = (int) ceil($count / 200);
+
+    return max(1, $minutes);
+}
+
+/**
  * Return the timezone used for journal scheduling.
  */
 function journalTimezone(): DateTimeZone
