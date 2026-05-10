@@ -20,7 +20,7 @@ include 'includes/http-headers.php';
 					<p>Vibe coding is transforming how product teams approach discovery and prototyping. Here's what I've learned implementing it across product management, design, and success teams. <a href="/work">See my product leadership experience</a>.</p>
 				</div>
 
-				<section class="page-section">
+				<section class="page-section" id="ai-adoption">
 					<div class="section-header">
 						<h2 class="section-title">What is Vibe Coding?</h2>
 					</div>
