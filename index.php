@@ -28,10 +28,9 @@ $pageMeta = [
 					<div class="home-hero__top">
 						<div class="home-hero__intro-col">
 							<p class="home-hero__eyebrow">Product leader, London</p>
-							<h1 id="home-hero-title" class="home-hero__title heading-serif">Product leader driving growth with AI and scalable product approaches</h1>
-							<p class="home-hero__lead">I'm a <strong class="marker-highlight">London-based product leader</strong> with over 20 years of digital experience and 12+ years in senior product management roles. I specialise in leveraging AI to drive growth, leading 0→1 product development, and scaling mature platforms across diverse industries. <a href="/work">View my work experience</a>.</p>
-							<p class="home-hero__lead">My career spans <strong class="marker-highlight">publishing, EdTech, expert networks, and consumer products</strong> — delivering results at organisations including LEGO, News UK/The Times, FutureLearn, Atheneum, and Which?. See my full <a href="/work">work history</a>.</p>
-							<p class="home-ai-callout">Written by me, not a language model. We have enough AI slop without me adding to it.</p>
+							<h1 id="home-hero-title" class="home-hero__title heading-serif">I help teams build things that actually matter.</h1>
+							<p class="home-hero__lead">Hi, I'm Mike — a London-based product leader working across <strong class="marker-highlight">AI</strong>, <strong class="marker-highlight">learning platforms</strong>, <strong class="marker-highlight">sustainability</strong>, and <strong class="marker-highlight">product strategy</strong>. I like shipping things, enjoying life, and a good pastry.</p>
+							<p class="home-ai-callout">This site is not written by ChatGPT as we have enough AI slop around without me adding to it.</p>
 							<div class="cta-group home-hero-cta">
 								<a class="primary-cta home-hero-cta-primary" href="/journal">Read the journal</a>
 								<a class="secondary-cta home-hero-cta-secondary" href="/hire-me">How I can help</a>
@@ -60,7 +59,7 @@ $pageMeta = [
 						</li>
 						<li class="home-thinking-card">
 							<span class="home-thinking-num" aria-hidden="true">04</span>
-							<p class="home-thinking-text heading-serif">How every discipline can build — not only engineering</p>
+							<p class="home-thinking-text heading-serif">How PM, design, and research ship tangible work — not only engineering</p>
 						</li>
 					</ol>
 				</section>
@@ -108,7 +107,7 @@ $pageMeta = [
 					<p class="home-help-tags"><a href="/product-strategy#product-strategy-framework">Product strategy</a> / <a href="/product-team-AI-vibe-coding#ai-adoption">AI adoption</a> / 0→1 discovery / Learning platforms / Lightweight team ways of working</p>
 
 					<div id="connect" class="home-connect-warm">
-						<h3 class="home-connect-warm__title heading-serif">Say hi — I reply.</h3>
+						<h3 class="home-connect-warm__title heading-serif">Say hi - I reply soon(ish).</h3>
 						<p class="home-connect-warm__lead">Always up for a conversation about product, AI, or where to find a good croissant in London.</p>
 						<div class="cta-group home-connect-warm__cta">
 							<a class="primary-cta primary-cta--quiet" href="mailto:mike.p.smith@gmail.com?subject=Hello%20from%20your%20website">Email me</a>
