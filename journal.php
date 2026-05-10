@@ -47,14 +47,14 @@ if ($currentEntry !== null) {
 <head>
     <?php include __DIR__ . '/includes/header-includes.php'; ?>
 </head>
-<body>
+<body class="page-site">
     <div class="inner-body">
         <?php include __DIR__ . '/includes/header.php'; ?>
         <main id="main" aria-label="Main content">
-            <div class="main-content" role="main">
+            <div class="main-content main-content--site" role="main">
                 <?php if ($currentEntry === null): ?>
                     <section class="page-header" aria-labelledby="journal-page-title">
-                        <h1 id="journal-page-title" class="title">Journal</h1>
+                        <h1 id="journal-page-title" class="title heading-serif">Journal</h1>
                         <p class="page-intro">Random musings and working notes from the product trenches. <a href="/work">Learn more about my experience</a>.</p>
                     </section>
 
@@ -95,7 +95,7 @@ if ($currentEntry !== null) {
                                     <?= htmlspecialchars($currentEntry['date']->format('d-m-Y'), ENT_QUOTES) ?>
                                 </time>
                             </p>
-                            <h1 id="journal-entry-title" class="title"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
+                            <h1 id="journal-entry-title" class="title heading-serif"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
                         </section>
                         <div class="journal-entry-body">
                             <?= renderJournalMarkdown($currentEntry['content']); ?>
@@ -103,12 +103,10 @@ if ($currentEntry !== null) {
                     </article>
                 <?php endif; ?>
 
-                <div class="journal-connect">
-                    <?php include __DIR__ . '/includes/about.php'; ?>
-                </div>
             </div>
         </main>
         <footer>
+            <?php include __DIR__ . '/includes/about.php'; ?>
             <?php include __DIR__ . '/includes/colophon.php'; ?>
         </footer>
     </div>
