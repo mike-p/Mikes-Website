@@ -1,7 +1,7 @@
 <?php
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 ?>
-<?php if ($currentPage !== 'index'): ?>
+<?php if ($currentPage !== 'index' && $currentPage !== 'hire-me'): ?>
 <section id="connect" class="content-section connect-warm-card">
 	<div class="connect-warm-card__inner">
 		<div class="connect-warm-card__copy">
@@ -13,8 +13,6 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/hire-me">See how I can help your team</a></p>
 			<?php elseif ($currentPage === 'product-team-AI-vibe-coding'): ?>
 				<p class="connect-warm-card__related">Related: <a href="/product-strategy">Explore my product strategy framework</a> | <a href="/hire-me">See how I can help your team</a></p>
-			<?php elseif ($currentPage === 'hire-me'): ?>
-				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/product-strategy">Explore my product strategy framework</a></p>
 			<?php elseif ($currentPage === 'journal'): ?>
 				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/product-strategy">Explore my product strategy framework</a></p>
 			<?php elseif ($currentPage === 'template'): ?>

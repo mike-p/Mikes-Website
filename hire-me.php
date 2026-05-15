@@ -22,10 +22,18 @@ include __DIR__ . '/includes/http-headers.php';
 				</div>
 				</section>
 
-				<!-- <div class="service-intro">
-					<p>I partner with businesses as a <strong>fractional product leader</strong> to install effective product strategies, lead high-performing teams, and deliver measurable results.</p>
-					<p>My goal is to provide the strategic oversight and hands-on execution you need to move your product forward, exactly when you need it most.</p>
-				</div> -->
+				<section class="connect-warm-card hire-me-contact-top" aria-labelledby="hire-me-contact-heading">
+					<div class="connect-warm-card__inner">
+						<div class="connect-warm-card__copy">
+							<h2 id="hire-me-contact-heading" class="connect-warm-card__title">Say hi — I reply.</h2>
+							<p class="connect-warm-card__lead">Interested in fractional product leadership or a specific challenge? Email me — I usually reply within a day or two.</p>
+						</div>
+						<div class="connect-warm-card__actions cta-group">
+							<a class="primary-cta" href="mailto:mike.p.smith@gmail.com?subject=Hello%20from%20your%20website">Email me</a>
+							<a class="secondary-cta" href="https://www.linkedin.com/in/mikepfsmith/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+						</div>
+					</div>
+				</section>
 
 				<section class="page-section">
 					<div class="section-header">
@@ -66,7 +74,6 @@ include __DIR__ . '/includes/http-headers.php';
 							</div>
 						</div>
 
-						
 					</div>
 				</section>
 

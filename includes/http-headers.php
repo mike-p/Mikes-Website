@@ -19,8 +19,15 @@ $is404 = (http_response_code() === 404 ||
            (strpos($_SERVER['REQUEST_URI'], '/404') !== false || 
             basename($_SERVER['PHP_SELF']) === '404.php')));
 
+$host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+$isLocalDev = str_contains($host, 'localhost') || str_contains($host, '127.0.0.1');
+
 // Set caching headers based on page type
-if ($is404) {
+if ($isLocalDev) {
+    header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+    header('Pragma: no-cache');
+    header('Expires: 0');
+} elseif ($is404) {
     // 404 pages should not be cached
     header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
     header('Pragma: no-cache');
