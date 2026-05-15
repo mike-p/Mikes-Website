@@ -1,3 +1,6 @@
+# Local deploy credentials (IONOS SFTP)
+.deploy.env
+
 # Dependencies
 node_modules/
 package-lock.json
@@ -6,8 +9,10 @@ package-lock.json
 .DS_Store
 Thumbs.db
 
-# IDE
-.vscode/
+# IDE (keep SFTP template; real sftp.json is generated locally with password)
+.vscode/*
+!.vscode/extensions.json
+!.vscode/sftp.json.example
 .idea/
 *.swp
 *.swo

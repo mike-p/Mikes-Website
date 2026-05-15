@@ -3,23 +3,30 @@
 	box-sizing: border-box;
 }
 
-/* Design tokens — must precede any rule using var(--dn-*, --terra, …) */
+/* Design tokens — cool grey base, teal links, terra reserved for primary CTAs */
 :root {
 	--dn-bg: #e8edf1;
 	--dn-ink: #2a3540;
 	--dn-muted: #5a6d7a;
-	--dn-accent: #b85c2c;
-	--dn-coral: #b85c5c;
+	--dn-accent: #3a6d6d;
+	--dn-accent-hover: #2f5c5c;
+	--dn-coral: #5a8585;
 	--dn-rule: rgba(42, 53, 64, 0.12);
 	--dn-card: #f4f7f9;
-	--dn-header-surface: rgba(244, 247, 249, 0.88);
+	--dn-nav-surface: rgba(236, 241, 246, 0.98);
+	--dn-header-surface: var(--dn-nav-surface);
+	--nav-raise-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.75) inset,
+		0 4px 18px rgba(42, 53, 64, 0.07),
+		0 1px 3px rgba(42, 53, 64, 0.04);
+	--page-bg: linear-gradient(180deg, #fbfcfd 0%, #f4f7f9 100%);
 	--terra: #b85c2c;
-	--warm-bg: #fdf6f0;
-	--warm-border: #f0d4bf;
-	--warm-text: #5c3a22;
-	--warm-callout-border: #e8895a;
-	--avatar-placeholder: #f0d4bf;
-	--bg-secondary: #f5efe8;
+	--warm-bg: var(--dn-card);
+	--warm-border: rgba(42, 53, 64, 0.1);
+	--warm-text: var(--dn-ink);
+	--warm-callout-border: #6a9090;
+	--avatar-placeholder: #d8e2e8;
+	--bg-secondary: #eef2f5;
 }
 
 html {
@@ -40,7 +47,7 @@ body {
 	color: var(--dn-ink);
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	background: linear-gradient(180deg, #faf8f6 0%, #ebe4dc 100%);
+	background: var(--page-bg);
 }
 
 /* Respect users who prefer reduced motion */
@@ -77,7 +84,7 @@ strong {
 
 a:hover {
 	text-decoration: none;
-	color: var(--dn-coral);
+	color: var(--dn-accent-hover);
 }
 
 a:visited {
@@ -94,7 +101,8 @@ a:visited {
 	margin: 0 auto 0;
 	background: var(--dn-header-surface);
 	backdrop-filter: blur(14px);
-	border-bottom: 1px solid var(--dn-rule);
+	border-bottom: 1px solid rgba(42, 53, 64, 0.08);
+	box-shadow: var(--nav-raise-shadow);
 	position: fixed;
 	width: 100%;
 	top: 0;
@@ -394,11 +402,11 @@ header .available-now.animations-ended::before {
 
 
 .marker-highlight {
-	background: linear-gradient(120deg, #ffeb3b 0%, #fff176 100%);
+	background: linear-gradient(120deg, rgba(58, 109, 109, 0.14) 0%, rgba(90, 133, 133, 0.1) 100%);
 	background-repeat: no-repeat;
 	background-size: 0% 0.3em;
 	background-position: left 95%;
-	color: #000000;
+	color: var(--dn-ink);
 	font-weight: 500;
 	padding: 0 2px;
 	text-decoration: none;
@@ -501,8 +509,8 @@ header .available-now.animations-ended::before {
 
 .journal-title a:hover,
 .journal-title a:focus-visible {
-	color: var(--terra);
-	border-bottom-color: var(--terra);
+	color: var(--dn-accent);
+	border-bottom-color: var(--dn-accent);
 }
 
 .journal-excerpt {
@@ -544,8 +552,8 @@ header .available-now.animations-ended::before {
 }
 
 .journal-back-link:hover {
-	border-color: var(--terra);
-	color: var(--terra);
+	border-color: var(--dn-accent);
+	color: var(--dn-accent);
 }
 
 .journal-entry .title {
@@ -699,7 +707,7 @@ header .available-now.animations-ended::before {
 	font-weight: 500;
 	position: relative;
 	padding: 0 0.1em;
-	background-image: linear-gradient(120deg, #ffeb3b 0%, #fff176 100%);
+	background-image: linear-gradient(120deg, rgba(58, 109, 109, 0.14) 0%, rgba(90, 133, 133, 0.1) 100%);
 	background-repeat: no-repeat;
 	background-size: 0% 0.35em;
 	background-position: left 90%;
@@ -782,21 +790,23 @@ header .available-now.animations-ended::before {
 
 /********************* Footer /********************* */
 footer {
+	box-sizing: border-box;
+	width: 100%;
 	max-width: 53rem;
 	margin: 0 auto;
-	padding: 0 1rem 20px;
+	padding: 2rem 1rem 20px;
 	clear: both;
 	border-top: 1px solid var(--dn-rule);
 }
 
-/* Connect section in footer */
-footer .content-section {
+/* Legacy connect block (not the warm card) */
+footer .content-section:not(.connect-warm-card) {
 	margin-bottom: 3rem;
 	padding-bottom: 3rem;
 	border-bottom: 1px solid var(--dn-rule);
 }
 
-footer .content-section:last-of-type {
+footer .content-section:not(.connect-warm-card):last-of-type {
 	border-bottom: none;
 }
 
@@ -843,17 +853,26 @@ footer .connect-section .section-content {
 .page-section .section-header {
 	border-bottom: none;
 	padding-bottom: 0;
-	margin-bottom: 1rem;
+	margin-bottom: 0.75rem;
 }
 
+/* Section H2 — serif, clearly above in-page H3s */
 .page-section .section-header .section-title {
-	font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
-	font-weight: 600;
-	font-size: clamp(1.25rem, 2.5vw, 1.55rem);
-	line-height: 1.25;
+	font-family: 'Lora', Georgia, 'Times New Roman', serif;
+	font-weight: 500;
+	font-size: clamp(1.45rem, 3vw, 1.85rem);
+	line-height: 1.2;
 	color: var(--dn-ink);
-	letter-spacing: -0.02em;
+	letter-spacing: -0.025em;
 	margin: 0;
+}
+
+.page-section .section-content > p:first-of-type {
+	margin-top: 0;
+	margin-bottom: 2.25rem;
+	color: var(--dn-muted);
+	font-size: 1.05rem;
+	line-height: 1.75;
 }
 
 .section-title {
@@ -868,7 +887,7 @@ footer .connect-section .section-content {
 	padding: 2rem;
 	background: var(--warm-bg);
 	border: 0.5px solid var(--warm-border);
-	border-left: 3px solid var(--terra);
+	border-left: 3px solid var(--dn-accent);
 	border-radius: 12px;
 	margin: 2rem 0;
 	transition: transform 0.2s ease, background 0.2s ease;
@@ -914,7 +933,7 @@ footer .connect-section .section-content {
 
 .resource-link:hover {
 	opacity: 0.85;
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 /* ===================== Template Grid ===================== */
@@ -934,7 +953,7 @@ footer .connect-section .section-content {
 }
 
 .template-card:hover {
-	border-color: rgba(184, 92, 44, 0.45);
+	border-color: rgba(58, 109, 109, 0.4);
 	transform: translateY(-4px);
 }
 
@@ -965,13 +984,13 @@ footer .connect-section .section-content {
 
 .template-link:hover {
 	opacity: 0.85;
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 /* ===================== Callout Boxes ===================== */
 .callout-warning {
 	background: var(--warm-bg);
-	border-left: 3px solid var(--terra);
+	border-left: 3px solid var(--dn-accent);
 	padding: 1.5rem;
 	margin: 2rem 0;
 	font-size: 0.95rem;
@@ -989,11 +1008,11 @@ footer .connect-section .section-content {
 	background: var(--warm-bg);
 	padding: 2.5rem;
 	margin: 3rem 0;
-	border-left: 3px solid var(--terra);
+	border-left: 3px solid var(--dn-accent);
 	border-radius: 0 8px 8px 0;
 	border: 0.5px solid var(--warm-border);
 	border-left-width: 3px;
-	border-left-color: var(--terra);
+	border-left-color: var(--dn-accent);
 }
 
 .service-intro p {
@@ -1005,27 +1024,31 @@ footer .connect-section .section-content {
 }
 
 .services-list {
-	margin: 3rem 0;
+	margin: 0;
 }
 
 .service-item {
-	margin-bottom: 3rem;
-	padding-bottom: 2.5rem;
+	margin-bottom: 2.25rem;
+	padding: 0 0 2.25rem 1rem;
+	border-left: 2px solid rgba(58, 109, 109, 0.32);
 	border-bottom: 1px solid var(--dn-rule);
 }
 
 .service-item:last-child {
 	border-bottom: none;
 	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
+/* Service H3 — subordinate to .section-title (sans, smaller) */
 .service-item h3 {
-	font-family: 'Lora', Georgia, serif;
-	font-size: 1.5rem;
+	font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+	font-size: 1.125rem;
 	color: var(--dn-ink);
-	margin: 0 0 1rem;
+	margin: 0 0 0.65rem;
 	font-weight: 600;
-	letter-spacing: -0.025em;
+	letter-spacing: -0.01em;
+	line-height: 1.35;
 }
 
 .service-item p {
@@ -1143,7 +1166,7 @@ h2.cv-role {
 }
 
 .cv-company a:hover {
-	border-bottom-color: var(--terra);
+	border-bottom-color: var(--dn-accent);
 	text-decoration: none;
 }
 
@@ -1173,7 +1196,7 @@ h2.cv-role {
 	top: 0.6rem;
 	width: 0.6rem;
 	height: 0.6rem;
-	background: var(--terra);
+	background: var(--dn-accent);
 	border-radius: 50%;
 	border: 2px solid #fff;
 	box-shadow: 0 0 0 2px var(--dn-rule);
@@ -1288,8 +1311,8 @@ h2.cv-role {
 		width: 10px;
 		height: 10px;
 		border-radius: 50%;
-		background: var(--terra);
-		box-shadow: 0 0 0 6px #faf8f6, 0 0 0 2px var(--dn-rule);
+		background: var(--dn-accent);
+		box-shadow: 0 0 0 6px var(--dn-card), 0 0 0 2px var(--dn-rule);
 		pointer-events: none;
 	}
 
@@ -1348,7 +1371,7 @@ p.cv-description {
 }
 
 .cv-description a:hover {
-	color: var(--terra);
+	color: var(--dn-accent);
 	text-decoration: none;
 }
 
@@ -1618,7 +1641,7 @@ p.cv-description {
 
 .main-content a.secondary-cta:hover,
 .main-content a.secondary-cta:focus-visible {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .main-content .title {
@@ -1713,7 +1736,7 @@ p.cv-description {
 }
 
 .template-route .template-back-link:hover {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .template-route .template-actions {
@@ -1843,7 +1866,7 @@ p.cv-description {
 }
 
 .template-route .template-body a:hover {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .template-route .template-body a.external-link {
@@ -1946,7 +1969,7 @@ p.cv-description {
 }
 
 .template-route .template-list-item a:hover {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .template-route .template-list-item p {
@@ -2048,9 +2071,9 @@ body.page-home .page-site-figure img {
 	border-radius: 8px;
 }
 
-/* Templates index + markdown viewer: cooler page shell (distinct from warm interior pages) */
+/* Template pages use the same cool page shell as the rest of the site */
 body.page-template {
-	background: linear-gradient(180deg, #eef2f5 0%, #e2e8ee 100%);
+	background: var(--page-bg);
 }
 
 .primary-cta,
@@ -2093,12 +2116,12 @@ body.page-template {
 
 .secondary-cta:hover,
 .cta-group .secondary-cta:hover {
-	border-color: var(--terra);
-	color: var(--terra);
+	border-color: var(--dn-accent);
+	color: var(--dn-accent);
 }
 
 .marker-highlight {
-	background: linear-gradient(120deg, rgba(184, 92, 44, 0.15), rgba(184, 92, 92, 0.12));
+	background: linear-gradient(120deg, rgba(58, 109, 109, 0.14), rgba(90, 133, 133, 0.1));
 	background-size: auto;
 	background-position: initial;
 	background-repeat: no-repeat;
@@ -2116,13 +2139,13 @@ header .nav-wrapper .back-home {
 }
 
 header .site-nav ul li a.nav-link--journal {
-	color: var(--terra);
+	color: var(--dn-accent);
 	font-weight: 500;
 }
 
 header .site-nav ul li a.nav-link--journal:hover,
 header .site-nav ul li a.nav-link--journal.active {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .cv-company {
@@ -2220,7 +2243,7 @@ header .site-nav ul li a.nav-link--journal.active {
 	font-weight: 500;
 	letter-spacing: 0.08em;
 	text-transform: uppercase;
-	color: var(--terra);
+	color: var(--dn-accent);
 	margin: 0 0 0.75rem;
 	line-height: 1.25;
 }
@@ -2252,8 +2275,8 @@ header .site-nav ul li a.nav-link--journal.active {
 }
 
 .main-content--home .home-hero__avatar {
-	width: 56px;
-	height: 56px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	overflow: hidden;
 	flex-shrink: 0;
@@ -2267,6 +2290,7 @@ header .site-nav ul li a.nav-link--journal.active {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	object-position: center center;
 }
 
 .main-content--home .home-hero-cta {
@@ -2327,7 +2351,7 @@ header .site-nav ul li a.nav-link--journal.active {
 .main-content--home .home-thinking-num {
 	font-size: 11px;
 	font-weight: 500;
-	color: var(--terra);
+	color: var(--dn-accent);
 	line-height: 1.25;
 	letter-spacing: 0.02em;
 }
@@ -2370,7 +2394,7 @@ header .site-nav ul li a.nav-link--journal.active {
 
 .main-content--home .journal-home-row:hover .journal-title,
 .main-content--home .journal-home-row:focus-visible .journal-title {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .main-content--home .journal-home-row__meta {
@@ -2414,7 +2438,7 @@ header .site-nav ul li a.nav-link--journal.active {
 .main-content--home .journal-home-row:hover .journal-home-row__arrow,
 .main-content--home .journal-home-row:focus-visible .journal-home-row__arrow {
 	transform: translateX(3px);
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 .main-content--home .home-notes-empty {
@@ -2434,14 +2458,14 @@ header .site-nav ul li a.nav-link--journal.active {
 	color: var(--dn-accent);
 	font-weight: 500;
 	text-decoration: underline;
-	text-decoration-color: rgba(184, 92, 44, 0.35);
+	text-decoration-color: rgba(58, 109, 109, 0.35);
 	text-underline-offset: 0.2em;
 }
 
 .main-content--home .home-help-tags a:hover,
 .main-content--home .home-help-tags a:focus-visible {
-	color: var(--terra);
-	text-decoration-color: rgba(184, 92, 44, 0.55);
+	color: var(--dn-accent);
+	text-decoration-color: rgba(58, 109, 109, 0.55);
 }
 
 .main-content--home .home-connect-warm {
@@ -2503,11 +2527,14 @@ header .site-nav ul li a.nav-link--journal.active {
 	padding: 1.75rem 0 2.5rem;
 }
 
-/* Homepage + warm interior pages; template footer matches main width too */
+/* Align footer column with .main-content--site (48rem incl. horizontal padding) */
 body.page-home footer,
 body.page-template footer {
 	max-width: 48rem;
-	margin-top: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	padding-top: 2rem;
 }
 
 .main-content--home .home-clients .section-label {
@@ -2545,8 +2572,8 @@ body.page-template footer {
 
 .main-content--home .home-clients-list a:hover,
 .main-content--home .home-clients-list a:focus-visible {
-	color: var(--terra);
-	border-color: rgba(184, 92, 44, 0.45);
+	color: var(--dn-accent);
+	border-color: rgba(58, 109, 109, 0.4);
 	background: var(--warm-bg);
 }
 
@@ -2597,9 +2624,31 @@ body.page-template footer {
 }
 
 footer .connect-warm-card {
+	margin: 0 0 1.5rem;
+	padding: 0;
 	border-bottom: none;
-	padding-bottom: 0;
-	margin-bottom: 2rem;
+}
+
+.main-content--site .hire-me-contact-top {
+	margin: 0 0 2.75rem;
+}
+
+.main-content--site .hire-me-contact-top .connect-warm-card__actions {
+	justify-content: flex-start;
+}
+
+footer .connect-warm-card__inner {
+	width: 100%;
+	max-width: 100%;
+}
+
+footer .connect-warm-card__copy {
+	flex: 1 1 16rem;
+	min-width: 0;
+}
+
+footer .connect-warm-card__actions {
+	flex: 0 0 auto;
 }
 
 @media (max-width: 600px) {
@@ -2696,7 +2745,7 @@ body.page-home .main-content--home .journal-list--home .journal-title {
 
 body.page-home .main-content--home .journal-home-row:hover .journal-title,
 body.page-home .main-content--home .journal-home-row:focus-visible .journal-title {
-	color: var(--terra);
+	color: var(--dn-accent);
 }
 
 body.page-home .home-connect-warm {

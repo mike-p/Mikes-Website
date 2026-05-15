@@ -28,8 +28,8 @@ $pageMeta = [
 					<div class="home-hero__top">
 						<div class="home-hero__intro-col">
 							<p class="home-hero__eyebrow">Product leader, London</p>
-							<h1 id="home-hero-title" class="home-hero__title heading-serif">I help teams build things that actually matter.</h1>
-							<p class="home-hero__lead">Hi, I'm Mike — a London-based product leader working across <strong class="marker-highlight">AI</strong>, <strong class="marker-highlight">learning platforms</strong>, <strong class="marker-highlight">sustainability</strong>, and <strong class="marker-highlight">product strategy</strong>. I like shipping things, enjoying life, and a good pastry.</p>
+							<h1 id="home-hero-title" class="home-hero__title heading-serif">I enable teams to build things that actually matter.</h1>
+							<p class="home-hero__lead">Hi, I'm Mike 👋🏻 a London-based product leader working across <strong class="marker-highlight">AI</strong>, <strong class="marker-highlight">learning platforms</strong>, <strong class="marker-highlight">sustainability</strong>, and <strong class="marker-highlight">product strategy</strong>. I like shipping things, enjoying life, and a good pastry 🥐.</p>
 							<p class="home-ai-callout">This site is not written by ChatGPT as we have enough AI slop around without me adding to it.</p>
 							<div class="cta-group home-hero-cta">
 								<a class="primary-cta home-hero-cta-primary" href="/journal">Read the journal</a>
@@ -37,7 +37,7 @@ $pageMeta = [
 							</div>
 						</div>
 						<div class="home-hero__avatar">
-							<img class="home-hero__avatar-img" src="/i/mike-avatar-home.jpg" alt="" width="180" height="180" decoding="async" />
+							<img class="home-hero__avatar-img" src="/i/mike-avatar-home.jpg" alt="Mike Smith" width="320" height="320" decoding="async" />
 							<span class="visually-hidden">Mike</span>
 						</div>
 					</div>

@@ -84,12 +84,10 @@ switch ($path) {
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400;1,9..40,500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/reset.css">
 <?php
-// Localhost: unminified for debugging. Production: minified when layout.min.css exists.
-$isLocal = ($host === 'localhost' || $host === '127.0.0.1');
-$minFile = __DIR__ . '/../css/layout.min.css';
-$cssHref = (!$isLocal && is_file($minFile)) ? '/css/layout.min.css' : '/css/layout.css?v=' . microtime(true);
+$layoutCss = __DIR__ . '/../css/layout.css';
+$layoutCssVersion = is_file($layoutCss) ? (string) filemtime($layoutCss) : '1';
 ?>
-<link rel="stylesheet" type="text/css" href="<?= htmlspecialchars($cssHref, ENT_QUOTES) ?>">
+<link rel="stylesheet" type="text/css" href="/css/layout.css?v=<?= htmlspecialchars($layoutCssVersion, ENT_QUOTES) ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico">
 <meta name="author" content="Mike Smith (Mike-p)">

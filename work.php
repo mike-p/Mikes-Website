@@ -24,7 +24,27 @@ include __DIR__ . '/includes/http-headers.php';
 					</div>
 					
 					<div class="cv-timeline">
-						
+					<div class="cv-company-group" id="action-sustainability">
+							<div class="cv-timeline-item cv-company-header">
+								<div class="cv-timeline-content">
+								<div class="cv-date"><time datetime="2021-12">2025</time> - <time datetime="2025-10">current</time></div>
+									<div class="cv-company">Action Sustainability</div>
+									<div class="cv-company-meta">
+										<div class="cv-tags">
+											<span class="cv-tag">EdTech</span>
+											<span class="cv-tag">PE-backed</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="cv-timeline-item cv-role-item">
+								<div class="cv-timeline-content">
+									<div class="cv-date"><time datetime="2025-01">Nov 2025</time> - <time datetime="2025-10">current</time></div>
+									<h2 class="cv-role">Head of Product</h2>
+									<p class="cv-description">Leading product function (product, design, engineering and content)</p>
+								</div>
+							</div>
+						</div>
 
 						<div class="cv-company-group" id="atheneum">
 							<div class="cv-timeline-item cv-company-header">
@@ -57,24 +77,7 @@ include __DIR__ . '/includes/http-headers.php';
 							</div>
 						</div>
 
-						<div class="cv-company-group" id="action-sustainability">
-							<div class="cv-timeline-item cv-company-header">
-								<div class="cv-timeline-content">
-									<div class="cv-company">Action Sustainability</div>
-									<div class="cv-company-meta">
-										<div class="cv-tags">
-											<span class="cv-tag">Sustainability</span>
-											<span class="cv-tag">Advisory</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="cv-timeline-item cv-role-item">
-								<div class="cv-timeline-content">
-									<p class="cv-description">Product and digital advisory supporting sustainability programmes.</p>
-								</div>
-							</div>
-						</div>
+						
 
 						<div class="cv-company-group" id="futurelearn">
 							<div class="cv-timeline-item cv-company-header">

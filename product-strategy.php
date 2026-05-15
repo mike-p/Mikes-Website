@@ -18,16 +18,17 @@ include __DIR__ . '/includes/http-headers.php';
 				<h1 id="product-strategy-page-title" class="title heading-serif">Scalable approach for a coherent product strategy and supporting process</h1>
 
 				<div class="intro">
-					<p>Effective product strategy requires both vision and process. I've developed scalable frameworks that help teams align on strategy and execute with clarity across squads and organisations. A full list of the templates mentioned below can be found <a href="/template">here</a>. <a href="/work">See how I've applied this in practice</a>.</p>
+					<p>Effective product strategy requires both vision and process. I've hopefully developed scalable frameworks that help teams align on strategy and execute with clarity across squads. A full list of the templates mentioned below can be found <a href="/template">here</a>. <a href="/work">See how I've applied this in practice</a>.</p>
 				</div>
 				</section>
 
 				<section class="page-section" id="product-strategy-framework">
 					<div class="section-header">
-						<h2 class="section-title">Product Strategy Framework</h2>
+						<h2 class="section-title">The strategy bit...
+						</h2>
 					</div>
 					<div class="section-content">
-						<p>A proven template to help teams coalesce around a clear product strategy, whether for a single squad or across multiple teams.</p>
+						<p>A proven template (as in I've used it for 8 years and it hasn't let me down yet....) to help teams coalesce around a clear product strategy, whether for a single squad or across multiple teams.</p>
 						<div class="resource-card">
 							<div class="resource-icon">📋</div>
 							<div class="resource-content">
@@ -41,7 +42,7 @@ include __DIR__ . '/includes/http-headers.php';
 
 				<section class="page-section" id="execution-review">
 					<div class="section-header">
-						<h2 class="section-title">Execution - Product Review Process</h2>
+						<h2 class="section-title">The execution bit...</h2>
 					</div>
 					<div class="section-content">
 						<p>A product review process is a framework for shipping products that have a clear strategy, vision, and measurable impact. This scalable approach can be used across squads and tribes.</p>

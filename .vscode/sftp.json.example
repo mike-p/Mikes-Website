@@ -1,0 +1,29 @@
+{
+  "name": "mike-p.co.uk",
+  "host": "home387541923.1and1-data.host",
+  "protocol": "sftp",
+  "port": 22,
+  "username": "u66236303",
+  "password": "SET_IN_GENERATED_sftp.json",
+  "remotePath": "/",
+  "uploadOnSave": true,
+  "useTempFile": false,
+  "openSsh": false,
+  "ignore": [
+    ".vscode",
+    ".cursor",
+    ".git",
+    "node_modules",
+    "scripts",
+    ".deploy.env",
+    ".deploy.env.example",
+    "package.json",
+    "package-lock.json",
+    "playwright.config.js",
+    ".DS_Store",
+    ".php-cs-fixer.cache",
+    "*.code-workspace",
+    "*.sh",
+    "*.command"
+  ]
+}
