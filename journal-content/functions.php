@@ -73,6 +73,8 @@ function parseJournalEntry(string $file): ?array
     $today = new DateTimeImmutable('today', $timezone);
     $isFuture = $normalizedDate > $today;
 
+    $charterFlag = strtolower($frontMatter['charter'] ?? '');
+
     return [
         'slug' => $slug,
         'title' => $title,
@@ -80,6 +82,26 @@ function parseJournalEntry(string $file): ?array
         'date' => $normalizedDate,
         'is_future' => $isFuture,
         'content' => $content,
+        'has_charter' => in_array($charterFlag, ['true', 'yes', '1'], true),
+    ];
+}
+
+/**
+ * Split journal content into intro and charter sections (first --- divider).
+ *
+ * @return array{intro: string, charter: string}
+ */
+function splitJournalIntroAndCharter(string $content): array
+{
+    $parts = preg_split('/\n---\n/', trim($content), 2);
+
+    if (count($parts) < 2) {
+        return ['intro' => trim($content), 'charter' => ''];
+    }
+
+    return [
+        'intro' => trim($parts[0]),
+        'charter' => trim($parts[1]),
     ];
 }
 

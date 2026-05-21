@@ -97,9 +97,19 @@ if ($currentEntry !== null) {
                             </p>
                             <h1 id="journal-entry-title" class="title heading-serif"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
                         </section>
-                        <div class="journal-entry-body">
-                            <?= renderJournalMarkdown($currentEntry['content']); ?>
-                        </div>
+                        <?php if (!empty($currentEntry['has_charter'])): ?>
+                            <?php $journalSections = splitJournalIntroAndCharter($currentEntry['content']); ?>
+                            <div class="journal-entry-body">
+                                <?= renderJournalMarkdown($journalSections['intro']); ?>
+                            </div>
+                            <div class="journal-entry-charter" aria-label="Team charter">
+                                <?= renderJournalMarkdown($journalSections['charter']); ?>
+                            </div>
+                        <?php else: ?>
+                            <div class="journal-entry-body">
+                                <?= renderJournalMarkdown($currentEntry['content']); ?>
+                            </div>
+                        <?php endif; ?>
                     </article>
                 <?php endif; ?>
 
