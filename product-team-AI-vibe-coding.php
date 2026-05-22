@@ -9,7 +9,7 @@ include __DIR__ . '/includes/http-headers.php';
     <link rel="prev" title="Product Strategy" href="https://mike-p.co.uk/product-strategy">
     <link rel="next" title="Work" href="https://mike-p.co.uk/work">
 </head>
-<body class="page-home">
+<body class="site-chrome page-site">
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
@@ -77,9 +77,9 @@ include __DIR__ . '/includes/http-headers.php';
 				</section>
 
             </div>
+			<?php include __DIR__ . '/includes/about.php'; ?>
 		</main>
 		<footer>
-			<?php include __DIR__ . '/includes/about.php'; ?>
 			<?php include __DIR__ . '/includes/colophon.php'; ?>
 		</footer>
 	</div>

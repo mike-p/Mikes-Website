@@ -1,11 +1,13 @@
 <?php
-$currentPage = basename($_SERVER['PHP_SELF'], '.php');
+$requestPath = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?: '/';
+$pathSegment = trim($requestPath, '/');
+$currentPage = $pathSegment === '' ? 'index' : explode('/', $pathSegment)[0];
 ?>
 <?php if ($currentPage !== 'index' && $currentPage !== 'hire-me'): ?>
-<section id="connect" class="content-section connect-warm-card">
+<section id="connect" class="site-connect connect-warm-card" aria-labelledby="site-connect-heading">
 	<div class="connect-warm-card__inner">
 		<div class="connect-warm-card__copy">
-			<h2 class="connect-warm-card__title">Say hi — I reply.</h2>
+			<h2 id="site-connect-heading" class="connect-warm-card__title">Say hi — I reply.</h2>
 			<p class="connect-warm-card__lead">Always up for a conversation about product, AI, or where to find a good croissant in London.</p>
 			<?php if ($currentPage === 'work'): ?>
 				<p class="connect-warm-card__related">Want to learn more? <a href="/product-strategy">Explore my product strategy framework</a> or <a href="/hire-me">see how I can help your team</a>.</p>

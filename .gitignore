@@ -1,5 +1,10 @@
 # Local deploy credentials (IONOS SFTP)
 .deploy.env
+.env
+.env.local
+
+# Stitch exports (fetched locally)
+stitch-export/
 
 # Dependencies
 node_modules/

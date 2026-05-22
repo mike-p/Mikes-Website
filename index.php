@@ -18,7 +18,7 @@ $pageMeta = [
 <head>
 	<?php include __DIR__ . '/includes/header-includes.php'; ?>
 </head>
-<body class="page-home">
+<body class="site-chrome page-home">
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main id="main" aria-label="Main content">
@@ -41,7 +41,6 @@ $pageMeta = [
 							<span class="visually-hidden">Mike</span>
 						</div>
 					</div>
-					<hr class="home-rule" />
 				</section>
 
 				<div class="home-split">
@@ -102,8 +101,6 @@ $pageMeta = [
 				</section>
 				</div>
 
-				<hr class="home-rule home-rule--split-after" />
-
 				<section class="home-help-section" aria-labelledby="home-help-heading">
 					<p class="section-label">Collaboration</p>
 					<h2 id="home-help-heading" class="home-section-heading">I work well on…</h2>
@@ -117,7 +114,6 @@ $pageMeta = [
 							<a class="secondary-cta secondary-cta--quiet" href="https://www.linkedin.com/in/mikepfsmith/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
 						</div>
 					</div>
-					<hr class="home-rule" />
 				</section>
 
 				<section class="home-clients" aria-labelledby="home-clients-heading">
@@ -136,7 +132,6 @@ $pageMeta = [
 			</div>
 		</main>
 		<footer>
-			<?php include __DIR__ . '/includes/about.php'; ?>
 			<?php include __DIR__ . '/includes/colophon.php'; ?>
 		</footer>
 	</div>
