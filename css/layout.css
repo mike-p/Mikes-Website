@@ -80,7 +80,7 @@ body {
 }
 
 ::selection {
-	background-color: var(--color-cedar);
+	background-color: var(--color-forest);
 	color: #fff;
 }
 
@@ -837,7 +837,7 @@ footer {
 	padding: 2rem 1rem 20px;
 	clear: both;
 	border-top: 1px solid var(--dn-ink);
-	background: var(--color-cedar);
+	background: var(--color-forest);
 	color: var(--color-snow);
 }
 
@@ -2336,16 +2336,16 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 
 .main-content--home .home-hero-cta .primary-cta,
 .main-content--home .home-hero-cta .primary-cta:visited {
-	background: var(--color-cedar);
-	border-color: var(--color-cedar);
+	background: var(--color-forest);
+	border-color: var(--color-forest);
 	color: #fff;
 }
 
 .main-content--home .home-hero-cta .primary-cta:hover,
 .main-content--home .home-hero-cta .primary-cta:focus-visible {
 	background: transparent;
-	border-color: var(--color-cedar);
-	color: var(--color-cedar);
+	border-color: var(--color-forest);
+	color: var(--color-forest);
 }
 
 .main-content--home .home-hero-cta .secondary-cta,
@@ -2628,7 +2628,7 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 	border-top: 1px solid var(--color-oatmeal);
 }
 
-/* Full-width cedar footer — home + interior marketing pages */
+/* Full-width forest footer — home + interior marketing pages (matches Say hi panel) */
 :where(.page-home, .page-site) footer {
 	max-width: none;
 	width: 100%;
