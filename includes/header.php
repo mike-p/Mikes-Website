@@ -1,6 +1,6 @@
 <?php
 $navStyle = 'centered';
-$navContainerClass = 'nav-container nav-style-centered';
+$navContainerClass = 'nav-container nav-primary';
 $navStyleQueryString = '';
 $homeHref = '/';
 ?>

@@ -18,26 +18,22 @@ $buildUrl = function (string $path): string {
 
 <nav class="site-nav" aria-label="Primary">
     <ul>
-        <?php 
-        $itemCount = count($navItems);
-        $index = 0;
-        foreach ($navItems as $path => $name): 
-            $index++;
-            $isLast = ($index === $itemCount);
+        <?php
+        foreach ($navItems as $path => $name):
             $isActive = ($currentSegment === $path);
+            $isJournal = ($path === 'journal');
             $titleAttr = htmlspecialchars($name, ENT_QUOTES);
             $href = htmlspecialchars($buildUrl($path), ENT_QUOTES);
+            $liClasses = $isJournal ? 'nav-item--journal' : '';
+            $liClassAttr = $liClasses === '' ? '' : ' class="' . htmlspecialchars($liClasses, ENT_QUOTES) . '"';
         ?>
-            <?php if ($isLast): ?>
-                <li class="nav-separator">|</li>
-            <?php endif; ?>
-            <li>
+            <li<?= $liClassAttr ?>>
                 <?php
                 $linkClasses = [];
                 if ($isActive) {
                     $linkClasses[] = 'active';
                 }
-                if ($path === 'journal') {
+                if ($isJournal) {
                     $linkClasses[] = 'nav-link--journal';
                 }
                 $classAttr = $linkClasses === [] ? '' : ' class="' . htmlspecialchars(implode(' ', $linkClasses), ENT_QUOTES) . '"';

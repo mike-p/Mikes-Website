@@ -11,7 +11,7 @@ include __DIR__ . '/includes/http-headers.php';
     <link rel="next" title="Hire Me" href="https://mike-p.co.uk/hire-me">
 </head>
 
-<body id="work" class="page-home layout-split">
+<body id="work" class="site-chrome page-site layout-split">
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
@@ -295,9 +295,9 @@ include __DIR__ . '/includes/http-headers.php';
 					</div>
 				</div>
 			</div>
+			<?php include __DIR__ . '/includes/about.php'; ?>
 		</main>
 		<footer>
-			<?php include __DIR__ . '/includes/about.php'; ?>
 			<?php include __DIR__ . '/includes/colophon.php'; ?>
 		</footer>
 	</div>

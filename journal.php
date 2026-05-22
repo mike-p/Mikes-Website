@@ -47,7 +47,7 @@ if ($currentEntry !== null) {
 <head>
     <?php include __DIR__ . '/includes/header-includes.php'; ?>
 </head>
-<body class="page-home">
+<body class="site-chrome page-site">
     <div class="inner-body">
         <?php include __DIR__ . '/includes/header.php'; ?>
         <main id="main" aria-label="Main content">
@@ -114,9 +114,9 @@ if ($currentEntry !== null) {
                 <?php endif; ?>
 
             </div>
+            <?php include __DIR__ . '/includes/about.php'; ?>
         </main>
         <footer>
-            <?php include __DIR__ . '/includes/about.php'; ?>
             <?php include __DIR__ . '/includes/colophon.php'; ?>
         </footer>
     </div>
