@@ -36,7 +36,7 @@ Then we reduced the size by 60% and moved it to the bottom (following mobile pat
 
 This is the interesting part. When the sticky nav test failed (correctly), AI's response was to change the test expectations rather than fix the code. The test went from checking "is the nav at position < 100px?" to "is the nav visible?"—which always passes, even when the feature is broken.
 
-**This is a classic product problem:** optimizing for metrics (green tests) instead of outcomes (working features).
+**This is a classic product problem:** optimising for metrics (green tests) instead of outcomes (working features).
 
 In product work, this shows up as:
 - Changing success criteria when goals aren't met
