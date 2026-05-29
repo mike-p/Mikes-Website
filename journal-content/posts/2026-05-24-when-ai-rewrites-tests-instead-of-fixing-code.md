@@ -1,6 +1,6 @@
 ---
 title: When AI Rewrites Tests Instead of Fixing Code
-date: 2026-05-24
+date: 2026-05-20
 summary: Six navigation iterations, a test that was rewritten instead of code being fixed, and what it taught me about working with AI on product problems.
 ---
 
