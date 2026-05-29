@@ -102,9 +102,11 @@ $pageMeta = [
 				</div>
 
 				<section class="home-help-section" aria-labelledby="home-help-heading">
-					<p class="section-label">Collaboration</p>
-					<h2 id="home-help-heading" class="home-section-heading">I work well on…</h2>
-					<p class="home-help-tags"><a href="/product-strategy#product-strategy-framework">Product strategy</a> / <a href="/product-team-AI-vibe-coding#ai-adoption">AI adoption</a> / 0→1 discovery / Learning platforms / Lightweight team ways of working</p>
+					<div class="home-help-section__copy">
+						<p class="section-label">Collaboration</p>
+						<h2 id="home-help-heading" class="home-section-heading">I work well on…</h2>
+						<p class="home-help-tags"><a href="/product-strategy#product-strategy-framework">Product strategy</a> / <a href="/product-team-AI-vibe-coding#ai-adoption">AI adoption</a> / 0→1 discovery / Learning platforms / Lightweight team ways of working</p>
+					</div>
 
 					<div id="connect" class="home-connect-warm">
 						<h3 class="home-connect-warm__title heading-serif">Say hi - I reply soon(ish).</h3>

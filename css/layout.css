@@ -309,7 +309,7 @@ header .nav-container.nav-primary .site-nav ul {
 
 header .nav-container.nav-primary .site-nav ul li a {
 	padding: 0.65rem 0;
-	font-size: 12px;
+	font-size: 0.8125rem;
 	letter-spacing: 0.1em;
 }
 
@@ -832,8 +832,8 @@ header .available-now.animations-ended::before {
 footer {
 	box-sizing: border-box;
 	width: 100%;
-	max-width: 53rem;
-	margin: 0 auto;
+	max-width: none;
+	margin: 0;
 	padding: 2rem 1rem 20px;
 	clear: both;
 	border-top: 1px solid var(--dn-ink);
@@ -842,12 +842,21 @@ footer {
 }
 
 .colophon {
-	text-align: right;
+	max-width: var(--container-max);
+	margin: 0 auto;
+	padding: 0 var(--margin-mobile);
+	text-align: left;
 	color: rgba(248, 247, 244, 0.75);
-	margin-top: 0;
 	font-family: var(--font-label);
 	font-size: 13px;
 	line-height: 1.5;
+}
+
+@media (min-width: 1025px) {
+	.colophon {
+		padding-left: var(--margin-desktop);
+		padding-right: var(--margin-desktop);
+	}
 }
 
 .colophon a {
@@ -2438,9 +2447,10 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 	border-bottom: none;
 }
 
-.main-content--home .journal-list--home .journal-list-item--home + .journal-list-item--home .journal-home-row {
-	padding-top: 3rem;
-	border-top: 1px solid var(--color-oatmeal);
+.main-content--home .journal-list--home .journal-list-item--home:not(:last-child) .journal-home-row {
+	padding-bottom: 1.25rem;
+	margin-bottom: 1.25rem;
+	border-bottom: 1px solid var(--color-oatmeal);
 }
 
 .main-content--home .journal-home-row {
@@ -2448,7 +2458,7 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 	align-items: flex-start;
 	justify-content: space-between;
 	gap: 1rem;
-	padding: 0 0 0;
+	padding: 0;
 	text-decoration: none;
 	color: inherit;
 	transition: color 0.3s ease;
@@ -2460,6 +2470,11 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 .main-content--home .journal-home-row:focus-visible .journal-title {
 	color: var(--dn-ink);
 	font-style: italic;
+}
+
+.main-content--home .journal-home-row__main {
+	display: flex;
+	flex-direction: column;
 }
 
 .main-content--home .journal-home-row__meta {
@@ -2497,14 +2512,15 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 	line-height: 1.2;
 	font-weight: 500;
 	transition: font-style 0.3s ease, color 0.15s ease;
-	margin: 0 0 1rem;
+	margin: 0;
 	color: var(--dn-ink);
 	font-family: var(--font-serif);
 }
 
 .main-content--home .journal-list--home .journal-excerpt {
 	font-size: 1rem;
-	margin: 0;
+	line-height: 1.6;
+	margin: 1rem 0 0;
 }
 
 .main-content--home .journal-home-row__arrow {
@@ -2624,61 +2640,34 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 .main-content--home .home-clients {
 	margin-top: 0;
 	margin-bottom: 0;
-	padding: 3rem 0 8rem;
+	padding: 2rem 0 5rem;
 	border-top: 1px solid var(--color-oatmeal);
 }
 
-/* Full-width forest footer — home + interior marketing pages (matches Say hi panel) */
-:where(.page-home, .page-site) footer {
-	max-width: none;
-	width: 100%;
+/* Forest footer spacing — site chrome (matches Say hi panel width) */
+body.page-home.site-chrome footer {
+	margin-top: 3rem;
+}
+
+body.site-chrome footer {
 	margin-top: 5rem;
 	padding: 5rem 0 2.5rem;
 	border-top: 1px solid var(--dn-ink);
 }
 
-:where(.page-home, .page-site) footer .colophon {
-	max-width: var(--container-max);
-	margin: 0 auto;
-	padding: 0 var(--margin-mobile);
-	text-align: left;
-}
-
-@media (min-width: 1025px) {
-	:where(.page-home, .page-site) footer .colophon {
-		padding-left: var(--margin-desktop);
-		padding-right: var(--margin-desktop);
-	}
-}
-
-:where(.page-home, .page-site) footer .colophon p {
+body.site-chrome footer .colophon p {
 	margin-bottom: 0.5rem;
 	font-size: 13px;
 	line-height: 1.5;
 }
 
-:where(.page-home, .page-site) footer .colophon p:first-child {
+body.site-chrome footer .colophon p:first-child {
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: rgba(248, 247, 244, 0.9);
 	margin-bottom: 1rem;
-}
-
-body.page-template footer {
-	max-width: var(--container-max);
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 5rem;
-	padding: 5rem var(--margin-mobile) 2.5rem;
-}
-
-@media (min-width: 1025px) {
-	body.page-template footer {
-		padding-left: var(--margin-desktop);
-		padding-right: var(--margin-desktop);
-	}
 }
 
 .main-content--home .home-clients .section-label {
@@ -2824,6 +2813,10 @@ body.page-home .main-content--home {
 	}
 }
 
+body.page-home {
+	--section-gap: 6rem;
+}
+
 body.page-home .home-split {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr);
@@ -2860,33 +2853,41 @@ body.page-home .home-help-section {
 	margin-bottom: var(--section-gap);
 }
 
+body.page-home .home-help-section__copy {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+body.page-home .home-help-section__copy .section-label {
+	margin: 0;
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+body.page-home .home-help-section__copy .home-section-heading {
+	margin: 0;
+}
+
+body.page-home .home-help-section__copy .home-help-tags {
+	font-size: 1.125rem;
+	margin: 0;
+}
+
 @media (min-width: 1025px) {
 	body.page-home .home-help-section {
 		grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
 	}
 
-	body.page-home .home-help-section > .section-label,
-	body.page-home .home-help-section > .home-section-heading,
-	body.page-home .home-help-section > .home-help-tags {
+	body.page-home .home-help-section__copy {
 		grid-column: 1;
 	}
 
 	body.page-home .home-help-section > .home-connect-warm {
 		grid-column: 2;
-		grid-row: 1 / span 3;
+		grid-row: 1;
 		align-self: center;
 	}
-}
-
-body.page-home .home-help-section > .section-label {
-	margin-bottom: 1.5rem;
-	padding-bottom: 0;
-	border-bottom: none;
-}
-
-body.page-home .home-help-tags {
-	font-size: 1.125rem;
-	margin-bottom: 0;
 }
 
 body.page-home .journal-meta-sep {
@@ -2934,7 +2935,7 @@ body.page-home .home-connect-warm__cta .secondary-cta {
 	}
 
 	header .nav-container.nav-primary .site-nav ul li a {
-		font-size: 11px;
+		font-size: 0.75rem;
 		letter-spacing: 0.08em;
 	}
 
