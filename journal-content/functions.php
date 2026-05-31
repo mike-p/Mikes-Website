@@ -456,6 +456,111 @@ function journalTimezone(): DateTimeZone
 }
 
 /**
+ * True on production hosts — drafts must never appear here.
+ */
+function journalIsProductionHost(string $host): bool
+{
+    $host = preg_replace('/:\d+$/', '', strtolower($host)) ?? strtolower($host);
+
+    return in_array($host, ['mike-p.co.uk', 'www.mike-p.co.uk'], true);
+}
+
+/**
+ * Optional override: JOURNAL_PREVIEW=1 in .env.local (repo root).
+ */
+function journalPreviewEnabledInEnv(): bool
+{
+    static $checked = false;
+    static $enabled = false;
+
+    if ($checked) {
+        return $enabled;
+    }
+
+    $checked = true;
+    $envFile = dirname(__DIR__) . '/.env.local';
+
+    if (!is_file($envFile)) {
+        return false;
+    }
+
+    foreach (file($envFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) ?: [] as $line) {
+        $line = trim($line);
+        if ($line === '' || str_starts_with($line, '#') || !str_contains($line, '=')) {
+            continue;
+        }
+
+        [$key, $value] = array_map('trim', explode('=', $line, 2));
+        if (strtoupper($key) === 'JOURNAL_PREVIEW' && in_array(strtolower($value), ['1', 'true', 'yes'], true)) {
+            $enabled = true;
+            break;
+        }
+    }
+
+    return $enabled;
+}
+
+/**
+ * True when running locally (not production). Works with any host/port when
+ * using the PHP built-in server, e.g. php -S 127.0.0.1:8000 router.php
+ */
+function journalIsLocalRequest(): bool
+{
+    if (php_sapi_name() === 'cli') {
+        return false;
+    }
+
+    if (journalPreviewEnabledInEnv()) {
+        return true;
+    }
+
+    $host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+    $hostWithoutPort = preg_replace('/:\d+$/', '', $host) ?? $host;
+
+    if (journalIsProductionHost($hostWithoutPort)) {
+        return false;
+    }
+
+    // Any address when using `php -S … router.php` (see README)
+    if (php_sapi_name() === 'cli-server') {
+        return true;
+    }
+
+    return $hostWithoutPort === 'localhost'
+        || str_starts_with($hostWithoutPort, '127.')
+        || $hostWithoutPort === '[::1]'
+        || (bool) preg_match('/\.(local|test|localhost|dev)$/', $hostWithoutPort);
+}
+
+/**
+ * Include scheduled (future-dated) posts. Enabled on local dev only.
+ */
+function journalIncludeScheduledPosts(): bool
+{
+    return journalIsLocalRequest();
+}
+
+/**
+ * Draft badge for scheduled posts (local preview only).
+ */
+function journalDraftBadge(array $entry): string
+{
+    if (empty($entry['is_future'])) {
+        return '';
+    }
+
+    $date = $entry['date'] instanceof DateTimeInterface
+        ? $entry['date']->format('j M Y')
+        : '';
+
+    if ($date === '') {
+        return '';
+    }
+
+    return '<span class="journal-draft-badge">Draft — publishes ' . htmlspecialchars($date, ENT_QUOTES) . '</span>';
+}
+
+/**
  * Determine the fully-qualified base URL for sitemap generation.
  */
 function sitemapBaseUrl(): string

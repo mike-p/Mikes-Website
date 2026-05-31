@@ -5,7 +5,7 @@ include __DIR__ . '/includes/http-headers.php';
 require __DIR__ . '/journal-content/functions.php';
 
 $postsDirectory = __DIR__ . '/journal-content/posts';
-$entries = loadJournalEntries($postsDirectory);
+$entries = loadJournalEntries($postsDirectory, journalIncludeScheduledPosts());
 $slug = isset($_GET['slug']) ? trim((string) $_GET['slug']) : null;
 
 if (($slug === null || $slug === '') && ($_SERVER['REQUEST_URI'] ?? '') !== '') {
@@ -69,6 +69,7 @@ if ($currentEntry !== null) {
                                         <time datetime="<?= htmlspecialchars($entry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
                                             <?= htmlspecialchars($entry['date']->format('d-m-Y'), ENT_QUOTES) ?>
                                         </time>
+                                        <?= journalDraftBadge($entry) ?>
                                         <span class="journal-read-time"><?= (int) $journalReadMins ?> min read</span>
                                     </div>
                                     <div class="journal-content">
@@ -94,6 +95,7 @@ if ($currentEntry !== null) {
                                 <time datetime="<?= htmlspecialchars($currentEntry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
                                     <?= htmlspecialchars($currentEntry['date']->format('d-m-Y'), ENT_QUOTES) ?>
                                 </time>
+                                <?= journalDraftBadge($currentEntry) ?>
                             </p>
                             <h1 id="journal-entry-title" class="title heading-serif"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
                         </section>
