@@ -5,7 +5,7 @@ include __DIR__ . '/includes/http-headers.php';
 require __DIR__ . '/journal-content/functions.php';
 
 $postsDirectory = __DIR__ . '/journal-content/posts';
-$allEntries = loadJournalEntries($postsDirectory);
+$allEntries = loadJournalEntries($postsDirectory, journalIncludeScheduledPosts());
 $recentNotes = array_slice($allEntries, 0, 3);
 
 $pageMeta = [
@@ -81,6 +81,7 @@ $pageMeta = [
 												<time datetime="<?= htmlspecialchars($entry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
 													<?= htmlspecialchars($entry['date']->format('M Y'), ENT_QUOTES) ?>
 												</time>
+												<?= journalDraftBadge($entry) ?>
 												<span class="journal-meta-sep" aria-hidden="true">·</span>
 												<span class="journal-read-time"><?= (int) $readMins ?> min read</span>
 											</div>
