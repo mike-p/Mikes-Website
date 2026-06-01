@@ -193,7 +193,7 @@ include __DIR__ . '/includes/http-headers.php';
 						</div>
 
 
-						<div class="cv-company-group">
+						<div class="cv-company-group" id="zoocha">
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 									<div class="cv-date"><time datetime="2010-01">2010</time> - <time datetime="2013-01">2013</time></div>

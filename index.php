@@ -149,6 +149,11 @@ $pageMeta = [
 							</a>
 						</li>
 						<li>
+							<a class="home-clients-logo" href="/work#zoocha">
+								<img src="/i/clients/zoocha.svg" alt="Zoocha" width="96" height="28" loading="lazy" decoding="async">
+							</a>
+						</li>
+						<li>
 							<a class="home-clients-logo home-clients-logo--wide" href="/work#action-sustainability">
 								<img src="/i/clients/action-sustainability.svg" alt="Action Sustainability" width="220" height="32" loading="lazy" decoding="async">
 							</a>
