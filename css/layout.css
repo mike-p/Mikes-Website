@@ -2329,8 +2329,8 @@ header .site-nav ul li.nav-item--journal a.nav-link--journal.active {
 
 .main-content--home .home-hero__avatar {
 	display: block;
-	width: 10rem;
-	height: 10rem;
+	width: 7.5rem;
+	height: 7.5rem;
 	border-radius: 50%;
 	overflow: hidden;
 	flex-shrink: 0;
@@ -2701,12 +2701,12 @@ body.site-chrome footer .colophon p:first-child {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	display: grid;
-	grid-template-columns: repeat(7, minmax(0, 1fr));
+	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
-	justify-items: center;
+	justify-content: center;
 	width: 100%;
-	gap: clamp(1rem, 2vw, 1.75rem);
+	gap: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .main-content--home .home-clients-list li {
@@ -2714,20 +2714,22 @@ body.site-chrome footer .colophon p:first-child {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex: 0 0 auto;
 	min-width: 0;
-	width: 100%;
-}
-
-@media (max-width: 900px) {
-	.main-content--home .home-clients-list {
-		grid-template-columns: repeat(4, minmax(0, 1fr));
-	}
 }
 
 @media (max-width: 520px) {
 	.main-content--home .home-clients-list {
+		display: grid;
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+		justify-items: center;
+		justify-content: center;
 		row-gap: 1.5rem;
+		column-gap: clamp(1.25rem, 5vw, 2rem);
+	}
+
+	.main-content--home .home-clients-list li {
+		width: 100%;
 	}
 }
 
@@ -2754,7 +2756,13 @@ body.site-chrome footer .colophon p:first-child {
 }
 
 .main-content--home .home-clients-logo--wide img {
-	height: clamp(1.35rem, 2.4vw, 1.85rem);
+	max-width: min(100%, 11rem);
+}
+
+.main-content--home .home-clients-logo--square img {
+	height: clamp(2rem, 3.6vw, 2.75rem);
+	width: clamp(2rem, 3.6vw, 2.75rem);
+	max-width: none;
 }
 
 .main-content--home .home-clients-logo:hover,
@@ -3064,8 +3072,8 @@ body.page-home .home-connect-warm__cta .secondary-cta {
 
 	.main-content--home .home-hero__top .home-hero__avatar {
 		margin-top: 0;
-		width: 8.5rem;
-		height: 8.5rem;
+		width: 6.375rem;
+		height: 6.375rem;
 	}
 
 	.main-content--home .home-hero__title {
