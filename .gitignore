@@ -36,3 +36,12 @@ vendor/
 .php-cs-fixer.cache
 .htaccess
 .htaccess
+
+# Client logo experiments (not deployed)
+i/clients/*-test*.svg
+i/clients/*-temp.svg
+i/clients/*-si.svg
+i/clients/*-vlz.svg
+i/clients/*-icons.svg
+i/clients/*-wordmark.svg
+i/clients/*-full.svg

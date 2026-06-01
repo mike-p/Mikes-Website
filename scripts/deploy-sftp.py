@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import fnmatch
 import os
 import stat
 import sys
@@ -29,6 +30,17 @@ SKIP_FILES = {
     ".deploy.env.example",
 }
 SKIP_SUFFIXES = {".code-workspace", ".bak"}
+
+# Scratch assets under i/clients/ (sourced during logo work; never deploy)
+CLIENT_SCRATCH_PATTERNS = (
+    "*-test*.svg",
+    "*-temp.svg",
+    "*-si.svg",
+    "*-vlz.svg",
+    "*-icons.svg",
+    "*-wordmark.svg",
+    "*-full.svg",
+)
 
 
 def _parse_env_file(path: Path) -> dict[str, str]:
@@ -59,10 +71,18 @@ def load_env() -> dict[str, str]:
     return env
 
 
+def is_client_scratch(rel: Path) -> bool:
+    if len(rel.parts) < 2 or rel.parts[0] != "i" or rel.parts[1] != "clients":
+        return False
+    return any(fnmatch.fnmatch(rel.name, pattern) for pattern in CLIENT_SCRATCH_PATTERNS)
+
+
 def skip_path(rel: Path) -> bool:
     if any(p in SKIP_DIR_NAMES for p in rel.parts):
         return True
     if rel.name in SKIP_FILES:
+        return True
+    if is_client_scratch(rel):
         return True
     return any(rel.name.endswith(s) for s in SKIP_SUFFIXES)
 
@@ -98,6 +118,28 @@ def upload_tree(sftp: paramiko.SFTPClient, local: Path, remote_base: str) -> tup
         uploaded += 1
         print(f"  up {rel.as_posix()}")
     return uploaded, skipped
+
+
+def cleanup_remote_client_scratch(sftp: paramiko.SFTPClient, remote_base: str) -> int:
+    remote_dir = f"{remote_base.rstrip('/')}/i/clients"
+    removed = 0
+    try:
+        entries = sftp.listdir(remote_dir)
+    except OSError as exc:
+        print(f"Skip remote cleanup ({remote_dir}): {exc}")
+        return 0
+    for name in entries:
+        rel = Path("i") / "clients" / name
+        if not is_client_scratch(rel):
+            continue
+        remote_path = f"{remote_dir}/{name}"
+        try:
+            sftp.remove(remote_path)
+            removed += 1
+            print(f"  rm {rel.as_posix()}")
+        except OSError as exc:
+            print(f"  ! rm {rel.as_posix()}: {exc}", file=sys.stderr)
+    return removed
 
 
 def list_remote(sftp: paramiko.SFTPClient, path: str) -> None:
@@ -165,8 +207,12 @@ def main() -> None:
             print(f"Syncing {REPO} → {remote_base}")
             n, sk = upload_tree(sftp, REPO, remote_base)
             print(f"Done: {n} files uploaded ({sk} local paths skipped).")
+        elif cmd == "cleanup-clients":
+            print(f"Removing scratch client logos on {remote_base}")
+            n = cleanup_remote_client_scratch(sftp, remote_base)
+            print(f"Done: {n} remote file(s) removed.")
         else:
-            print("Usage: deploy-sftp.py [ls|sync]", file=sys.stderr)
+            print("Usage: deploy-sftp.py [ls|sync|cleanup-clients]", file=sys.stderr)
             sys.exit(2)
     finally:
         sftp.close()
