@@ -13,7 +13,7 @@ include __DIR__ . '/includes/http-headers.php';
 	<div class="inner-body">
     	<?php include __DIR__ . '/includes/header.php'; ?>
 		<main id="main" aria-label="Main content">
-			<div class="main-content main-content--site" role="main">
+			<div class="main-content main-content--site">
 				<section class="error-page hero-section" aria-labelledby="error-page-title">
 					<h1 id="error-page-title" class="title heading-serif">Page not found</h1>
 

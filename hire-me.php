@@ -13,7 +13,7 @@ include __DIR__ . '/includes/http-headers.php';
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content main-content--site" role="main">
+			<div class="main-content main-content--site">
 				<section class="page-hero hero-section" aria-labelledby="hire-me-page-title">
 				<h1 id="hire-me-page-title" class="title heading-serif">Let's work together!</h1>
 

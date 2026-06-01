@@ -309,17 +309,14 @@ function parseFrontMatter(string $frontMatter): array
  */
 function formatInlineMarkdown(string $text): string
 {
-    // Process inline code FIRST to protect content from other markdown processing
-    // Extract code blocks BEFORE escaping, then escape code content only once
     $codePlaceholders = [];
+    $linkPlaceholders = [];
     $placeholderIndex = 0;
-    
+
     $text = preg_replace_callback(
         '/`(.+?)`/s',
         function ($matches) use (&$codePlaceholders, &$placeholderIndex) {
-            // Use HTML comment format as placeholder - won't be processed by markdown patterns
             $placeholder = '<!--CODE' . $placeholderIndex . '-->';
-            // Escape code content only once
             $codePlaceholders[$placeholder] = '<code>' . htmlspecialchars($matches[1], ENT_QUOTES) . '</code>';
             $placeholderIndex++;
             return $placeholder;
@@ -327,37 +324,36 @@ function formatInlineMarkdown(string $text): string
         $text
     );
 
-    // Now escape the rest of the text (with placeholders)
-    $escaped = htmlspecialchars($text, ENT_QUOTES);
-
-    // Links [label](url)
-    $escaped = preg_replace_callback(
+    // Links before escape so placeholders survive htmlspecialchars (same as code blocks)
+    $text = preg_replace_callback(
         '/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/',
-        static function ($matches) {
+        static function ($matches) use (&$linkPlaceholders, &$placeholderIndex) {
             $url = $matches[2];
             $label = $matches[1];
             $escapedUrl = htmlspecialchars($url, ENT_QUOTES);
             $escapedLabel = htmlspecialchars($label, ENT_QUOTES);
-            
-            // Check if link is external (not on mike-p.co.uk domain)
             $isExternal = !preg_match('/^https?:\/\/(www\.)?mike-p\.co\.uk(\/|$)/i', $url);
-            
+
             if ($isExternal) {
-                return sprintf(
+                $html = sprintf(
                     '<a href="%s" target="_blank" rel="noopener noreferrer" class="external-link">%s</a>',
                     $escapedUrl,
                     $escapedLabel
                 );
+            } else {
+                $html = sprintf('<a href="%s">%s</a>', $escapedUrl, $escapedLabel);
             }
-            
-            return sprintf(
-                '<a href="%s">%s</a>',
-                $escapedUrl,
-                $escapedLabel
-            );
+
+            $placeholder = '<!--LINK' . $placeholderIndex . '-->';
+            $linkPlaceholders[$placeholder] = $html;
+            $placeholderIndex++;
+
+            return $placeholder;
         },
-        $escaped
+        $text
     );
+
+    $escaped = htmlspecialchars($text, ENT_QUOTES);
 
     // Bold **text** or __text__
     $escaped = preg_replace('/\*\*(.+?)\*\*/s', '<strong>$1</strong>', $escaped);
@@ -367,9 +363,12 @@ function formatInlineMarkdown(string $text): string
     $escaped = preg_replace('/(?<!\*)\*(?!\*)(.+?)(?<!\*)\*(?!\*)/s', '<em>$1</em>', $escaped);
     $escaped = preg_replace('/(?<!_)_(?!_)(.+?)(?<!_)_(?!_)/s', '<em>$1</em>', $escaped);
 
-    // Restore code blocks - replace placeholders with actual code HTML
+    foreach ($linkPlaceholders as $placeholder => $linkHtml) {
+        $escapedPlaceholder = htmlspecialchars($placeholder, ENT_QUOTES);
+        $escaped = str_replace($escapedPlaceholder, $linkHtml, $escaped);
+    }
+
     foreach ($codePlaceholders as $placeholder => $codeHtml) {
-        // The placeholder will be HTML-escaped (<!-- becomes &lt;!--), so replace the escaped version
         $escapedPlaceholder = htmlspecialchars($placeholder, ENT_QUOTES);
         $escaped = str_replace($escapedPlaceholder, $codeHtml, $escaped);
     }

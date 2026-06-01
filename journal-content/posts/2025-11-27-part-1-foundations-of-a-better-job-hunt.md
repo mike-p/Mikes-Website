@@ -63,7 +63,7 @@ Define exactly what you want so you're not reacting to randomness.
 
 On the whole, the recruiters I worked with were generous with their time, honest, and genuinely helpful. They juggle a lot, and the more straightforward you make things for them, the better the experience on both sides.
 
-Special mentions to [Nicola Morse](https://www.linkedin.com/in/nicola-morse-9ba53552/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3Bc7y1961CQLajKK6KopwV1g%3D%3D), [Nathan Hoskisson](https://www.linkedin.com/in/nathanhoskisson/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3Bc7y1961CQLajKK6KopwV1g%3D%3D), [Max Flint](https://www.linkedin.com/in/max-flint/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3Bc7y1961CQLajKK6KopwV1g%3D%3D) and [Richard Saad](https://www.linkedin.com/in/richardsadd/?lipi=urn%3Ali%3Apage%3Ad_flagship3_people_connections%3Bc7y1961CQLajKK6KopwV1g%3D%3D).
+Special mentions to [Nicola Morse](https://www.linkedin.com/in/nicola-morse-9ba53552/), [Nathan Hoskisson](https://www.linkedin.com/in/nathanhoskisson/), [Max Flint](https://www.linkedin.com/in/max-flint/) and [Richard Saad](https://www.linkedin.com/in/richardsadd/).
 
 ---
 

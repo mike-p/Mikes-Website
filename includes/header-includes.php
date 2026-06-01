@@ -48,6 +48,10 @@ switch ($path) {
         $title = $pageMeta['title'] ?? 'Work Experience | Mike Smith | Product Leader';
         $description = $pageMeta['description'] ?? '20+ years of product leadership experience at leading companies including LEGO, News UK, FutureLearn, Atheneum, Which?, Oracle, and Tesco. Timeline of career progression from web developer to product director.';
         break;
+    case '/design-system':
+        $title = $pageMeta['title'] ?? 'Design system | Mike Smith';
+        $description = $pageMeta['description'] ?? 'Design tokens and UI components for mike-p.co.uk.';
+        break;
     case '/404.php':
     case '/404':
         $title = $pageMeta['title'] ?? 'Page Not Found | Mike Smith';
@@ -82,7 +86,11 @@ switch ($path) {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.css">
+<?php
+$geistCss = __DIR__ . '/../css/fonts/geist-sans.css';
+$geistCssVersion = is_file($geistCss) ? (string) filemtime($geistCss) : '1';
+?>
+<link rel="stylesheet" type="text/css" href="/css/fonts/geist-sans.css?v=<?= htmlspecialchars($geistCssVersion, ENT_QUOTES) ?>">
 <link rel="stylesheet" type="text/css" href="/css/reset.css">
 <?php
 $layoutCss = __DIR__ . '/../css/layout.css';
@@ -92,7 +100,13 @@ $layoutCssVersion = is_file($layoutCss) ? (string) filemtime($layoutCss) : '1';
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="Shortcut Icon" type="image/ico" href="/favicon.ico">
 <meta name="author" content="Mike Smith (Mike-p)">
-<meta name="robots" content="<?= ($path === '/404.php' || $path === '/404') ? 'noindex,nofollow' : 'index,follow' ?>">
+<?php
+$robotsMeta = $pageMeta['robots'] ?? null;
+if ($robotsMeta === null) {
+    $robotsMeta = ($path === '/404.php' || $path === '/404') ? 'noindex,nofollow' : 'index,follow';
+}
+?>
+<meta name="robots" content="<?= htmlspecialchars($robotsMeta, ENT_QUOTES) ?>">
 <meta name="referrer" content="unsafe-url">
 <script type="application/ld+json"> 
 {
