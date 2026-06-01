@@ -51,7 +51,7 @@ if ($currentEntry !== null) {
     <div class="inner-body">
         <?php include __DIR__ . '/includes/header.php'; ?>
         <main id="main" aria-label="Main content">
-            <div class="main-content main-content--site" role="main">
+            <div class="main-content main-content--site">
                 <?php if ($currentEntry === null): ?>
                     <section class="page-header" aria-labelledby="journal-page-title">
                         <h1 id="journal-page-title" class="title heading-serif">Journal</h1>
@@ -89,7 +89,8 @@ if ($currentEntry !== null) {
                     <?php endif; ?>
                 <?php elseif ($currentEntry !== null): ?>
                     <article class="journal-entry">
-                        <section class="journal-entry-header" aria-labelledby="journal-entry-title">
+                        <header class="journal-entry-header">
+                            <h1 id="journal-entry-title" class="title heading-serif"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
                             <p class="journal-entry-meta">
                                 <a class="journal-back-link" href="/journal">← Journal</a>
                                 <time datetime="<?= htmlspecialchars($currentEntry['date']->format('Y-m-d'), ENT_QUOTES) ?>">
@@ -97,8 +98,7 @@ if ($currentEntry !== null) {
                                 </time>
                                 <?= journalDraftBadge($currentEntry) ?>
                             </p>
-                            <h1 id="journal-entry-title" class="title heading-serif"><?= htmlspecialchars($currentEntry['title'], ENT_QUOTES) ?></h1>
-                        </section>
+                        </header>
                         <?php if (!empty($currentEntry['has_charter'])): ?>
                             <?php $journalSections = splitJournalIntroAndCharter($currentEntry['content']); ?>
                             <div class="journal-entry-body">

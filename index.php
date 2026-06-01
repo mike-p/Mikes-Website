@@ -22,14 +22,14 @@ $pageMeta = [
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main id="main" aria-label="Main content">
-			<div class="main-content main-content--home" role="main">
+			<div class="main-content main-content--home">
 
 				<section class="home-hero" aria-labelledby="home-hero-title">
 					<div class="home-hero__top">
 						<div class="home-hero__intro-col">
 							<p class="home-hero__eyebrow">Product leader, London</p>
 							<h1 id="home-hero-title" class="home-hero__title heading-serif">I enable teams to build things that actually matter.</h1>
-							<p class="home-hero__lead">Hi, I'm Mike 👋🏻 a London-based product leader working across <strong class="marker-highlight">AI</strong>, <strong class="marker-highlight">learning platforms</strong>, <strong class="marker-highlight">sustainability</strong>, and <strong class="marker-highlight">product strategy</strong>. I like shipping things, enjoying life, and a good pastry 🥐.</p>
+							<p class="home-hero__lead">Hi, I'm Mike 👋🏻 a London-based product leader working across <strong class="marker-highlight">AI</strong>, <strong class="marker-highlight">Learning platforms (aka EdTech)</strong>, <strong class="marker-highlight">sustainability</strong>, and <strong class="marker-highlight">product strategy</strong>. I like shipping things, enjoying life, and a good pastry 🥐.</p>
 							<p class="home-ai-callout">This site is not written by ChatGPT as we have enough AI slop around without me adding to it.</p>
 							<div class="cta-group home-hero-cta">
 								<a class="primary-cta home-hero-cta-primary" href="/journal">Read the journal</a>
@@ -37,7 +37,7 @@ $pageMeta = [
 							</div>
 						</div>
 						<div class="home-hero__avatar">
-							<img class="home-hero__avatar-img" src="/i/mike-avatar-home.jpg" alt="Mike Smith" width="320" height="320" decoding="async" />
+							<img class="home-hero__avatar-img" src="/i/mike-avatar-home.jpg" alt="Mike Smith" width="256" height="256" decoding="async">
 							<span class="visually-hidden">Mike</span>
 						</div>
 					</div>
@@ -45,7 +45,7 @@ $pageMeta = [
 
 				<div class="home-split">
 				<section class="home-thinking" aria-labelledby="home-thinking-heading">
-					<h2 id="home-thinking-heading" class="section-label home-split__section-title">Currently thinking about</h2>
+					<h2 id="home-thinking-heading" class="home-section-label home-section-label--ruled">Currently thinking about</h2>
 					<ol class="home-thinking-list">
 						<li class="home-thinking-card">
 							<span class="home-thinking-num" aria-hidden="true">01</span>
@@ -67,7 +67,7 @@ $pageMeta = [
 				</section>
 
 				<section class="home-notes" aria-labelledby="home-notes-heading">
-					<h2 id="home-notes-heading" class="section-label home-split__section-title">Recent notes</h2>
+					<h2 id="home-notes-heading" class="home-section-label home-section-label--ruled">Recent notes</h2>
 					<?php if (empty($recentNotes)): ?>
 						<p class="home-notes-empty">Nothing published yet. <a href="/journal">Visit the journal</a>.</p>
 					<?php else: ?>
@@ -104,7 +104,7 @@ $pageMeta = [
 
 				<section class="home-help-section" aria-labelledby="home-help-heading">
 					<div class="home-help-section__copy">
-						<p class="section-label">Collaboration</p>
+						<p class="home-section-label home-section-label--plain">Collaboration</p>
 						<h2 id="home-help-heading" class="home-section-heading">I work well on…</h2>
 						<p class="home-help-tags"><a href="/product-strategy#product-strategy-framework">Product strategy</a> / <a href="/product-team-AI-vibe-coding#ai-adoption">AI adoption</a> / 0→1 discovery / Learning platforms / Lightweight team ways of working</p>
 					</div>
@@ -121,14 +121,38 @@ $pageMeta = [
 
 				<section class="home-clients" aria-labelledby="home-clients-heading">
 					<h2 id="home-clients-heading" class="visually-hidden">Organisations</h2>
-					<p class="home-clients-label section-label">Previously at</p>
+					<p class="home-section-label home-section-label--ruled">Previous product fun at:</p>
 					<ul class="home-clients-list">
-						<li><a href="/work#lego">LEGO</a></li>
-						<li><a href="/work#news-uk" title="News UK (The Times, The Sun, and more)">The Times</a></li>
-						<li><a href="/work#futurelearn">FutureLearn</a></li>
-						<li><a href="/work#which">Which?</a></li>
-						<li><a href="/work#atheneum">Atheneum</a></li>
-						<li><a href="/work#action-sustainability">Action Sustainability</a></li>
+						<li>
+							<a class="home-clients-logo" href="/work#lego">
+								<img src="/i/clients/lego.svg" alt="LEGO" width="88" height="28" loading="lazy" decoding="async">
+							</a>
+						</li>
+						<li>
+							<a class="home-clients-logo" href="/work#news-uk" title="News UK (The Times, The Sun, and more)">
+								<img src="/i/clients/the-times.svg" alt="The Times" width="120" height="32" loading="lazy" decoding="async">
+							</a>
+						</li>
+						<li>
+							<a class="home-clients-logo" href="/work#futurelearn">
+								<img src="/i/clients/futurelearn.svg" alt="FutureLearn" width="148" height="28" loading="lazy" decoding="async">
+							</a>
+						</li>
+						<li>
+							<a class="home-clients-logo" href="/work#which">
+								<img src="/i/clients/which.svg" alt="Which?" width="88" height="32" loading="lazy" decoding="async">
+							</a>
+						</li>
+						<li>
+							<a class="home-clients-logo" href="/work#atheneum">
+								<img src="/i/clients/atheneum.svg" alt="Atheneum" width="128" height="28" loading="lazy" decoding="async">
+							</a>
+						</li>
+						<li>
+							<a class="home-clients-logo home-clients-logo--wide" href="/work#action-sustainability">
+								<img src="/i/clients/action-sustainability.svg" alt="Action Sustainability" width="220" height="32" loading="lazy" decoding="async">
+							</a>
+						</li>
 					</ul>
 				</section>
 

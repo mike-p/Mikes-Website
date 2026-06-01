@@ -13,7 +13,7 @@ include __DIR__ . '/includes/http-headers.php';
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content main-content--site" role="main">
+			<div class="main-content main-content--site">
 				<section class="page-hero hero-section" aria-labelledby="product-strategy-page-title">
 				<h1 id="product-strategy-page-title" class="title heading-serif">Scalable approach for a coherent product strategy and supporting process</h1>
 

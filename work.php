@@ -15,7 +15,7 @@ include __DIR__ . '/includes/http-headers.php';
 	<div class="inner-body">
 		<?php include __DIR__ . '/includes/header.php'; ?>
 		<main aria-label="Main content" id="main">
-			<div class="main-content main-content--site" role="main">
+			<div class="main-content main-content--site">
 				<div class="content-container">
 					<h1 class="title heading-serif">Work Experience</h1>
 					
