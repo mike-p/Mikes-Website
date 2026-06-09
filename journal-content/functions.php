@@ -578,6 +578,117 @@ function sitemapBaseUrl(): string
     return $scheme . '://' . $host;
 }
 
+/**
+ * JSON-LD BlogPosting schema for a journal entry.
+ */
+function buildJournalArticleJsonLd(array $entry, string $baseUrl): string
+{
+    $slug = $entry['slug'] ?? '';
+    $url = rtrim($baseUrl, '/') . '/journal/' . $slug;
+    $postFile = dirname(__DIR__) . '/journal-content/posts/' . $slug . '.md';
+    $datePublished = $entry['date'] instanceof DateTimeInterface
+        ? $entry['date']->format('Y-m-d')
+        : '';
+    $dateModified = is_file($postFile)
+        ? date('Y-m-d', (int) filemtime($postFile))
+        : $datePublished;
+
+    $description = trim((string) ($entry['summary'] ?? ''));
+    if ($description === '') {
+        $description = journalExcerpt($entry);
+    }
+
+    $schema = [
+        '@context' => 'https://schema.org',
+        '@type' => 'BlogPosting',
+        'headline' => $entry['title'] ?? '',
+        'description' => $description,
+        'datePublished' => $datePublished,
+        'dateModified' => $dateModified,
+        'url' => $url,
+        'mainEntityOfPage' => [
+            '@type' => 'WebPage',
+            '@id' => $url,
+        ],
+        'author' => [
+            '@type' => 'Person',
+            'name' => 'Mike Smith',
+            'url' => 'https://mike-p.co.uk',
+        ],
+        'publisher' => [
+            '@type' => 'Person',
+            'name' => 'Mike Smith',
+        ],
+        'image' => rtrim($baseUrl, '/') . '/i/logo.png',
+    ];
+
+    return json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_THROW_ON_ERROR);
+}
+
+/**
+ * Y-m-d lastmod from the newest filemtime in a list of paths.
+ *
+ * @param list<string> $paths
+ */
+function sitemapLastModFromFiles(array $paths): string
+{
+    $latest = 0;
+    foreach ($paths as $path) {
+        if (is_file($path)) {
+            $latest = max($latest, (int) filemtime($path));
+        }
+    }
+
+    return $latest > 0 ? date('Y-m-d', $latest) : '';
+}
+
+/**
+ * Latest Y-m-d from one or more date strings.
+ *
+ * @param list<string> $dates
+ */
+function sitemapMaxLastModDate(array $dates): string
+{
+    $latest = 0;
+    foreach ($dates as $date) {
+        if ($date === '') {
+            continue;
+        }
+        $timestamp = strtotime($date);
+        if ($timestamp !== false) {
+            $latest = max($latest, $timestamp);
+        }
+    }
+
+    return $latest > 0 ? date('Y-m-d', $latest) : '';
+}
+
+/**
+ * Newest publish or file change among journal posts (for index / journal list pages).
+ *
+ * @param array<int, array<string, mixed>> $entries
+ */
+function sitemapLatestJournalLastMod(string $postsDirectory, array $entries): string
+{
+    $latest = 0;
+
+    foreach ($entries as $entry) {
+        if ($entry['is_future'] ?? false) {
+            continue;
+        }
+
+        $postFile = rtrim($postsDirectory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . ($entry['slug'] ?? '') . '.md';
+        if (is_file($postFile)) {
+            $latest = max($latest, (int) filemtime($postFile));
+        }
+
+        if (($entry['date'] ?? null) instanceof DateTimeInterface) {
+            $latest = max($latest, $entry['date']->getTimestamp());
+        }
+    }
+
+    return $latest > 0 ? date('Y-m-d', $latest) : '';
+}
 
 /**
  * Build the XML sitemap contents.
@@ -589,39 +700,56 @@ function sitemapBaseUrl(): string
  */
 function buildSitemapXml(string $baseUrl, array $entries, array $templates = []): string
 {
+    $repoRoot = dirname(__DIR__);
+    $postsDirectory = $repoRoot . '/journal-content/posts';
+    $journalFeedLastMod = sitemapLatestJournalLastMod($postsDirectory, $entries);
+
     $staticUrls = [
         [
             'loc' => $baseUrl,
+            'lastmod' => sitemapMaxLastModDate([
+                sitemapLastModFromFiles([$repoRoot . '/index.php']),
+                $journalFeedLastMod,
+            ]),
             'changefreq' => 'weekly',
             'priority' => '1.0',
         ],
         [
             'loc' => $baseUrl . '/hire-me',
+            'lastmod' => sitemapLastModFromFiles([$repoRoot . '/hire-me.php']),
             'changefreq' => 'monthly',
             'priority' => '0.9',
         ],
         [
             'loc' => $baseUrl . '/product-strategy',
+            'lastmod' => sitemapLastModFromFiles([$repoRoot . '/product-strategy.php']),
             'changefreq' => 'weekly',
             'priority' => '0.9',
         ],
         [
             'loc' => $baseUrl . '/product-team-AI-vibe-coding',
+            'lastmod' => sitemapLastModFromFiles([$repoRoot . '/product-team-AI-vibe-coding.php']),
             'changefreq' => 'weekly',
             'priority' => '0.9',
         ],
         [
             'loc' => $baseUrl . '/work',
+            'lastmod' => sitemapLastModFromFiles([$repoRoot . '/work.php']),
             'changefreq' => 'monthly',
             'priority' => '0.8',
         ],
         [
             'loc' => $baseUrl . '/journal',
+            'lastmod' => sitemapMaxLastModDate([
+                sitemapLastModFromFiles([$repoRoot . '/journal.php']),
+                $journalFeedLastMod,
+            ]),
             'changefreq' => 'daily',
             'priority' => '0.9',
         ],
         [
             'loc' => $baseUrl . '/template',
+            'lastmod' => sitemapLastModFromFiles([$repoRoot . '/template.php']),
             'changefreq' => 'monthly',
             'priority' => '0.8',
         ],
@@ -639,6 +767,9 @@ function buildSitemapXml(string $baseUrl, array $entries, array $templates = [])
     foreach ($staticUrls as $url) {
         $lines[] = '<url>';
         $lines[] = '  <loc>' . htmlspecialchars($url['loc'], ENT_XML1) . '</loc>';
+        if (!empty($url['lastmod'])) {
+            $lines[] = '  <lastmod>' . htmlspecialchars($url['lastmod'], ENT_XML1) . '</lastmod>';
+        }
         $lines[] = '  <changefreq>' . htmlspecialchars($url['changefreq'], ENT_XML1) . '</changefreq>';
         $lines[] = '  <priority>' . htmlspecialchars($url['priority'], ENT_XML1) . '</priority>';
         $lines[] = '</url>';
