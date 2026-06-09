@@ -8,6 +8,14 @@ $postsDirectory = __DIR__ . '/journal-content/posts';
 $entries = loadJournalEntries($postsDirectory, journalIncludeScheduledPosts());
 $slug = isset($_GET['slug']) ? trim((string) $_GET['slug']) : null;
 
+$journalSlugRedirects = [
+    '2026-05-24-when-ai-rewrites-tests-instead-of-fixing-code' => '2026-05-20-when-ai-rewrites-tests-instead-of-fixing-code',
+];
+if ($slug !== null && $slug !== '' && isset($journalSlugRedirects[$slug])) {
+    header('Location: /journal/' . $journalSlugRedirects[$slug], true, 301);
+    exit;
+}
+
 if (($slug === null || $slug === '') && ($_SERVER['REQUEST_URI'] ?? '') !== '') {
     $requestPath = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH) ?? '';
     if (preg_match('#^/journal/([^/]+)$#', rtrim($requestPath, '/'), $matches)) {
@@ -39,6 +47,7 @@ if ($currentEntry !== null) {
     $pageMeta['title'] = $currentEntry['title'] . ' | Journal | Mike Smith';
     $pageMeta['description'] = journalExcerpt($currentEntry);
     $pageMeta['og_type'] = 'article';
+    $pageMeta['schema_article'] = buildJournalArticleJsonLd($currentEntry, sitemapBaseUrl());
 }
 
 ?>

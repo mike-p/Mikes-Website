@@ -178,3 +178,9 @@ if ($robotsMeta === null) {
   ]
 }
 </script>
+<?php if (!empty($pageMeta['schema_article'])): ?>
+<script type="application/ld+json">
+<?= $pageMeta['schema_article'] ?>
+
+</script>
+<?php endif; ?>
