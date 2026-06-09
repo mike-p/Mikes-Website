@@ -2815,6 +2815,20 @@ body.site-chrome footer .colophon p:first-child {
 	margin-bottom: 0;
 }
 
+.connect-warm-card__related a {
+	color: var(--dn-ink);
+	font-weight: 500;
+	text-decoration: underline;
+	text-decoration-color: var(--color-oatmeal);
+	text-underline-offset: 0.2em;
+}
+
+.connect-warm-card__related a:hover,
+.connect-warm-card__related a:focus-visible {
+	color: var(--dn-accent);
+	text-decoration-color: var(--dn-accent);
+}
+
 .connect-warm-card__actions {
 	margin: 0;
 	justify-content: flex-end;

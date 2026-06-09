@@ -12,11 +12,11 @@ $currentPage = $pathSegment === '' ? 'index' : explode('/', $pathSegment)[0];
 			<?php if ($currentPage === 'work'): ?>
 				<p class="connect-warm-card__related">Want to learn more? <a href="/product-strategy">Explore my product strategy framework</a> or <a href="/hire-me">see how I can help your team</a>.</p>
 			<?php elseif ($currentPage === 'product-strategy'): ?>
-				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/hire-me">See how I can help your team</a></p>
+				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> · <a href="/hire-me">See how I can help your team</a></p>
 			<?php elseif ($currentPage === 'product-team-AI-vibe-coding'): ?>
-				<p class="connect-warm-card__related">Related: <a href="/product-strategy">Explore my product strategy framework</a> | <a href="/hire-me">See how I can help your team</a></p>
+				<p class="connect-warm-card__related">Related: <a href="/product-strategy">Product strategy framework</a> · <a href="/hire-me">See how I can help your team</a></p>
 			<?php elseif ($currentPage === 'journal'): ?>
-				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> | <a href="/product-strategy">Explore my product strategy framework</a></p>
+				<p class="connect-warm-card__related">Related: <a href="/work">View my work experience</a> · <a href="/product-strategy">Product strategy framework</a></p>
 			<?php elseif ($currentPage === 'template'): ?>
 				<p class="connect-warm-card__related">Related: <a href="/product-strategy">Product strategy frameworks</a> · <a href="/hire-me">How I can help</a></p>
 			<?php endif; ?>

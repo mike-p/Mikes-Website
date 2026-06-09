@@ -39,13 +39,27 @@ if ($isLocalDev) {
     header('Vary: Accept-Encoding');
 }
 
-// Set ETag for better caching (optional, but helps with conditional requests)
+// ETag must reflect page content, not only this include file (homepage/journal list journal posts).
 if (!$is404 && isset($_SERVER['REQUEST_URI'])) {
-    $etag = md5($_SERVER['REQUEST_URI'] . filemtime(__FILE__));
+    $script = $_SERVER['SCRIPT_FILENAME'] ?? __FILE__;
+    $salt = is_file($script) ? (string) filemtime($script) : '';
+
+    $journalAware = ['index.php', 'journal.php', 'sitemap.php'];
+    if (in_array(basename($script), $journalAware, true)) {
+        $postsDir = dirname(__DIR__) . '/journal-content/posts';
+        $latestPostMtime = 0;
+        if (is_dir($postsDir)) {
+            foreach (glob($postsDir . '/*.md') ?: [] as $postFile) {
+                $latestPostMtime = max($latestPostMtime, (int) filemtime($postFile));
+            }
+        }
+        $salt .= ':' . $latestPostMtime;
+    }
+
+    $etag = md5($_SERVER['REQUEST_URI'] . $salt);
     header('ETag: "' . $etag . '"');
-    
-    // Handle If-None-Match requests (304 Not Modified)
-    if (isset($_SERVER['HTTP_IF_NONE_MATCH']) && 
+
+    if (isset($_SERVER['HTTP_IF_NONE_MATCH']) &&
         trim($_SERVER['HTTP_IF_NONE_MATCH'], '"') === $etag) {
         http_response_code(304);
         exit;
