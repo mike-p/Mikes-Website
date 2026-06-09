@@ -501,7 +501,7 @@ function journalPreviewEnabledInEnv(): bool
 
 /**
  * True when running locally (not production). Works with any host/port when
- * using the PHP built-in server, e.g. php -S 127.0.0.1:8000 router.php
+ * using the PHP built-in server, e.g. php -S localhost:8000 router.php
  */
 function journalIsLocalRequest(): bool
 {

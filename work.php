@@ -28,7 +28,7 @@ include __DIR__ . '/includes/http-headers.php';
 							<div class="cv-timeline-item cv-company-header">
 								<div class="cv-timeline-content">
 								<div class="cv-date"><time datetime="2021-12">2025</time> - <time datetime="2025-10">current</time></div>
-									<div class="cv-company">Action Sustainability</div>
+									<div class="cv-company"><a href="https://www.actionsustainability.com" target="_blank" rel="noopener noreferrer" class="external-link">Action Sustainability</a></div>
 									<div class="cv-company-meta">
 										<div class="cv-tags">
 											<span class="cv-tag">EdTech</span>

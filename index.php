@@ -106,7 +106,7 @@ $pageMeta = [
 					<div class="home-help-section__copy">
 						<p class="home-section-label home-section-label--plain">Collaboration</p>
 						<h2 id="home-help-heading" class="home-section-heading">I work well on…</h2>
-						<p class="home-help-tags"><a href="/product-strategy#product-strategy-framework">Product strategy</a> / <a href="/product-team-AI-vibe-coding#ai-adoption">AI adoption</a> / 0→1 discovery / Learning platforms / Lightweight team ways of working</p>
+						<p class="home-help-tags"><a href="/product-strategy#product-strategy-framework">Product strategy</a> / <a href="/product-team-AI-vibe-coding#ai-adoption">AI adoption</a> / 0→1 discovery / <a href="/journal/2026-06-08-moodle-mayhem">Learning platforms</a> / Lightweight team ways of working</p>
 					</div>
 
 					<div id="connect" class="home-connect-warm">
