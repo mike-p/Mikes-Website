@@ -46,14 +46,10 @@ if (!$is404 && isset($_SERVER['REQUEST_URI'])) {
 
     $journalAware = ['index.php', 'journal.php', 'sitemap.php'];
     if (in_array(basename($script), $journalAware, true)) {
+        require_once dirname(__DIR__) . '/journal-content/functions.php';
         $postsDir = dirname(__DIR__) . '/journal-content/posts';
-        $latestPostMtime = 0;
-        if (is_dir($postsDir)) {
-            foreach (glob($postsDir . '/*.md') ?: [] as $postFile) {
-                $latestPostMtime = max($latestPostMtime, (int) filemtime($postFile));
-            }
-        }
-        $salt .= ':' . $latestPostMtime;
+        // Fingerprint published posts so ETags change when a scheduled post goes live.
+        $salt .= ':' . journalCacheFingerprint($postsDir);
     }
 
     $etag = md5($_SERVER['REQUEST_URI'] . $salt);
