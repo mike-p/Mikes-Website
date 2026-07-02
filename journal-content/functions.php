@@ -442,6 +442,24 @@ function journalReadingMinutes(array $entry): int
 }
 
 /**
+ * Fingerprint for cache busting on journal-aware pages.
+ * Changes when a scheduled post goes live or published content is edited.
+ */
+function journalCacheFingerprint(string $directory, bool $includeFuture = false): string
+{
+    $entries = loadJournalEntries($directory, $includeFuture);
+    $parts = [];
+
+    foreach ($entries as $entry) {
+        $file = rtrim($directory, DIRECTORY_SEPARATOR) . DIRECTORY_SEPARATOR . $entry['slug'] . '.md';
+        $mtime = is_file($file) ? (int) filemtime($file) : 0;
+        $parts[] = $entry['slug'] . ':' . $entry['date']->format('Y-m-d') . ':' . $mtime;
+    }
+
+    return implode('|', $parts);
+}
+
+/**
  * Return the timezone used for journal scheduling.
  */
 function journalTimezone(): DateTimeZone
