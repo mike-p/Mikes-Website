@@ -2,7 +2,7 @@
 // Include HTTP headers (must be before any output)
 include __DIR__ . '/includes/http-headers.php';
 
-require __DIR__ . '/journal-content/functions.php'; // For markdown rendering and generateTitleFromSlug()
+require_once __DIR__ . '/journal-content/functions.php'; // For markdown rendering and generateTitleFromSlug()
 require __DIR__ . '/templates-content/functions.php';
 
 $templatesDirectory = __DIR__ . '/templates-content/templates';

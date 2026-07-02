@@ -2,7 +2,7 @@
 // Include HTTP headers (must be before any output)
 include __DIR__ . '/includes/http-headers.php';
 
-require __DIR__ . '/journal-content/functions.php';
+require_once __DIR__ . '/journal-content/functions.php';
 
 $postsDirectory = __DIR__ . '/journal-content/posts';
 $entries = loadJournalEntries($postsDirectory, journalIncludeScheduledPosts());
