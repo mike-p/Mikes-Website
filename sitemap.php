@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-require __DIR__ . '/journal-content/functions.php';
+require_once __DIR__ . '/journal-content/functions.php';
 require __DIR__ . '/templates-content/functions.php';
 
 $baseUrl = sitemapBaseUrl();

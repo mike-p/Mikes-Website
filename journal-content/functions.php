@@ -604,12 +604,21 @@ function buildJournalArticleJsonLd(array $entry, string $baseUrl): string
     $slug = $entry['slug'] ?? '';
     $url = rtrim($baseUrl, '/') . '/journal/' . $slug;
     $postFile = dirname(__DIR__) . '/journal-content/posts/' . $slug . '.md';
-    $datePublished = $entry['date'] instanceof DateTimeInterface
-        ? $entry['date']->format('Y-m-d')
-        : '';
-    $dateModified = is_file($postFile)
-        ? date('Y-m-d', (int) filemtime($postFile))
-        : $datePublished;
+    $timezone = journalTimezone();
+
+    $datePublished = '';
+    if ($entry['date'] instanceof DateTimeInterface) {
+        $datePublished = DateTimeImmutable::createFromInterface($entry['date'])
+            ->setTimezone($timezone)
+            ->format(DateTimeInterface::ATOM);
+    }
+
+    $dateModified = $datePublished;
+    if (is_file($postFile)) {
+        $dateModified = (new DateTimeImmutable('@' . (int) filemtime($postFile)))
+            ->setTimezone($timezone)
+            ->format(DateTimeInterface::ATOM);
+    }
 
     $description = trim((string) ($entry['summary'] ?? ''));
     if ($description === '') {
