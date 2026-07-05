@@ -106,6 +106,74 @@ function splitJournalIntroAndCharter(string $content): array
 }
 
 /**
+ * Pull footnote definitions out of markdown before rendering.
+ *
+ * Syntax: [^id]: Footnote text with [links](url)
+ *
+ * @return array{content: string, footnotes: array<string, array{content: string, number: int|null}>}
+ */
+function extractJournalFootnotes(string $markdown): array
+{
+    $footnotes = [];
+
+    $content = preg_replace_callback(
+        '/^\[\^([^\]]+)\]:\s*(.+)$/m',
+        static function (array $matches) use (&$footnotes): string {
+            $footnotes[$matches[1]] = [
+                'content' => trim($matches[2]),
+                'number' => null,
+            ];
+
+            return '';
+        },
+        $markdown
+    );
+
+    return [
+        'content' => trim(preg_replace("/\n{3,}/", "\n\n", $content ?? '')),
+        'footnotes' => $footnotes,
+    ];
+}
+
+/**
+ * Render collected footnotes as an ordered list.
+ *
+ * @param array<string, array{content: string, number: int|null}> $footnotes
+ */
+function renderJournalFootnotesHtml(array $footnotes): string
+{
+    $used = array_filter(
+        $footnotes,
+        static fn (array $footnote): bool => $footnote['number'] !== null
+    );
+
+    if ($used === []) {
+        return '';
+    }
+
+    uasort($used, static fn (array $a, array $b): int => $a['number'] <=> $b['number']);
+
+    $html = '<aside class="journal-footnotes" aria-label="Footnotes"><ol>';
+
+    foreach ($used as $id => $footnote) {
+        $noNestedFootnotes = [];
+        $content = formatInlineMarkdown($footnote['content'], $noNestedFootnotes);
+        $safeId = htmlspecialchars($id, ENT_QUOTES);
+
+        $html .= sprintf(
+            '<li id="fn-%1$s" value="%2$d"><a class="journal-footnote-back" href="#fnref-%1$s" aria-label="Back to reference">↩</a> %3$s</li>',
+            $safeId,
+            $footnote['number'],
+            $content
+        );
+    }
+
+    $html .= '</ol></aside>';
+
+    return $html;
+}
+
+/**
  * Convert Markdown into basic HTML with lightweight formatting support.
  *
  * @param string $markdown
@@ -113,10 +181,12 @@ function splitJournalIntroAndCharter(string $content): array
  */
 function renderJournalMarkdown(string $markdown): string
 {
-    $markdown = trim($markdown);
+    $extracted = extractJournalFootnotes(trim($markdown));
+    $markdown = $extracted['content'];
+    $footnotes = $extracted['footnotes'];
 
     if ($markdown === '') {
-        return '';
+        return $footnotes === [] ? '' : renderJournalFootnotesHtml($footnotes);
     }
 
     $lines = preg_split("/(\r\n|\n|\r)/", $markdown);
@@ -128,13 +198,13 @@ function renderJournalMarkdown(string $markdown): string
     $tableHeader = null;
     $tableSeparator = null;
 
-    $flushParagraph = function () use (&$paragraphLines, &$html) {
+    $flushParagraph = function () use (&$paragraphLines, &$html, &$footnotes) {
         if (empty($paragraphLines)) {
             return;
         }
 
         $text = implode(' ', $paragraphLines);
-        $html .= '<p>' . formatInlineMarkdown($text) . '</p>';
+        $html .= '<p>' . formatInlineMarkdown($text, $footnotes) . '</p>';
         $paragraphLines = [];
     };
 
@@ -148,7 +218,7 @@ function renderJournalMarkdown(string $markdown): string
         }
     };
 
-    $flushTable = function () use (&$inTable, &$tableRows, &$tableHeader, &$tableSeparator, &$html) {
+    $flushTable = function () use (&$inTable, &$tableRows, &$tableHeader, &$tableSeparator, &$html, &$footnotes) {
         if (!$inTable || $tableHeader === null) {
             return;
         }
@@ -156,14 +226,14 @@ function renderJournalMarkdown(string $markdown): string
         $html .= '<table>';
         $html .= '<thead><tr>';
         foreach ($tableHeader as $cell) {
-            $html .= '<th>' . formatInlineMarkdown(trim($cell)) . '</th>';
+            $html .= '<th>' . formatInlineMarkdown(trim($cell), $footnotes) . '</th>';
         }
         $html .= '</tr></thead>';
         $html .= '<tbody>';
         foreach ($tableRows as $row) {
             $html .= '<tr>';
             foreach ($row as $cell) {
-                $html .= '<td>' . formatInlineMarkdown(trim($cell)) . '</td>';
+                $html .= '<td>' . formatInlineMarkdown(trim($cell), $footnotes) . '</td>';
             }
             $html .= '</tr>';
         }
@@ -229,7 +299,7 @@ function renderJournalMarkdown(string $markdown): string
             $flushParagraph();
             $closeList();
             $level = strlen($matches[1]);
-            $text = formatInlineMarkdown($matches[2]);
+            $text = formatInlineMarkdown($matches[2], $footnotes);
             $html .= sprintf('<h%d>%s</h%d>', $level, $text, $level);
             continue;
         }
@@ -242,7 +312,7 @@ function renderJournalMarkdown(string $markdown): string
                 $html .= '<ol>';
                 $inList = 'ol';
             }
-            $html .= '<li>' . formatInlineMarkdown($matches[1]) . '</li>';
+            $html .= '<li>' . formatInlineMarkdown($matches[1], $footnotes) . '</li>';
             continue;
         }
 
@@ -254,7 +324,7 @@ function renderJournalMarkdown(string $markdown): string
                 $html .= '<ul>';
                 $inList = 'ul';
             }
-            $html .= '<li>' . formatInlineMarkdown($matches[1]) . '</li>';
+            $html .= '<li>' . formatInlineMarkdown($matches[1], $footnotes) . '</li>';
             continue;
         }
 
@@ -262,7 +332,7 @@ function renderJournalMarkdown(string $markdown): string
         if (preg_match('/^>\s+(.*)$/', $trimmed, $matches)) {
             $flushParagraph();
             $closeList();
-            $html .= '<blockquote>' . formatInlineMarkdown($matches[1]) . '</blockquote>';
+            $html .= '<blockquote>' . formatInlineMarkdown($matches[1], $footnotes) . '</blockquote>';
             continue;
         }
 
@@ -272,6 +342,8 @@ function renderJournalMarkdown(string $markdown): string
     $flushParagraph();
     $closeList();
     $flushTable();
+
+    $html .= renderJournalFootnotesHtml($footnotes);
 
     return $html;
 }
@@ -304,13 +376,13 @@ function parseFrontMatter(string $frontMatter): array
 /**
  * Basic inline Markdown formatter for emphasis and links.
  *
- * @param string $text
- * @return string
+ * @param array<string, array{content: string, number: int|null}> $footnotes
  */
-function formatInlineMarkdown(string $text): string
+function formatInlineMarkdown(string $text, array &$footnotes = []): string
 {
     $codePlaceholders = [];
     $linkPlaceholders = [];
+    $footnoteRefPlaceholders = [];
     $placeholderIndex = 0;
 
     $text = preg_replace_callback(
@@ -326,13 +398,14 @@ function formatInlineMarkdown(string $text): string
 
     // Links before escape so placeholders survive htmlspecialchars (same as code blocks)
     $text = preg_replace_callback(
-        '/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/',
+        '/\[(.+?)\]\(((?:https?:\/\/|\/)[^\s)]+)\)/',
         static function ($matches) use (&$linkPlaceholders, &$placeholderIndex) {
             $url = $matches[2];
             $label = $matches[1];
             $escapedUrl = htmlspecialchars($url, ENT_QUOTES);
             $escapedLabel = htmlspecialchars($label, ENT_QUOTES);
-            $isExternal = !preg_match('/^https?:\/\/(www\.)?mike-p\.co\.uk(\/|$)/i', $url);
+            $isExternal = preg_match('/^https?:\/\//i', $url)
+                && !preg_match('/^https?:\/\/(www\.)?mike-p\.co\.uk(\/|$)/i', $url);
 
             if ($isExternal) {
                 $html = sprintf(
@@ -353,6 +426,40 @@ function formatInlineMarkdown(string $text): string
         $text
     );
 
+    if ($footnotes !== []) {
+        $text = preg_replace_callback(
+            '/\[\^([^\]]+)\]/',
+            static function (array $matches) use (&$footnotes, &$footnoteRefPlaceholders, &$placeholderIndex): string {
+                $id = $matches[1];
+
+                if (!isset($footnotes[$id])) {
+                    return $matches[0];
+                }
+
+                if ($footnotes[$id]['number'] === null) {
+                    $assigned = array_filter(
+                        $footnotes,
+                        static fn (array $footnote): bool => $footnote['number'] !== null
+                    );
+                    $footnotes[$id]['number'] = count($assigned) + 1;
+                }
+
+                $number = $footnotes[$id]['number'];
+                $safeId = htmlspecialchars($id, ENT_QUOTES);
+                $placeholder = '<!--FNREF' . $placeholderIndex . '-->';
+                $footnoteRefPlaceholders[$placeholder] = sprintf(
+                    '<sup class="journal-footnote-ref"><a href="#fn-%1$s" id="fnref-%1$s" aria-label="Footnote %2$d">%2$d</a></sup>',
+                    $safeId,
+                    $number
+                );
+                $placeholderIndex++;
+
+                return $placeholder;
+            },
+            $text
+        );
+    }
+
     $escaped = htmlspecialchars($text, ENT_QUOTES);
 
     // Bold **text** or __text__
@@ -366,6 +473,11 @@ function formatInlineMarkdown(string $text): string
     foreach ($linkPlaceholders as $placeholder => $linkHtml) {
         $escapedPlaceholder = htmlspecialchars($placeholder, ENT_QUOTES);
         $escaped = str_replace($escapedPlaceholder, $linkHtml, $escaped);
+    }
+
+    foreach ($footnoteRefPlaceholders as $placeholder => $footnoteRefHtml) {
+        $escapedPlaceholder = htmlspecialchars($placeholder, ENT_QUOTES);
+        $escaped = str_replace($escapedPlaceholder, $footnoteRefHtml, $escaped);
     }
 
     foreach ($codePlaceholders as $placeholder => $codeHtml) {

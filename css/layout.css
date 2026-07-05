@@ -784,6 +784,54 @@ header .available-now.animations-ended::before {
 	background-image: none;
 }
 
+.journal-footnote-ref {
+	font-size: 0.75em;
+	line-height: 0;
+	vertical-align: super;
+}
+
+.journal-footnote-ref a {
+	font-weight: 600;
+	text-decoration: none;
+	color: var(--dn-accent);
+}
+
+.journal-footnote-ref a:hover,
+.journal-footnote-ref a:focus-visible {
+	text-decoration: underline;
+}
+
+.journal-footnotes {
+	margin-top: 2.5rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid var(--dn-rule);
+	font-size: 0.95rem;
+	color: var(--dn-muted);
+}
+
+.journal-footnotes ol {
+	margin: 0;
+	padding-left: 1.75rem;
+	list-style-type: decimal;
+}
+
+.journal-footnotes li {
+	margin: 0.75rem 0;
+	padding-left: 0.25rem;
+}
+
+.journal-footnote-back {
+	margin-right: 0.35rem;
+	text-decoration: none;
+	color: var(--dn-accent);
+	font-weight: 600;
+}
+
+.journal-footnote-back:hover,
+.journal-footnote-back:focus-visible {
+	text-decoration: underline;
+}
+
 /* ===================== Content Sections ===================== */
 .content-section {
 	margin-bottom: 4rem;
