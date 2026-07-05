@@ -74,3 +74,5 @@ That's it for now, at some point there may well be more.
 - pacing and momentum,
 - managing the emotional side,
 - what I'd do differently next time.
+
+💿 [The Tricky Second Album](/journal/2026-08-05-the-tricky-second-album)
