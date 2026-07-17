@@ -1,9 +1,16 @@
 {
   "name": "mike-p.co.uk",
+<<<<<<< HEAD
   "host": "your-sftp-host.example.com",
   "protocol": "sftp",
   "port": 22,
   "username": "your-sftp-username",
+=======
+  "host": "home387541923.1and1-data.host",
+  "protocol": "sftp",
+  "port": 22,
+  "username": "u66236303",
+>>>>>>> 91e51f43460336e62e3541cb6f42ee7737e3d444
   "password": "SET_IN_GENERATED_sftp.json",
   "remotePath": "/",
   "uploadOnSave": true,
